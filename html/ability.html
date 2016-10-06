@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Park Yeong Hoo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=640, user-scalable=yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="x-rim-auto-match" content="none" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/portfolio.jquery.css" />
+	<style type="text/css">
+	.ability						{float: right; width: 95%; height: 100%; background-color: #56545f;}
+	.ability ul.thumbs				{font-family: 'Abel', sans-serif;}
+	.ability ul.thumbs li.content	{font-family: 'Nanum Gothic', sans-serif;}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/portfolio.jquery.js"></script>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script>
+	$(function(){
+		// Utility
+		if (typeof Object.create !== 'function') {
+			Object.create = function(obj){
+				function F() {};
+					F.prototype = obj;
+					return new F();
+				};
+			}
+			(function($, window, document, undefined) {
+				var Portfolio = {
+					init: function(options, elem) {
+						var self = this;
+						self.$elem = $(elem);
+						self.$thumnail = $(elem).find('.thumbnail');
+						// Options
+						self.options = $.extend({}, $.fn.portfolio.options, options || {});
+						// Set columns width
+						self.setColWidth();
+						// On click
+						self.$thumnail.click(function() {
+						self.showContent($(this));
+						});
+					},
+					setColWidth: function() {
+						var self = this;
+						if ($(window).width() > 970) {
+							var colWidth = ((100 / self.options.cols));
+							self.$elem.find('li').css('width', colWidth + '%');
+						}
+					},
+					getContentPos: function(clicked) {
+						var self = this,
+							thumbnails = self.$elem.find('.thumbnail'),
+							contentPos = null;
+						for (var i = 0; i <= thumbnails.length; i++) {
+							// Get href
+							var href = clicked.attr('href');
+							if (href == $(thumbnails[i]).attr('href')) {
+								// If its not the last thumb
+								if (i !== (thumbnails.length - 1)) {
+									var cols = self.options.cols;
+									if ($(window).width() <= 1200 && $(window).width() > 970) cols = 3;
+									else if ($(window).width() <= 970 && $(window).width() > 590) cols = 2;
+									else if ($(window).width() <= 590) cols = 1;
+									// thumb position
+									var thumbPos = i + 1;
+									// If there's no reminder
+									var contentPos = 0;
+									if (thumbPos % cols !== 0)
+										contentPos = (cols - (thumbPos % cols)) + thumbPos;
+									else // If we have a reminder
+										contentPos = thumbPos;
+									// Clean & Validate (This fixes weird bug when there's only 2 thumbs)
+									if (contentPos > thumbnails.length) {
+										contentPos = thumbnails.length;
+									}
+								} else {
+								contentPos = i + 1;
+								}
+							}
+						}
+					return contentPos;
+					},
+					showContent: function(thumbnail) {
+						var $href = thumbnail.attr('href'),
+							self = this,
+							contentPos = self.getContentPos(thumbnail);
+						// Remove existing stuff first
+						self.$elem.find('li a.thumbnail .active-arrow').remove();
+						self.$elem.find('li.content').remove();
+						// Add active arrow
+						thumbnail.append('<span class="active-arrow"></span>');
+						// Add content
+						var $portfolioContent = $($href);
+						var html = '<li class="content"><span class="close">&times;</span>' + $portfolioContent.html() + '</li>';
+						self.$elem.find('li:eq(' + (contentPos - 1) + ')').after(html);
+						// Animate
+						self.$elem.find('li')[self.options.transition](500);
+						$('html, body').animate({
+							scrollTop: self.$elem.find('li.content').offset().top -150
+						}, 700);
+						// Close content
+						self.$elem.find('.close').click(function(){
+						self.$elem.find('li a.thumbnail .active-arrow').remove();
+						self.$elem.find('li.content').remove();
+						});
+					}
+				};
+				$.fn.portfolio = function(options) {
+					return this.each(function(){
+					var portfolio = Object.create(Portfolio);
+						portfolio.init(options, this);
+					});
+				};
+				// Default options
+				$.fn.portfolio.options = {
+					cols: 3,
+					transition: 'slideDown'
+				};
+			})(jQuery, window, document);
+	})
+	$(document).ready(function() {
+		$('.thumbs').portfolio({
+			cols: 4,
+			transition: 'slideDown'
+		});
+	});
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<!-- gnb -->
+	<div id="gnb">
+		<ul>
+		<li><a href="ability.html">Ability</a></li>
+		<li><a href="about.html">About</a></li>
+		</ul>
+		<span class="goback"><a href="index.html"> &lt; </a></span>
+	</div>
+	<!-- //gnb -->
+	<!-- content -->
+	<div id="content">
+		<div class="ability">
+			<!-- thumbs -->
+			<ul class="thumbs">
+			<li>
+				<a href="#thumb1" class="thumbnail" style="background-image: url('../images/thumb1.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb2" class="thumbnail" style="background-image: url('../images/thumb2.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb3" class="thumbnail" style="background-image: url('../images/thumb3.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb4" class="thumbnail" style="background-image: url('../images/thumb4.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb5" class="thumbnail" style="background-image: url('../images/thumb5.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb6" class="thumbnail" style="background-image: url('../images/thumb6.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb7" class="thumbnail" style="background-image: url('../images/thumb7.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb8" class="thumbnail" style="background-image: url('../images/thumb8.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			<li>
+				<a href="#thumb9" class="thumbnail" style="background-image: url('../images/thumb9.jpg')">
+					<span class="category">Web development</span>
+					<span class="description">동해물과 백두산이 마르고 닳도록</span>
+				</a>
+			</li>
+			</ul>
+			<!-- //thumbs -->
+			<!-- thumbs-content -->
+			<div class="thumbs-content">
+				<div id="thumb1">
+					<p class="title">웹개발</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb2">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb3">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb4">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb5">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb6">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb7">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb8">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+				<div id="thumb9">
+					<p class="title">Web development</p>
+					<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+				</div>
+			</div>
+			<!-- //thumbs-content -->
+		</div>
+	</div>
+	<!-- //contents -->
+</div>
+</body>
+</html>
