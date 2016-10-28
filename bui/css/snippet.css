@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* import
+@import url(./../../css/common/form.css);
+@import url(./../../css/common/button.css);
+@import url(./../../css/common/tabs.css);
+@import url(./../../css/common/global.css);
+@import url(./../plugin/syntaxhighlighter_3.0.83/styles/shCoreRDark.css);
+@import url(./../plugin/syntaxhighlighter_3.0.83/styles/shThemeGramakson.css);
+*/
+
+html, body																		{height: 100%;}
+#wrap																			{position: relative; min-height: 100%; overflow: hidden;}
+body																			{margin: 0; font-family: 'Segoe UI', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, '굴림', Gulim, sans-serif; -webkit-text-size-adjust: none;}
+
+/* reset */
+hr																				{display: none;}
+h1 a																			{text-decoration: none;}
+pre, code																		{font-family: 'Courier New', sans-serif;}
+
+/* skip */
+#skipContent a																	{display: block; margin-top: -1px; height: 1px; overflow: hidden; font-weight: bold; text-align: center; color: #ffffff; background-color: #333333;}
+#skipContent a:active,
+#skipContent a:focus															{margin: 0; height: 36px; line-height: 36px;}
+
+/* header */	
+#header																			{position: relative; z-index: 20; padding: 0 1em; background-color: #494b4d;}
+#header:after																	{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header h1																		{float: left; margin: 0; line-height: .9;}
+#header h1 a																	{display: block; padding-top: 12px; height: 32px; color: #ffffff; font-size: 20px; vertical-align: top;}
+#header h1 a abbr																{display: inline-block; line-height: inherit; vertical-align: top;}
+#header h1 a:before																{content: '\f041'; display: inline-block; margin-right: .25em; line-height: inherit; font-family: FontAwesome; font-style: normal; font-weight: normal; font-size: inherit; text-align: center; vertical-align: top;}
+
+#header .gnb																	{display: none;}
+#header .lnb																	{float: left; margin-left: 40px;}
+#header .lnb h1																	{position: absolute; overflow: hidden; visibility: hidden; margin: 0; padding: 0; width: 0; height: 0; line-height: 0; font-size: 0;}
+#header .lnb ul																	{list-style: none; margin: 0; padding: 0;}
+#header .lnb>ul:after															{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .lnb>ul>li																{float: left; position: relative;}
+#header .lnb>ul>li+li															{margin-left: 40px;}
+#header .lnb>ul>li>a															{display: block; padding-top: 15px; height: 29px; line-height: .9; font-size: 16px; color: #999999; text-decoration: none; text-transform: capitalize;}
+#header .lnb>ul>li.active>a														{color: #ffffff;}
+#header .lnb>ul>li>ul															{display: none; position: absolute; top: 44px; left: 50%; margin-left: -80px; width: 160px; background-color: #ffffff;}
+#header .lnb>ul>li:hover>ul														{display: block; box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);}
+#header .lnb>ul>li>ul li+li														{border-top: 1px solid #dedede;}
+#header .lnb>ul>li>ul li a														{display: block; padding: 9px 12px 0 12px; height: 23px; line-height: .9; font-size: 16px; color: #333333; text-decoration: none; text-transform: capitalize;}
+#header .lnb>ul>li>ul li.active a												{background-color: #f5f5f5;}
+
+
+
+
+
+/*
+
+#content .content-primary .data-panel.theme-bui									{margin: 1em 0;}
+#content .content-primary .data-panel.theme-bui:after							{content: ''; display: block; clsear: both; width: 0; height: 0; visibility: hidden;;}
+#content .content-primary .data-panel.theme-bui .page-count span				{float: left; font-size: .75em; line-height: 28px;}
+#content .content-primary .data-panel.theme-bui .page-count span+span			{margin-left: 20px;}
+*/
+
+
+
+/* content */
+#content																		{position: relative; z-index: 10;}
+#content .content-header														{padding: 48px 16px 32px 16px; box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.2);}
+#content .content-header h1														{margin: 0; font-weight: normal; color: #333333; font-size: 48px; text-transform: capitalize;}
+#content .content-header p														{color: #666666;}
+
+/* #content .content-header h1:first-letter										{color: red;} */
+
+#content .content-primary														{}
+#content .content-primary>section												{margin: 3em 1em;}
+#content .content-primary>section>h1											{font-size: 24px; line-height: .9; font-weight: normal; color: #333333;}
+#content .content-primary>section>p												{font-size: 16px; line-height: 1.5;}
+#content .content-primary>section>section>h1									{font-size: 16px; line-height: .9; font-weight: normal; color: #333333; text-transform: capitalize;}
+
+/* footer */
+#footer																			{padding: 1em; border-top: 1px solid #d2d9e5; text-align: center; color: #666666;}
+#footer a																		{color: inherit;}
+/* #footer .copyright																{font-size: smaller;} */
+
+
+/* global class */
+.module-preivew.transparent														{padding: 1em; border: 1px solid #d2d9e5; background: url(../images/bg_transparent.gif) 0 0 repeat;}
+.module-preivew.grid															{padding: 1em; border: 1px solid #d2d9e5; background: #ffffff url(../images/bg_grid.png) 0 0 repeat;}
+* html .module-preivew.grid														{background-position: 1px 1px;}
+.module-code																	{font-size: .75em;}
+
+#markupList tbody tr td:nth-last-child(4),
+#markupList tbody tr td:nth-last-child(3),
+#markupList tbody tr td:nth-last-child(2)										{font-family: 'Courier New', sans-serif;}
+
+/* nav */
+.nav.theme-bui a																{text-decoration: none;}
+.nav.theme-bui																	{margin: 0; padding: 0; list-style: none; border: 1px solid #d2d9e5; border-radius: .25em; background-color: #f0f2f5;}
+.nav.theme-bui li + li															{border-top: 1px solid #d2d9e5;}
+.nav.theme-bui li>a																{display: block; padding: 1em; font-weight: 300; font-size: 1.05em; line-height: 1; font-family: Helvetica, sans-serif; color: #333333;}
+
+/* data-table */
+.data-table.theme-bui															{font-size: .75em;}
+.data-table.theme-bui th														{padding: 8px; height: 28px; border: 1px solid #d2d9e5; background-color: #f0f2f5}
+.data-table.theme-bui td														{padding: 8px; height: 28px; border: 1px solid #d2d9e5;}
+
+
+

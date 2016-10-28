@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=640, user-scalable=yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Window Format Guide</title>
+<style type="text/css">
+/* 
+GLOBAL
+*/
+/* font */
+@font-face	{
+	font-family: 'HyundaiR';
+	src: url('fonts/HyundaiDeptOTFR.eot');
+	src: url('fonts/HyundaiDeptOTFR.woff') format('woff'), url('fonts/HyundaiDeptOTFR.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* frame */
+body						{margin: 0; font-family: 'HyundaiR'; font-size: 28px;}
+img							{width: 100%; vertical-align: top; border: 0 none;}
+#wrap						{overflow: hidden;}
+p							{margin: 0; padding: 0; text-align: left; line-height: 44px;}
+ul							{list-style: none; margin: 0; padding: 0;}
+h1							{margin: 0; padding: 0;}
+
+/* 
+CONTENT 
+*/
+/* header */
+#header-container			{height: 100px; background: url(images/header.png) no-repeat; background-position: 50% 0;}
+#header						{margin: 0 auto; width: 640px;}
+#header h1					{text-indent: -999em;}
+
+/* content */
+#content					{margin: 0 auto; padding: 0 1%; width: 640px; box-sizing: border-box;}
+#content div+div			{margin-top: 30px; border-top: 2px #333333 solid;}
+#content li					{margin: 10px 0;}
+#content li a				{display: block; line-height: 44px;}
+.content a					{display: block; text-decoration: none;}
+
+/* util-install */
+.content.program-install h3	{margin: 0; padding: 0;}
+.content.program-install ul	{margin: 1em 0;}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="header-container">
+		<!-- header -->
+		<div id="header">
+			<h1>Window Format Guide</h1>
+		</div>
+		<!-- //header -->
+	</div>
+	<div id="content-container">
+		<div id="content">
+			<div class="context">
+				<ul>
+				<li><a href="#windowReset">컴퓨터 포맷</a></li>
+				<li><a href="#programInstall">프로그램 설치</a></li>
+				</ul>
+			</div>
+			<div id="projectCreate" class="content window-reset">
+				<h2>컴퓨터 포맷</h2>
+				<p><strong>준비물</strong> 윈도우 운영체제 CD or USB, 백업드라이브</p>
+				<ol>
+				<li>
+					<p>포맷 하기 전에 백업해둘 파일들을 삭제하지 않을 드라이브 안이나 웹드라이브, 외장하드 등에 저장한다.</p>
+				</li>
+				<li>
+					<p>윈도우 운영체제를 담은 USB(CD일 경우 CD를 넣고 재부팅)를 본체 포트에 꼽아놓고 다시 시작을 누른다.</p>
+				</li>
+				<li>
+					<p>컴퓨터가 다시 시작하면서 처음 화면에 CMOS를 변경하기 위한 BIOS 접근 키를 알려주면 해당 키를 눌러 CMOS창에 접근한다.</p>
+				</li>
+				<li>
+					<p>하단과 같은 창이 뜨면 제일 먼저 Load Optimized Defaults를 눌러 설정을 초기화 해준다.</p>
+					<img src="images/window-format.jpg" alt="" />
+				</li>
+				<li>
+					<p>Standard CMOS Features에서 드라이브 수량과 종류, 사양 등을 파악한다. 추후 윈도우 설치 후 디스크 파티션을 나눌 때 필요하다.</p>
+					<img src="images/window-format.jpg" alt="" />
+				</li>
+				<li>
+					<p>Advanced BIOS Features에서 First Boot Device를 USB(운영체제가 CD면 CD-ROM으로 설정)로 바꿔주고, Second Boot Device는 CDROM으로 바꿔준다. Third Boot Device는 굳이 변경하지 않아도 된다. 설정이 완료됐으면 Hard Disk Boot Priority를 눌러 운영체제를 담은 USB나 CDROM을 가장 상위로 올려준다.</p>
+				</li>
+				<li>
+					<p>Full screen 부팅을 disabled로 바꾸어주고, Quick Boot은 Enabled로 바꾸어준 뒤 저장한다.</p>
+				</li>
+				<li>
+					<p>윈도우 설치화면이 나오면 Windows에서 모든 기능이 사용가능한 <strong>Ultimate</strong>을 설정해주고 다음 클릭, <strong>동의함</strong> 누르고 다음 클릭, <strong>사용자 지정(고급)</strong>을 누르고 다음 클릭, <strong>드라이브 옵션(고급)</strong> 클릭해준다.</p>
+				</li>
+				<li>
+					<p>디스크 파티션 나누는 부분인데, 총 3개 파티션으로 나누기를 권장한다. <strong>C:System</strong>(프로그램 설치 드라이브) <strong>D:Project</strong>(작업 드라이브) <strong>E:Data</strong>(백업 드라이브)로 나눈다. 윈도우 설치를 위한 <strong>C:시스템 예약 100MB</strong>는 남겨두어야 한다.</p>
+				</li>
+				<li>
+					<p>Windows 설치가 완료되면 사용자 이름을 입력하는 창이 뜬다. 이 때, 이름을 입력해버리면 이름은 관리자이지만 제약이 많은 허수아비 관리자가 된다. 진정한 관리자가 권한을 얻기 위해 <strong>Shift+F10</strong>을 눌러 콘솔창을 연다. 창이 뜨면 <strong>net user administrator /active :yes *</strong>을 입력해주고 엔터, 비밀번호를 입력하라고 뜨면 비밀번호를 입력한 뒤 <strong>taskkill /f /im msoobe.exe</strong>을 입력하여 강제종료 해준다. 대략 15초의 시간이 있는데 이 때, 포트에 꽂혀있는 USB를 뽑아야 한다.</p>
+				</li>
+				<li>
+					<p>시스템이 시작되면 <strong>윈도우&gt;제어판&gt;관리도구&gt;컴퓨터관리&gt;디스크관리</strong>에서 C, D, E드라이브 설정을 맞춰주고, 이름도 <strong>C:System, D:Project, E:Data</strong>로 바꾸어준다.</p>
+				</li>
+				</ol>
+				<a href="#header">상단으로&uarr;</a>
+			</div>
+			<div id="programInstall" class="content program-install">
+				<h2>프로그램 설치</h2>
+				<h3>형상관리</h3>
+				<ul>
+				<li><a href="https://git-scm.com/downloads" target="_blank" title="Git 다운로드">Git</a></li>
+				<li><a href="https://tortoisegit.org/" target="_blank" title="Tortoise Git 다운로드">Tortoise Git</a></li>
+				<li><a href="https://tortoisesvn.net/" target="_blank" title="Tortoise SVN 다운로드">Tortoise SVN</a></li>
+				<li><a href="https://github.com/" target="_blank" title="GitHub 다운로드">GitHub</a></li>
+				<li><a href="https://bitbucket.org/" target="_blank" title="Bitbucket 다운로드">Bitbucket</a></li>
+				</ul>
+				<h3>브라우저</h3>
+				<ul>
+				<li><a href="https://www.microsoft.com/ko-kr/download/internet-explorer.aspx" target="_blank" title="Internet Explorer 다운로드">Internet Explorer</a></li>
+				<li><a href="https://www.google.co.kr/chrome/browser/desktop/" target="_blank" title="Chrome 다운로드">Chrome</a></li>
+				<li><a href="https://www.mozilla.org/ko/firefox/new/" target="_blank" title="Mozilla Firefox 다운로드">Mozilla Firefox</a></li>
+				<li><a href="http://www.opera.com/ko" target="_blank" title="Opera 다운로드">Opera</a></li>
+				<li><a href="https://support.apple.com/ko_KR/downloads/safari" target="_blank" title="Safari 다운로드">Safari</a></li>
+				</ul>
+				<h3>생산성</h3>
+				<ul>
+				<li><a href="http://tomcat.apache.org/" target="_blank" title="Tomcat Apache 다운로드">Tomcat Apache</a></li>
+				<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" title="JAVA SE 다운로드">JAVA SE</a></li>
+				<li><a href="https://eclipse.org/downloads/packages/release/Neon/1" target="_blank" title="eclipse 다운로드">eclipse</a></li>
+				<li><a href="https://www.editplus.com/kr/download.html" target="_blank" title="Editplus 다운로드">Editplus</a></li>
+				<li><a href="https://filezilla-project.org/download.php?type=server" target="_blank" title="File Zilla 다운로드">File Zilla</a></li>
+				<li><a href="http://www.vmware.com/kr/products/workstation/workstation-evaluation.html" target="_blank" title="VMware Workstation 다운로드">VMware Workstation</a></li>
+				<li><a href="http://www.sandollcloud.com/download/" target="_blank" title="구름다리 다운로드">구름다리</a></li>
+				<li><a href="https://www.bandisoft.co.kr/bandizip/" target="_blank" title="반디집 다운로드">반디집</a></li>
+				<li><a href="http://www.adobe.com/kr/products/photoshop.html" target="_blank" title="Adobe Photoshop 시험판 다운로드">Adobe Photoshop</a></li>
+				<li><a href="http://www.adobe.com/kr/products/illustrator.html" target="_blank" title="Adobe Illustrator 시험판 다운로드">Adobe Illustrator</a></li>
+				<li><a href="https://get.adobe.com/kr/reader/" target="_blank" title="Adobe Acrobat Reader DC 다운로드">Adobe Acrobat Reader DC</a></li>
+				</ul>
+				<h3>유틸리티</h3>
+				<ul>
+				<li><a href="https://www.altools.co.kr/Download/ALSee.aspx" target="_blank" title="알씨 다운로드">알씨</a></li>
+				<li><a href="#" target="_blank" title="스티커 메모">스티커 메모</a></li>
+				<li><a href="#" target="_blank" title="캡쳐 도구">캡쳐 도구</a></li>
+				<li><a href="#" target="_blank" title="계산기">계산기</a></li> 
+				</ul>
+				<a href="#header">상단으로&uarr;</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
