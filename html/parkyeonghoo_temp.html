@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>수퍼블리셔 &#124; Portfolio</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="박영후 포트폴리오" />
+<meta name="Keywords" content="박영후, 박영후 포트폴리오, 수퍼블리셔, 뭉 포트폴리오, 뭉 작업물" />
+<link rel="stylesheet" href="../css/parkyeonghoo.css" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../js/portfolio.jquery.js"></script>
+<script id="dsq-count-scr" src="//supublisher-moong.disqus.com/count.js" async></script>
+<script>
+$(function(){
+	// Utility
+	if (typeof Object.create !== 'function') {
+		Object.create = function(obj){
+			function F() {};
+				F.prototype = obj;
+				return new F();
+			};
+		}
+		(function($, window, document, undefined) {
+			var Portfolio = {
+				init: function(options, elem) {
+					var self = this;
+					self.$elem = $(elem);
+					self.$thumnail = $(elem).find('.thumbnail');
+					// Options
+					self.options = $.extend({}, $.fn.portfolio.options, options || {});
+					// Set columns width
+					self.setColWidth();
+					// On click
+					self.$thumnail.click(function() {
+					self.showContent($(this));
+					});
+				},
+				setColWidth: function() {
+					var self = this;
+					if ($(window).width() > 970) {
+						var colWidth = ((100 / self.options.cols));
+						self.$elem.find('li').css('width', colWidth + '%');
+					}
+				},
+				getContentPos: function(clicked) {
+					var self = this,
+						thumbnails = self.$elem.find('.thumbnail'),
+						contentPos = null;
+					for (var i = 0; i <= thumbnails.length; i++) {
+						// Get href
+						var href = clicked.attr('href');
+						if (href == $(thumbnails[i]).attr('href')) {
+							// If its not the last thumb
+							if (i !== (thumbnails.length - 1)) {
+								var cols = self.options.cols;
+								if ($(window).width() <= 1200 && $(window).width() > 970) cols = 3;
+								else if ($(window).width() <= 970 && $(window).width() > 590) cols = 2;
+								else if ($(window).width() <= 590) cols = 1;
+								// thumb position
+								var thumbPos = i + 1;
+								// If there's no reminder
+								var contentPos = 0;
+								if (thumbPos % cols !== 0)
+									contentPos = (cols - (thumbPos % cols)) + thumbPos;
+								else // If we have a reminder
+									contentPos = thumbPos;
+								// Clean & Validate (This fixes weird bug when there's only 2 thumbs)
+								if (contentPos > thumbnails.length) {
+									contentPos = thumbnails.length;
+								}
+							} else {
+							contentPos = i + 1;
+							}
+						}
+					}
+				return contentPos;
+				},
+				showContent: function(thumbnail) {
+					var $href = thumbnail.attr('href'),
+						self = this,
+						contentPos = self.getContentPos(thumbnail);
+					// Remove existing stuff first
+					self.$elem.find('li a.thumbnail .active-arrow').remove();
+					self.$elem.find('li.content').remove();
+					// Add active arrow
+					thumbnail.append('<span class="active-arrow"></span>');
+					// Add content
+					var $portfolioContent = $($href);
+					var html = '<li class="content"><span class="close">&times;</span>' + $portfolioContent.html() + '</li>';
+					self.$elem.find('li:eq(' + (contentPos - 1) + ')').after(html);
+					// Animate
+					self.$elem.find('li')[self.options.transition](500);
+					$('html, body').animate({
+						scrollTop: self.$elem.find('li.content').offset().top -150
+					}, 700);
+					// Close content
+					self.$elem.find('.close').click(function(){
+					self.$elem.find('li a.thumbnail .active-arrow').remove();
+					self.$elem.find('li.content').remove();
+					});
+				}
+			};
+			$.fn.portfolio = function(options) {
+				return this.each(function(){
+				var portfolio = Object.create(Portfolio);
+					portfolio.init(options, this);
+				});
+			};
+			// Default options
+			$.fn.portfolio.options = {
+				cols: 4,
+				transition: 'slideDown'
+			};
+		})(jQuery, window, document);
+})
+$(document).ready(function() {
+	$('.thumbs').portfolio({
+		cols: 4,
+		transition: 'slideDown'
+	});
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1><img src="../images/logo.png" alt="박영후 포트폴리오 로고" /></h1>
+	</div>
+	<!-- content -->
+	<div id="content">
+		<!-- thumbs -->
+		<ul class="thumbs">
+		<li><a href="#thumb1" class="thumbnail" style="background-image: url('../images/thumb1.png')"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
+		<li><a href="#thumb2" class="thumbnail" style="background-image: url('../images/thumb2.jpg')"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
+		<li><a href="#thumb3" class="thumbnail" style="background-image: url('../images/thumb3.jpg')"><span class="category">Hyundai Department<br/>Web/Mobile Page</span></a></li>
+		<li><a href="#thumb4" class="thumbnail" style="background-image: url('../images/thumb4.jpg')"><span class="category">Hyundai Department<br/>Mobile Page</span></a></li>
+		<li><a href="#thumb5" class="thumbnail" style="background-image: url('../images/thumb5.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb6" class="thumbnail" style="background-image: url('../images/thumb6.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb7" class="thumbnail" style="background-image: url('../images/thumb7.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb8" class="thumbnail" style="background-image: url('../images/thumb8.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb9" class="thumbnail" style="background-image: url('../images/thumb9.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb10" class="thumbnail" style="background-image: url('../images/thumb10.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb11" class="thumbnail" style="background-image: url('../images/thumb11.jpg')"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb12" class="thumbnail" style="background-image: url('../images/thumb12.jpg')"><span class="category">Web development</span></a></li>
+		</ul>
+		<!-- //thumbs -->
+		<!-- thumbs-content -->
+		<div class="thumbs-content">
+			<div id="thumb1">
+				<p class="title"><a href="works/html/index_20160826.html" target="_blank" title="현대백화점 8월 26일자 등록 메인화면">Hyundai Department Main Page</a></p>
+				<p></p>
+			</div>
+			<div id="thumb2">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb3">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb4">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb5">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb6">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb7">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb8">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb9">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb10">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb11">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+			<div id="thumb12">
+				<p class="title">Web development</p>
+				<p>내 인생의 반의 반쯤 어쩌면 더 많이 내맘에 모래시곌 채워져 가만히 서있으면 멈출 것 같았던 시간은 동네 앞마당에 얼음 땡 난 얼음 심부름후 거스름돈 주머니에 조금 챙겨 나는 부자 부러울것 없는 나를 따돌려버리고 시간은 달아나버려 간절히 소망했던 신의 부탁마저 씹혀 이상했던 어른들의 표정도 내 얼굴에 화장실 거울속에 비춰진 내 모습에 놀란 저 꼬마 날 이상히 쳐다보네</p>
+			</div>
+		</div>
+		<!-- //thumbs-content -->
+	</div>
+	<!-- //content -->
+<!-- disqus -->
+<div id="disqus_thread">
+	<a href="http://foo.com/bar.html#disqus_thread">Link</a>.
+</div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+		s.src = '//supublisher-moong.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- //disqus -->
+</div>
+</body>
+</html>

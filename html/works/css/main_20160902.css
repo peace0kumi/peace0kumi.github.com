@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*
+ * GLOBAL
+ */
+
+/* bxSlider */
+.bx-wrapper																		{}
+.bx-wrapper .bx-viewport														{}
+.bx-wrapper .bx-viewport .bx-slider												{}
+.bx-wrapper .bx-viewport .bx-slider:after										{content: ''; display: block; clear: both; width: 0; height: 0; visiblity: hidden;}
+
+/* direction */
+.bx-wrapper .bx-controls .bx-controls-direction a								{}
+.bx-wrapper .bx-controls .bx-controls-direction a.bx-prev						{}
+.bx-wrapper .bx-controls .bx-controls-direction a.bx-next						{}
+.bx-wrapper .bx-controls .bx-controls-direction a.disabled						{display: none;}
+
+/* auto */
+.bx-wrapper .bx-controls .bx-controls-auto										{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item				{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item .bx-start		{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item .bx-stop		{}
+
+/* pager */
+.bx-wrapper .bx-controls .bx-pager												{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item								{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link				{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link.active			{}
+
+/* layout */
+body																			{position: relative; z-index: 0; background-color: #ffffff;}
+.wrapper																		{overflow: hidden;}
+
+/* button reset */
+.btn																			{vertical-align: middle;}
+input.btn,
+button.btn																		{overflow: visible; margin: 0; padding: 0; border: 0 none; cursor: pointer; background-color: transparent; -webkit-appearance: none;}
+a.btn																			{display: inline-block; text-decoration: none;}
+em.btn																			{display: inline-block; font-style: normal;}
+
+/* btn theme */
+.btn.more																		{overflow: hidden; height: 24px; width: 95px; line-height: 24px; background: url(../images/20160902/btn_more.png) no-repeat 0 0;}
+.btn.more span																	{position: relative; z-index: -1;}
+.btn.detail																		{overflow: hidden; height: 34px; width: 130px; line-height: 34px; text-indent: -999em;}
+.btn.detail span																{position: relative;}
+
+/* flexslider */
+.flexslide																		{position: relative;}
+.flexslide .flex-viewport .slides:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+
+.flexslide .flex-controls .flex-pagination										{text-align: center;}
+.flexslide .flex-controls .flex-pagination .flex-control-nav					{display: inline-block; vertical-align: top;}
+.flexslide .flex-controls .flex-pagination .flex-control-nav:after				{content: ''; display: block; clear: both; width: 0; height: 0;}
+.flexslide .flex-controls .flex-pagination .flex-control-nav li					{float: left;}
+.flexslide .flex-controls .flex-pagination .flex-control-nav li a				{display: block; width: 20px; height: 21px; overflow: hidden; text-indent: -999em; background-image: url(../images/20160902/bg_flexslider_controls.png); background-repeat: no-repeat;}
+.flexslide .flex-controls .flex-pagination .flex-control-nav li a.flex-active	{background-position: 0 -21px;}
+.flexslide .flex-controls .flex-pagination .flex-pauseplay						{display: inline-block; vertical-align: top; margin-left: 10px;}
+.flexslide .flex-controls .flex-pagination .flex-pauseplay a					{display: block; width: 20px; height: 21px; overflow: hidden; text-indent: -999em; background-image: url(../images/20160902/bg_flexslider_controls.png); background-repeat: no-repeat;}
+.flexslide .flex-controls .flex-pagination .flex-pauseplay a.flex-pause			{background-position: 0 -42px;}
+.flexslide .flex-controls .flex-pagination .flex-pauseplay a.flex-play			{background-position: 0 -64px;}
+.flexslide .flex-controls .flex-pagination										{position: absolute; z-index: 1; left: 0; right: 0; bottom: 36px; height: 0;}
+
+/*
+ * CONTENT
+ */
+/* main-visual */
+#content .main-visual															{position: relative; overflow: hidden; left: 50%; margin-left: -1300px; width: 2600px; height: 580px;}
+#content .main-visual .item														{height: 580px; overflow: hidden;}
+#content .main-visual .item .wrap												{position: relative; width: 100%; height: 580px; background-repeat: no-repeat; background-position: 0 0;}
+#content .main-visual .item .wrap .data-info									{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#content .main-visual .flex-direction a											{display: block; position: absolute; z-index: 1; top: 50%; margin-top: -55px; width: 50px; height: 111px; text-indent: -999em; overflow: hidden; background-image: url(../images/20160902/bg_flexslider_direction.png); background-repeat: no-repeat;}
+#content .main-visual .flex-direction a.flex-prev								{left: 50%; margin-left: -492px; background-position: 0 0;}
+#content .main-visual .flex-direction a.flex-next								{right: 50%; margin-right: -492px; background-position: 0 -111px;}
+
+/* chuseok-coupon */
+#content .main-visual .item.chuseok-coupon .wrap								{margin: 0 auto; width: 2600px; height: 580px; background-image: url(../images/20160902/visual_chuseok_01.png); background-position: 50% 50%; background-repeat: 0 0;}
+#content .main-visual .item.chuseok-coupon .button-area							{position: absolute; z-index: 1; left: 41.3%; bottom: 280px;}
+#content .main-visual .item.chuseok-coupon .button-area a.btn					{display: inline-block; text-decoration: none;}
+#content .main-visual .item.chuseok-coupon .button-area .btn					{overflow: hidden; width: 259px; height: 56px; text-indent: -999em; background-image: url(../images/20160902/visual_chuseok_02.png); background-repeat: no-repeat -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .main-visual .item.chuseok-coupon .button-area .btn:hover				{background-image: url(../images/20160902/visual_chuseok_02_02.png);}
+
+/* tilda-swinton */
+#content .main-visual .item.tilda-swinton .wrap									{background-color: #b3d3d7;}
+#content .main-visual .item.tilda-swinton .wrap .object-01 {
+	margin: 0 auto;
+	width: 1280px;
+	height: 680px;
+	background-image: url(../images/20160902/visual_tilda_swinton_01.png);
+	background-position: 50% 50%;
+	background-repeat: 0 0;
+
+	-webkit-animation-name: example;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	animation-name: example;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+#content .main-visual .item.tilda-swinton .wrap .object-02						{position: absolute; top: 0; left: 50%; margin-left: -640px; width: 1280px; height: 580px; background-image: url(../images/20160902/visual_tilda_swinton_02.png);}
+#content .main-visual .item.tilda-swinton .button-area							{position: absolute; z-index: 1; right: 37%; bottom: 190px;}
+#content .main-visual .item.tilda-swinton .button-area a.btn					{display: inline-block; text-decoration: none;}
+#content .main-visual .item.tilda-swinton .button-area .btn						{overflow: hidden; width: 259px; height: 56px; text-indent: -999em; background-image: url(../images/20160902/visual_tilda_swinton_03.png); background-repeat: no-repeat -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .main-visual .item.tilda-swinton .button-area .btn:hover				{background-image: url(../images/20160902/visual_tilda_swinton_03_02.png);}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+	0% {transform: translate(0,-100px);}
+	100% {transform: translate(0,0);}
+}
+
+/* Standard syntax */
+@keyframes example {
+	0% {transform: translate(0,-100px);}
+	100% {transform: translate(0,0);}
+}
+
+#content .main-visual .item.art-of-fashion .wrap								{background-image: url(../images/20160902/visual_art_of_fashion_01.png);}
+
+/* bxSlider */
+#content .great-son .photo-slide .bx-wrapper									{text-align: center;}
+#content .great-son .photo-slide .bx-wrapper .bx-viewport						{}
+#content .great-son .photo-slide .bx-wrapper .bx-viewport .bx-slider			{}
+#content .great-son .photo-slide .bx-wrapper .bx-viewport .bx-slider:after		{content: ''; display: block; clear: both; width: 0; height: 0; visiblity: hidden;}
+
+/* direction */
+#content .great-son .photo-slide .bx-direction									{}
+#content .great-son .photo-slide .bx-direction .slider-prev						{display: block; position: absolute; z-index: 30; bottom: 12px; left: 14px;}
+#content .great-son .photo-slide .bx-direction .slider-next						{display: block; position: absolute; z-index: 30; bottom: 12px; right: 14px;}
+
+/* shopping-news */
+#content .shopping-news															{position: relative;}
+#content .shopping-news h3														{margin: 72px 0 36px 0; text-align: center;}
+#content .shopping-news .item-display:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .shopping-news .item-display .item										{float: left; position: relative; width: 231px;}
+#content .shopping-news .item-display .item+.item								{margin-left: 20px;}
+#content .shopping-news .item-display .item.item-01 .wrap						{display: block; height: 452px; text-indent: -999em; background-image: url(../images/20160902/img_shopping_01.png); background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .shopping-news .item-display .item.item-01 .wrap:hover					{background-image: url(../images/20160902/img_shopping_01_02.png);}
+#content .shopping-news .item-display .item.item-02 .wrap						{display: block; height: 452px; text-indent: -999em; background-image: url(../images/20160902/img_shopping_02.png); background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .shopping-news .item-display .item.item-02 .wrap:hover					{background-image: url(../images/20160902/img_shopping_02_02.png);}
+#content .shopping-news .item-display .item.item-03 .wrap						{display: block; height: 452px; text-indent: -999em; background-image: url(../images/20160902/img_shopping_03.png); background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .shopping-news .item-display .item.item-03 .wrap:hover					{background-image: url(../images/20160902/img_shopping_03_02.png);}
+#content .shopping-news .item-display .item.item-04 .wrap						{display: block; height: 452px; text-indent: -999em; background-image: url(../images/20160902/img_shopping_04.png); background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .shopping-news .item-display .item.item-04 .wrap:hover					{background-image: url(../images/20160902/img_shopping_04_02.png);}
+#content .shopping-news .item-display .item .data-info							{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#content .shopping-news .aside													{position: absolute; top: 0; right: 0;}
+
+/* art-of-fashion */
+#content .art-of-fashion														{position: relative;}
+#content .art-of-fashion h3														{margin: 32px 0 36px 0; text-align: center;}
+#content .art-of-fashion .item													{position: relative; width: 984px; height: 556px;}
+#content .art-of-fashion .item .wrap											{display: block; height: 556px; background-image: url(../images/20160902/art_of_fashion_01.png); background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .art-of-fashion .item .wrap:hover										{background-image: url(../images/20160902/art_of_fashion_01_02.png);}
+#content .art-of-fashion .item .wrap .data-info									{display: block; overflow: hidden; visibility: hidden; margin: 0; padding: 0; width: 0; height: 0; line-height: 0; font-size: 0;}
+
+/* ehyundai-story */
+#content .ehyundai-story h3														{margin: 72px 0 36px 0; text-align: center;}
+#content .ehyundai-story h3 img													{vertical-align: top;}
+#content .ehyundai-story .item-display:after									{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .ehyundai-story .item-display .item									{float: left; position: relative;}
+#content .ehyundai-story .item-display .item+.item								{margin-left: 21px;}
+#content .ehyundai-story .item-display .item .wrap								{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail					{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail .image			{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail .image img		{display: block; width: 314px; height: 464px;}
+#content .ehyundai-story .item-display .item .wrap .data-info					{display: none; position: absolute; right: 0; bottom: 0; left: 0; height: 190px; background-color: red;}
+#content .ehyundai-story .item-display .item .wrap:hover .data-info				{display: block;}
+
+/* the-hyundai */
+#content .the-hyundai h3														{margin: 72px 0 36px 0; text-align: center;}
+#content .the-hyundai h3 img													{vertical-align: top;}
+#content .the-hyundai .item-display:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .the-hyundai .item-display .item										{float: left; width: 482px; height: 236px; overflow: hidden;}
+#content .the-hyundai .item-display .item+.item									{margin-left: 20px;}
+#content .the-hyundai .flex-direction											{display: none;}
+
+/* floating-banner */
+.floating-banner																{position: absolute; top: 730px; left: 50%; margin-left: 552px;}
+.floating-banner.fixed															{position: fixed; top: 180px;}
+.floating-banner a																{display: block;}
+.floating-banner a img															{vertial-align: top;}
