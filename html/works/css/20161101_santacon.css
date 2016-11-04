@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* 
+GLOBAL
+*/
+/* font */
+@font-face																										{font-family: 'HyundaiB'; src: url('./../fonts/HyundaiDeptOTFB.eot'); src: url('./../fonts/HyundaiDeptOTFB.woff') format('woff'), url('./../fonts/HyundaiDeptOTFB.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal;}
+@font-face																										{font-family: 'HyundaiR'; src: url('./../fonts/HyundaiDeptOTFR.eot'); src: url('./../fonts/HyundaiDeptOTFR.woff') format('woff'), url('./../fonts/HyundaiDeptOTFR.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal;}
+
+/* frame */
+html																											{-webkit-text-size-adjust: none; text-size-adjust: none;}
+body																											{margin: 0; padding: 0; background-color: #f2f2f2;}
+img																												{width: 100%; vertical-align: top; border: 0 none;}
+#wrap																											{overflow: hidden;}
+p																												{margin: 0; padding: 0;}
+ul																												{list-style: none; margin: 0; padding: 0;}
+
+/* form reset */
+.form																											{margin: 0; padding: 0; overflow: visible; max-width: 100%; border-radius: 0;}
+input[type=text].form,
+select.form																										{-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+/* submit-form */
+.submit-form.theme-a																							{margin: 0; padding: 0; border: 0 none;}
+.submit-form.theme-a legend																						{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; line-height: 0; font-size: 0;}
+.submit-form.theme-a .form-item+.form-item																		{margin-top: 15px;}
+.submit-form.theme-a .form-head																					{font-family: "HyundaiB", sans-serif; font-size: 16px;}
+.submit-form.theme-a .form-body																					{font-family: "HyundaiR", sans-serif;}
+.submit-form.theme-a .form-body input[type="text"],
+.submit-form.theme-a .form-body select																			{height: 37px; line-height: 37px; padding-left: 14px; font-size: 14px; color: #666666; font-family: "HyundaiB", sans-serif; box-sizing: border-box; border: 1px solid #666666; vertical-align: middle;}
+.submit-form.theme-a .form-body .form-docs																		{padding: 10px; border: 1px solid #eeeeee;}
+.submit-form.theme-a .form-body .form-docs .data-list															{margin: 0; padding: 0;}
+.submit-form.theme-a .form-body .form-docs .data-list li														{list-style: none; line-height: 15px; font-size: 11px; color: #666666;}
+.submit-form.theme-a .form-body .form-docs .para																{line-height: 15px; font-size: 11px; color: #666666;}
+.submit-form.theme-a .form-body .form-docs .para+.para															{margin-top: 5px;}
+.submit-form.theme-a .form-body .form-docs .data-list+.para														{margin-top: 5px;}
+.submit-form.theme-a .form-body .form-docs .para+.data-list														{margin-top: 5px;}
+.submit-form.theme-a .form-body .form-title																		{margin: 8px 0; line-height: 22px; font-size: 14px; color: #333333;}
+.submit-form.theme-a .form-body .form-area:after																{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.submit-form.theme-a .form-body .form-area .form																{float: left; width: 100%;}
+.submit-form.theme-a .form-body .form-area .form+.form															{margin-left: 4px;}
+
+/* info-board */
+.info-board.theme-a																								{font-family: "HyundaiR", sans-serif;}
+
+/* btn reset */
+a.btn																											{display: inline-block; text-decoration: none;}
+button.btn																										{overflow: visible; margin: 0; padding: 0; border: 0 none; background-color: transparent; -webkit-appearance: none;}
+
+/* btn theme-a */
+.btn.theme-a																									{font-family: "HyundaiB", sans-serif; width: 100%;}
+.btn.theme-a.small span																							{display: block; height: 48px; line-height: 48px; font-size: 16px;}
+.btn.theme-a.state-a span																						{text-align: center; background-color: #2e5e4b; color: #ffffff;}
+
+/* kakao */
+.kakao																											{padding-left: 1.3em; background-image: url(../images/20161101/kakaotalk.png); background-repeat: no-repeat; background-position: 0 0; -webkit-background-size: contain; background-size: contain;}
+
+/* option-select */
+.option-select:after																							{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.option-select label																							{display: block; color: #333333; font-size: 14px; line-height: 15px;}
+.option-select label:after																						{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.option-select label .text																						{float: left; line-height: inherit;}
+.option-select label .form																						{float: left; margin-right: 6px; width: 15px; height: 15px; vertical-align: middle; border: 1px solid #666666;}
+.option-select.type-a label																						{float: left;}
+.option-select.type-a label+label																				{margin-left: 15px;}
+
+/* 
+CONTENT
+*/
+/* header */
+#header h1																										{margin: 0;}
+
+/* santacon-userinfo */
+.santacon-userinfo .submit-form.theme-a																			{padding: 10px 10px; background-color: #ffffff;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-name:after,
+.santacon-userinfo .submit-form.theme-a .form-item.user-cellphone:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-name .form-head,
+.santacon-userinfo .submit-form.theme-a .form-item.user-cellphone .form-head									{float: left; width: 75px; line-height: 37px; font-size: 16px;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-name .form-head .wbr									{padding-left: 40px;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-name .form-body,
+.santacon-userinfo .submit-form.theme-a .form-item.user-cellphone .form-body									{float: left; width: calc(100% - 75px);}
+.santacon-userinfo .submit-form.theme-a .form-item.user-cellphone .para											{font-size: 11px; line-height: 20px; color: #666666;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-policy .form-body										{margin-top: 6px;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-agree .form-body										{margin-top: 8px;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-agree .form-head										{font-size: 14px; letter-spacing: -0.3px;}
+.santacon-userinfo .info-board.theme-a																			{margin-top: 15px; padding: 0 10px; text-align: center;}
+.santacon-userinfo .info-board.theme-a .para.title																{font-family: "HyundaiB", sans-serif; font-size: 16px; color: #333333;}
+.santacon-userinfo .info-board.theme-a .para+.para																{margin-top: 15px;}
+.santacon-userinfo .info-board.theme-a .para																	{font-size: 11px; line-height: 15px; color: #666666;}
+.santacon-userinfo .info-board.theme-a .para .strong															{font-family: "HyundaiB", sans-serif;}
+.santacon-userinfo .info-board.theme-a input[type="password"]													{height: 37px; line-height: 37px; margin-top: 10px; text-align: center; font-family: "HyundaiB", sans-serif; font-size: 14px; color: #666666; box-sizing: border-box; border: 1px solid #666666; vertical-align: middle;}
+.santacon-userinfo .button-area																					{margin-top: 15px; padding: 0 10px 15px; cursor: pointer;}
+/* scroll */
+.santacon-userinfo .submit-form.theme-a .form-item.user-policy .form-body .form-docs							{height: 60px; overflow-y: scroll; background-color: #ffffff;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-policy .form-body .form-docs::-webkit-scrollbar-track	{background-color: transparent;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-policy .form-body .form-docs::-webkit-scrollbar			{width: 4px;}
+.santacon-userinfo .submit-form.theme-a .form-item.user-policy .form-body .form-docs::-webkit-scrollbar-thumb	{border-radius: 2px; background-color: #b1b1b1;}
+
+/* santacon-coupon */
+.santacon-coupon .info-board.theme-a																			{margin-top: 10px; padding: 0 10px; text-align: center;}
+.santacon-coupon .info-board.theme-a .para																		{font-size: 14px; line-height: 22px;}
+.santacon-coupon .info-board.theme-a .para time																	{font-family: "HyundaiB", sans-serif;}
+.santacon-coupon .info-board.theme-a .para .em																	{font-family: "HyundaiB", sans-serif; text-decoration: underline;}
+.santacon-coupon .submit-form.theme-a																			{margin-top: 15px; padding: 0 10px;}
+.santacon-coupon .submit-form.theme-a .form-head,
+.santacon-coupon .submit-form.theme-a .form-body,
+.santacon-coupon .submit-form.theme-a input[type="text"]														{text-align: center; font-size: 16px; color: #333333;}
+.santacon-coupon .submit-form.theme-a input[type="text"]														{margin-top: 10px; background-color: rgba(204,204,204,0.5); border: 0 none; color: #767676;}
+.santacon-coupon .button-area																					{margin-top: 15px; padding: 0 10px 15px; cursor: pointer;}
+.santacon-coupon .data-list																						{margin-top: 10px; padding: 0 10px; text-align: center; font-family: "HyundaiB", sans-serif; font-size: 14px;}
+.santacon-coupon .data-list li																					{line-height: 17px;}
+
+/* santacon-download */
+.santacon-download .info-board.theme-a																			{margin-top: 16px; padding: 0 10px; text-align: center;}
+.santacon-download .info-board.theme-a .strong																	{font-family: "HyundaiB", sans-serif;}
+.santacon-download .info-board.theme-a .para																	{font-size: 14px; line-height: 18px;}
+.santacon-download .info-board.theme-a .para.title																{font-size: 16px;}
+.santacon-download .info-board.theme-a .para+.para																{margin-top: 16px;}
+.santacon-download .info-board.theme-a .para .strong															{font-family: "HyundaiB", sans-serif;}
+.santacon-download .button-area																					{padding: 0 10px; margin-top: 16px; cursor: pointer;}

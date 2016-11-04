@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=640, user-scalable=yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>중동점 웨딩페어 사전예약 페이지</title>
+<style type="text/css">
+/* font */
+@font-face																{font-family: 'HyundaiB'; src: url('./../fonts/HyundaiDeptOTFB.eot'); src: url('./../fonts/HyundaiDeptOTFB.woff') format('woff'), url('./../fonts/HyundaiDeptOTFB.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal;}
+@font-face																{font-family: 'HyundaiR'; src: url('./../fonts/HyundaiDeptOTFR.eot'); src: url('./../fonts/HyundaiDeptOTFR.woff') format('woff'), url('./../fonts/HyundaiDeptOTFR.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal;}
+
+/* frame */
+body																	{margin: 0;}
+img																		{vertical-align: top; border: 0 none;}
+#wrap																	{overflow: hidden;}
+p																		{margin: 0; padding: 0;}
+
+/* form reset */
+.form																	{margin: 0; padding: 0; overflow: visible; max-width: 100%; border-radius: 0;}
+input[type=text].form,
+select.form																{-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+/* submit-form */
+.submit-form.theme-a													{margin: 0; padding: 0; border: 0 none;}
+.submit-form.theme-a legend												{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; line-height: 0; font-size: 0;}
+.submit-form.theme-a .form-item+.form-item								{margin-top: 30px;}
+.submit-form.theme-a .form-head											{font-family: "HyundaiB", sans-serif; font-size: 28px;}
+.submit-form.theme-a .form-head+.form-body								{margin-top: 10px;}
+.submit-form.theme-a .form-body											{font-family: "HyundaiR", sans-serif;}
+.submit-form.theme-a .form-body input[type="text"],
+.submit-form.theme-a .form-body select,
+.submit-form.theme-a .form-body option									{height: 73px; line-height: 73px; padding-left: 28px; font-size: 28px; color: #666666; font-family: "HyundaiB", sans-serif; box-sizing: border-box; border: 1px solid #828282; vertical-align: middle;}
+.submit-form.theme-a .form-body select									{background: url(./../images/20160913/btn_more.png) no-repeat 97% 50%;}
+.submit-form.theme-a .form-body .form-docs								{padding: 20px; border: 2px solid #eeeeee;}
+.submit-form.theme-a .form-body .form-docs .data-list					{margin: 0; padding: 0;}
+.submit-form.theme-a .form-body .form-docs .data-list li				{list-style: none; line-height: 30px; font-size: 22px; color: #666666;}
+.submit-form.theme-a .form-body .form-docs .para						{line-height: 30px; font-size: 22px; color: #666666;}
+.submit-form.theme-a .form-body .form-docs .para+.data-list				{margin-top: 20px;}
+.submit-form.theme-a .form-body .form-title								{margin: 16px 0; line-height: 44px; font-size: 28px; color: #333333;}
+.submit-form.theme-a .form-body .form-area:after						{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.submit-form.theme-a .form-body .form-area .form						{float: left;}
+.submit-form.theme-a .form-body .form-area .form+.form					{margin-left: 8px;}
+
+/* em */
+.em.state-d																{color: #a98f61;}
+
+/* btn reset */
+a.btn																	{display: inline-block; text-decoration: none;}
+button.btn																{overflow: visible; margin: 0; padding: 0; border: 0 none; background-color: transparent; -webkit-appearance: none;}
+
+/* btn theme-a */
+.btn.theme-a															{font-family: "HyundaiB", sans-serif;  width: 285px;}
+.btn.theme-a.small span													{display: block; height: 95px; line-height: 95px; font-size: 28px;}
+.btn.theme-a.state-a span												{text-align: center; background-color: #b4996b; color: #ffffff;}
+.btn.theme-a.state-b span												{text-align: center; background-color: #222222; color: #ffffff;}
+
+/* 
+content
+*/
+/* header */
+#header-container														{position: relative; height: 626px; background-image: url(./../images/20160913/head_01.png); background-repeat: no-repeat; background-position: 50% 0;}
+#header																	{margin: 0 auto; width: 640px;}
+#header h1																{margin: 0;}
+#header .summary														{margin: 0;}
+
+/* content */
+#content-container														{margin-top: 40px;}
+#content																{margin: 0 auto; width: 640px; padding-bottom: 35px;}
+#content .content-primary												{margin: 0 auto; padding: 0 27px;}
+#content .content-primary h2											{margin: 0;}
+
+/* button-area */
+.fair-reservation .button-area											{margin-top: 40px;}
+.fair-reservation .button-area:after									{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.fair-reservation .button-area .btn										{float: left; font-family: "HyundaiB", sans-serif; }
+.fair-reservation .button-area .btn+.btn								{margin-left: 14px;}
+
+/* option-select */
+.option-select:after													{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.option-select label													{display: block; color: #333333; font-size: 28px; line-height: 30px;}
+.option-select label:after												{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.option-select label .text												{float: left; line-height: inherit;}
+.option-select label .form												{float: left; margin-right: 12px; width: 30px; height: 30px; vertical-align: middle; border: 1px solid #666666;}
+.option-select.type-a label												{float: left;}
+.option-select.type-a label+label										{margin-left: 16px;}
+.option-select.type-b label+label										{margin-top: 16px;}
+
+/* notice-list */
+.notice-list															{margin: 24px 0 0 0; padding: 0;}
+.notice-list li															{position: relative; padding-left: 28px; list-style: none; line-height: 40px; font-family: "HyundaiR", sans-serif; font-size: 24px; color: #666666;}
+.notice-list li:before													{content: '*'; display: block; position: absolute; top: 0; left: 0; line-height: 54px; font-size: 40px; font-family: arial;}
+
+/* pop-up */
+.fair-popup																{display: none; position: fixed; z-index: 10; bottom: 50px; left: 50%; width: 540px; margin-left: -295px; padding: 40px 25px; background-color: #ffffff;}
+.fair-popup .btn.close													{display: block; position: absolute; top: 45px; right: 25px;}
+.fair-popup .btn span													{display: block; height: 95px; line-height: 95px; text-align: center; font-family: "HyundaiB", sans-serif; font-size: 28px; color: #ffffff; white-space: nowrap;}
+.fair-popup .popup-content h2											{margin: 0; padding-bottom: 10px; font-family: "HyundaiB", sans-serif; font-size: 32px; color: #333333; border-bottom: 5px #797979 solid;}
+.fair-popup .popup-content .popup-details								{margin: 50px 0;}
+.fair-popup .popup-content .popup-details .strong						{font-family: "HyundaiB", sans-serif;  font-size: 32px; color: #333333; text-align: center; line-height: 40px;}
+.fair-popup .popup-content .popup-details .text							{font-family: "HyundaiR", sans-serif; font-size: 26px; color: #333333;}
+.fair-popup .popup-content.apply-views-not-found .popup-details .text	{margin-top: 40px; text-align: center; line-height: 34px;}
+.fair-popup .button-area												{margin-top: 50px; text-align: center;}
+.fair-popup .button-area .btn+.btn										{margin-left: .5em;}
+.fair-popup .button-area .btn.medium.confirm							{width: 285px; height: 95px; background-color: #222222;}
+.fair-popup .button-area .btn.small.confirm								{width: 220px; height: 95px; background-color: #b4996b;}
+.fair-popup .button-area .btn.small.cancel								{width: 220px; height: 95px; background-color: #222222;}
+.fair-popup-mask														{display: none; position: fixed; z-index: 0; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.5);}
+.layer-popup-active .fair-popup-mask									{display: block;}
+.layer-popup-active #applyDetail										{display: block;}
+</style>
+<script src="./../js/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e){
+		//신청하기 알림창 띄우기
+		$(".button-area #applyBtn").click(function(e){
+			alert('신청 완료되었습니다.')
+			//오류시
+			/* alert('신청하신 스페셜쇼 신청이 선착순 접수 종료되었습니다. 양해 부탁 드립니다.') */
+		});
+		
+		$('#confirmBtn').click(function() {
+			$('body').addClass('layer-popup-active');
+		});
+		
+		$('.close-popup').each(function() {
+			$(this).click(function() {
+				$('body').removeClass('layer-popup-active');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header-container">
+		<!-- header -->
+		<div id="header">
+			<h1><img src="./../images/20160913/head_02.png" alt="현대 프리미엄 웨딩페어 기간: 10.7(금)~10.9(일) 장소: 중동점 9층 문화홀(가네트홀)" /></h1>
+			<p class="summary"><img src="./../images/20160913/head_03.png" alt="현대백화점이 제안하는 프리미엄 웨딩의 모든 것 지금 바로 무료초대 신청하세요." /></p>
+		</div>
+		<!-- //header -->
+	</div>
+	<div id="content-container">
+		<!-- content -->
+		<div id="content" class="fair-reservation" id="fairReservation">
+			<!-- content-primary -->
+			<div class="content-primary">
+				<form action="#">
+					<!-- submit-form -->
+					<fieldset class="submit-form theme-a">
+						<legend>중동점 웨딩페어 신청</legend>
+						<div class="form-item user-name">
+							<div class="form-head">
+								<label for="fullName" class="label">성명</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<input type="text" id="fullName" maxlength="#" class="form" style="width: 100%;"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-item user-cellphone">
+							<div class="form-head">
+								<label for="cellphoneID" class="label">휴대폰</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<select id="cellphoneID" title="통신사 식별번호 선택" class="form" style="width: 165px;">
+										<option selected="selected">선택</option>
+										<option>010</option>
+										<option>011</option>
+										<option>016</option>
+										<option>017</option>
+										<option>018</option>
+										<option>019</option>
+										<option>0505</option>
+									</select>
+									<input type="text" id="cellphoneNumber" title="휴대전화 번호 입력" placeholder="&ldquo;-&rdquo; 제외하고 입력해주세요." maxlength="8" class="form" style="width: 413px;" />
+								</div>
+							</div>
+						</div>
+						<div class="form-item user-gender">
+							<div class="form-head">
+								<label for="genderSelect" class="label">성별</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<select id="genderSelect" title="성별 선택" class="form" style="width: 100%;">
+										<option selected="selected">남/여</option>
+										<option>남자</option>
+										<option>여자</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-item wedding-day">
+							<div class="form-head">
+								<label for="weddingDay" class="label">결혼예정일</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<select id="weddingDay" class="form" style="width: 100%;">
+									<option>2016</option>
+									<option>2017</option>
+									<option>2018</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-item fair-day">
+							<div class="form-head">
+								<label for="fairDay" class="label">웨딩페어 방문날짜</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<select id="fairDay" class="form" style="width: 100%;">
+									<option selected="selected">2016년 10월 7일</option>
+									<option>2016년 10월 8일</option>
+									<option>2016년 10월 9일</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 2016-09-20 수정 -->
+						<div class="form-item show-select">
+							<div class="form-head">
+								<span class="label em state-d">10.8(토) 단 하루 Special Show 참가 신청(선택)</span>
+							</div>
+							<div class="form-body">
+								<div class="option-select type-b">
+									<label for="showDetail"><input type="checkbox" id="showDetail" checked="checked" class="form" /> <span class="text">드레스설명회 : 2016.10.8(토) 오후 4시</span></label>
+									<label for="showSpecific"><input type="checkbox" id="showSpecific" class="form" /> <span class="text">메이크업쇼 : 2016.10.8(토) 오후 3시</span></label>
+								</div>
+							</div>
+						</div>
+						<!-- //2016-09-20 수정 -->
+						
+						<!-- 2016-09-20 추가 -->
+						<div class="form-item apply-person">
+							<div class="form-head">
+								<label for="applyPerson" class="label">신청인원</label>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<select id="applyPerson" class="form" style="width: 100%;">
+										<option>1명</option>
+										<option>2명</option>
+										<option>3명</option>
+										<option>4명</option>
+										<option>5명</option>
+										<option>6명</option>
+										<option>7명</option>
+										<option>8명</option>
+										<option>9명</option>
+										<option>10명</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<label for="personalInfo" class="label">개인정보 수집 동의</label>
+							</div>
+							<div class="form-body">
+								<div class="form-docs">
+									<ul class="data-list">
+									<li>수집주체 : 현대백화점</li>
+									<li>수집항목 : 성명, 연락처, 성별, 결혼예정일</li>
+									<li>수집목적 : 웨딩페어 예약 확인 연락</li>
+									<li>보유 및 이용기간 : 웨딩페어 이벤트 종료시까지 폐기</li>
+									</ul>
+								</div>
+								<p class="form-title">개인정보 수집약관에 동의하십니까?(필수)</p>
+								<div class="option-select type-a">
+									<label for="agree"><input type="radio" name="radio-01" class="form" id="agree" checked="checked" /> <span class="text">동의</span></label>
+									<label for="disagree"><input type="radio" name="radio-01" class="form" id="disagree" /> <span class="text">동의안함</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<label for="thirdpersonInfo" class="label">제3자 정보제공 동의</label>
+							</div>
+							<div class="form-body">
+								<div class="form-docs">
+									<p class="para">주식회사 현대백화점은 현대프리미엄 웨딩페어의 상담 예약 서비스를 위해 아래와 같은 정보를 제공합니다.</p>
+									<ul class="data-list">
+									<li>제공받는 자 : 웨딩페어 참여브랜드 &lsquo;차지연웨딩&rsquo;</li>
+									<li>수집항목 : 성명, 연락처, 성별, 결혼예정일</li>
+									<li>수집목적 : 웨딩페어 웨딩 확인 연락</li>
+									<li>보유 및 이용기간 : 웨딩페어 이벤트 종료시까지 보관 후 폐기</li>
+									</ul>
+									<p class="para">※ 동의 거부 시 온라인 상담 예약 신청이 불가합니다.</p>
+								</div>
+								<p class="form-title">제3자 정보제공(상담 브랜드 매장)에 동의하십니까?(선택)</p>
+								<div class="option-select type-a">
+									<label for="agree2"><input type="radio" name="radio-02" class="form" id="agree2" checked="checked" /> <span class="text">동의</span></label>
+									<label for="disagree2"><input type="radio" name="radio-02" class="form" id="disagree2" /> <span class="text">동의안함</span></label>
+								</div>
+							</div>
+							<ul class="notice-list">
+							<li>개인정보는 상담예약 연락 이외에는 일절 사용되지 않습니다.</li>
+							<li>무료초대 신청 후 브랜드 매장에서 유선으로 연락드립니다.</li>
+							<li>제3자 정보제공(상담 브랜드 매장) 동의 거부 시 초대신청은 가능하나 TM서비스 이용이 불가합니다.</li>
+							</ul>
+						</div>
+						<!-- //2016-09-20 추가 -->
+						<div class="button-area">
+							<a href="#applyDetail" id="applyBtn" class="btn theme-a state-a small"><span>신청하기</span></a>
+							<a href="#applyConfirm" id="confirmBtn" class="btn theme-a state-b small"><span>신청 확인하기</span></a>
+						</div>
+					</fieldset>
+					<!-- //submit-form -->
+				</form>
+			</div>
+			<!-- //content-primary -->
+		</div>
+		<!-- //content -->
+		
+		<!-- layer-popup -->
+		<div class="fair-popup" id="applyDetail">
+			<!-- 신청 확인하기 -->
+			<div class="popup-content apply-views" id="applyViews" style="display: block;">
+				<h2>예약 신청 조회하기</h2>
+				<div class="popup-details">
+					<p class="text">신청시 입력하신 핸드폰 번호를 입력해주세요.</p>
+				</div>
+				<form action="#">
+					<fieldset class="submit-form theme-a">
+						<legend>신청시 입력한 휴대폰 번호 확인</legend>
+							<div class="form-item user-cellphone">
+								<div class="form-head">
+									<label for="cellphoneID" class="label">휴대폰</label>
+								</div>
+								<div class="form-body">
+									<div class="form-area">
+										<select id="cellphoneID" title="통신사 식별번호 선택" class="form" style="width: 165px;">
+											<option selected="selected">선택</option>
+											<option>010</option>
+											<option>011</option>
+											<option>016</option>
+											<option>017</option>
+											<option>018</option>
+											<option>019</option>
+											<option>0505</option>
+										</select>
+										<input type="text" id="cellphoneNumber" title="휴대전화 번호 입력" placeholder="&ldquo;-&rdquo; 제외하고 입력해주세요." maxlength="8" class="form" style="width: 365px;" />
+									</div>
+								</div>
+							</div>
+					</fieldset>
+				</form>
+				<div class="button-area">
+					<button type="submit" id="confirmPopup" class="btn medium confirm close-popup"><span>확인</span></button>
+				</div>
+			</div>
+			<!-- //신청 확인하기 -->
+			
+			<!-- 미등록 번호 등 조회 불가시 -->
+			<div class="popup-content apply-views-not-found" id="applyViewsNotFound" style="display: none;">
+				<h2>예약 신청 조회하기</h2>
+				<div class="popup-details">
+					<p class="strong">해당 번호로 등록된 내역이 없습니다.<br/>번호를 다시 확인후 입력해주세요.</p>
+					<p class="text">계속적인 조회 오류시 아래번호로 문의해주세요.<br/>02-3416-5822</p>
+				</div>
+				<div class="button-area">
+					<button type="submit" class="btn medium confirm close-popup"><span>확인</span></button>
+				</div>
+			</div>
+			<!-- //미등록 번호 등 조회 불가시 -->
+			
+			<!-- 예약완료 정상시 -->
+			<div class="popup-content apply-eservation" id="applyEservation" style="display: none;">
+				<h2>예약 신청하기</h2>
+				<div class="popup-details">
+					<p class="strong">이현대 고객님</p>
+					<p class="strong">10월 7일(금) 예약 완료 되었습니다.</p>
+				</div>
+				<div class="button-area">
+					<button type="submit" class="btn small confirm close-popup"><span>확인</span></button>
+					<button type="submit" class="btn small cancel"><span>예약취소</span></button>
+				</div>
+			</div>
+			<!-- //예약완료 정상시 -->
+			
+			<!-- 예약완료 정상시 예약취소 버튼 클릭시 -->
+			<div class="popup-content apply-eservation-cancel" id="applyEservationCancel" style="display: none;">
+				<h2>예약 취소하기</h2>
+				<div class="popup-details">
+					<p class="strong">예약 취소가</p>
+					<p class="strong">완료 되었습니다.</p>
+				</div>
+				<div class="button-area">
+					<button type="submit" class="btn small cancel close-popup"><span>확인</span></button>
+				</div>
+			</div>
+			<!-- //예약완료 정상시 예약취소 버튼 클릭시 -->
+			
+			<!-- 닫기버튼 -->
+			<button type="button" id="closePopup" class="btn close close-popup"><img src="./../images/20160913/btn_close.png" alt="닫기" /></button>
+			<!-- //닫기버튼 -->
+		</div>
+		<!-- layer-popup -->
+	</div>
+	<div id="fairpopupMask" class="fair-popup-mask"></div>
+</div>
+</body>
+</html>
