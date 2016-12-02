@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* 
 GLOBAL
 */
@@ -33,7 +35,7 @@ GLOBAL
 .company-intro .about_enm li.ani										{background: url(../images/20160301/bg_company_about_ani.jpg) no-repeat 0 0;}
 
 /* company-vision */
-.company-vision .company_area .vision									{padding-top: 110px; background: url(../images/20160301/bg_company_vision.gif) no-repeat 490px 180px;}
+.company-vision .company_area .vision									{padding: 110px 0; background: url(../images/20160301/bg_company_vision.gif) no-repeat 490px 180px;}
 .company-vision .company_area .vision h2								{width: 545px; height: 202px; font-size: 34px; display: inline-block; border-bottom: 1px #e1e1e1 solid;}
 .company-vision .company_area .vision img								{padding-top: 20px;}
 .company-vision .company_area .vision li								{margin-top: 35px;}
@@ -64,26 +66,27 @@ GLOBAL
 .company-history .history_table .history_table_ul .month .num span		{display: inline-block; font-size: 14px; vertical-align: middle; background-image: none;}
 
 /* company-ceo */
-.company-ceo .ceo														{background: url(../images/20160301/bg_company_ceo.jpg) no-repeat 100% 110px;}
+.company-ceo .ceo														{padding-bottom: 150px; background: url(../images/20160301/bg_company_ceo.jpg) no-repeat 100% 110px;}
 .company-ceo .ceo h2													{padding-top: 105px; width: 545px; font-size: 26px; color: #222222; line-height: 1.4;}
 .company-ceo .ceo p														{width: 450px; font-size: 12px; color: #666666; line-height: 1.7; margin-top: 30px;}
 
 /* company-ir */
-.company-ir .ir_top														{padding-top: 105px; height: 52px; border-bottom: 1px solid #e4e4e4;}
+.company-ir .ir															{padding-bottom: 150px;}
+.company-ir .ir_top														{padding-top: 30px; height: 52px;}
 .company-ir .ir_top h2													{width: 545px; font-size: 26px; color: #222222; line-height: 1.4;}
-.company-ir .ir_top .ir_menu											{position: absolute; top: 140px; right: 0; height: 32px;}
+.company-ir .ir_top .ir_menu											{position: absolute; top: 123px; right: 0; height: 32px;}
 .company-ir .ir_top .ir_menu li											{float: left; font-size: 15px;}
 .company-ir .ir_top .ir_menu li a										{display: block; position: relative; padding: 0 20px; height: 32px; color: #666666; line-height: 32px;}
 .company-ir .ir_top .ir_menu li.ir_menu_on								{background: url(../images/20160301/bg_history_tab_rgt.gif) no-repeat 100% 0;}
 .company-ir .ir_top .ir_menu li.ir_menu_on a							{color: #ffffff;}
-.company-ir .in_ir_menu													{height: 40px; background: #f6f6f6; text-align: center;}
+.company-ir .in_ir_menu													{position: absolute; top: 170px; right: 0; left: 0; height: 40px; background: #f6f6f6; text-align: center; border-top: 1px solid #e4e4e4;}
 .company-ir .in_ir_menu li												{display: inline-block; text-align: center; line-height: 40px; padding: 0 20px; font-size: 12px; font-weight: bold; color: #666666; background: url(../images/20160301/bg_tab_bar.gif) no-repeat 0 13px;}
 .company-ir .in_ir_menu li:first-child									{background: none;}
 .company-ir .in_ir_menu a												{color: #666666; height: 40px;}
 .company-ir .in_ir_menu li.in_ir_menu_on span							{display: inline-block; border-bottom: 1px solid #9933cc;}
-.company-ir .ir_load													{width: 100%; height: 478px; padding-top: 35px;}
+.company-ir .ir_load													{width: 100%; height: 478px; padding-top: 100px;}
 .company-ir .ir_load h4													{font-size: 19px;}
-.company-ir .ir_load .ir_table											{position: relative; top: 20px; width: 98%; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4; table-layout: fixed; font-size: 12px; color: #666666;}
+.company-ir .ir_load .ir_table											{position: relative; top: 0; width: 98%; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4; table-layout: fixed; font-size: 12px; color: #666666;}
 .company-ir .ir_load .ir_table th,
 .company-ir .ir_load .ir_table td										{padding: 20px 0 20px 0;}
 .company-ir .ir_load .ir_table th										{padding-left: 30px; text-align: left; width: 65%;}
@@ -91,7 +94,7 @@ GLOBAL
 .company-ir .ir_load .ir_table td>a										{display: block; height: 17px; padding: 7px 0 0 22px; position: relative; right: -200px; background: url(../images/20160301/bg_file_rgt_m.png) no-repeat 0 45%;}
 .company-ir .ir_load .ir_table td>a:hover								{display: block; height: 17px; padding: 7px 0 0 22px; position: relative; right: -200px; background: url(../images/20160301/bg_file_rgt_mw.jpg) no-repeat 0 45%;}
 .company-ir .ir_load .ir_table strong									{display: block; height: 17px; padding: 7px 0 0 22px; position: absolute; top: 0px; left: 14px; font-size: 11px; color: #666666; letter-spacing: -1px; background: url(../images/20160301/ico_xls.gif) no-repeat 0 50%;}
-.company-ir .ir_s_box													{position: absolute; top: 259px; right: 10px; display: inline-block; width: 111px; height: 28px; margin-right: 10px; padding: 2px 2px 2px 5px; border: 1px #e4e4e4 solid; border-radius: 2.5px; text-align: left;}
+.company-ir .ir_s_box													{position: absolute; top: 280px; right: 10px; display: inline-block; width: 111px; height: 28px; margin-right: 10px; padding: 2px 2px 2px 5px; border: 1px #e4e4e4 solid; border-radius: 2.5px; text-align: left;}
 .company-ir .ir_s_box select											{border: 0; font-size: 12px; color: #666666; vertical-align: top; display: inline-block; padding: 2px 2px 2px 5px; width: 111px; height: 28px; position: absolute; right: 20px; top: 264px; color: #888888; outline: none; text-decoration: none; font-size: 12px; background-color: #ffffff;}
 .company-ir .ir_s_box .ir_s_selector									{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 107px; height: 21px; background: #fff url(../images/20160301/ico_arr_bot.gif) no-repeat 97px 12px; padding: 7px 0 0 4px; font-size: 12px; color: #888888;}
 .company-ir .ir_s_box .ir_s_holder										{z-index: 250; position: relative; width: 111px; height: 28px;}

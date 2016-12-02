@@ -13,12 +13,11 @@
 <meta name="Description" content="박영후 포트폴리오" />
 <meta name="Keywords" content="박영후, 박영후 포트폴리오, 수퍼블리셔, 뭉 포트폴리오, 뭉 작업물" />
 <link rel="stylesheet" href="../css/parkyeonghoo.css" />
-<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="../js/portfolio.jquery.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="http://peace0kumi.dothome.co.kr/parkyeonghoo/images/favicon.ico" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script id="dsq-count-scr" src="//supublisher-moong.disqus.com/count.js" async></script>
 <script>
-$(function(){
+jQuery(function(){
 	// Utility
 	if (typeof Object.create !== 'function') {
 		Object.create = function(obj){
@@ -32,7 +31,7 @@ $(function(){
 				init: function(options, elem) {
 					var self = this;
 					self.$elem = $(elem);
-					self.$thumnail = $(elem).find('.thumbnail');
+					self.$thumnail = $(elem).find('.thumbnail'); 
 					// Options
 					self.options = $.extend({}, $.fn.portfolio.options, options || {});
 					// Set columns width
@@ -115,7 +114,7 @@ $(function(){
 			};
 			// Default options
 			$.fn.portfolio.options = {
-				cols: 4,
+				cols: 3,
 				transition: 'slideDown'
 			};
 		})(jQuery, window, document);
@@ -131,24 +130,24 @@ $(document).ready(function() {
 <body>
 <div id="wrap">
 	<div id="header">
-		<h1><img src="../images/logo.png" alt="박영후 포트폴리오 로고" /></h1>
+		<h1><img src="http://peace0kumi.dothome.co.kr/parkyeonghoo/images/logo.png" alt="박영후 포트폴리오 로고" /></h1>
 	</div>
 	<!-- content -->
 	<div id="content">
 		<!-- thumbs -->
 		<ul class="thumbs">
-		<li><a href="#thumb1" class="thumbnail" style="background-image: url('../images/thumb9.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb2" class="thumbnail" style="background-image: url('../images/thumb10.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb3" class="thumbnail" style="background-image: url('../images/thumb11.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb4" class="thumbnail" style="background-image: url('../images/thumb12.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb5" class="thumbnail" style="background-image: url('../images/thumb5.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb6" class="thumbnail" style="background-image: url('../images/thumb6.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb7" class="thumbnail" style="background-image: url('../images/thumb7.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb8" class="thumbnail" style="background-image: url('../images/thumb8.jpg')"><span class="category">Web development</span></a></li>
-		<li><a href="#thumb9" class="thumbnail" style="background-image: url('../images/thumb9.png')"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
-		<li><a href="#thumb10" class="thumbnail" style="background-image: url('../images/thumb10.png')"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
-		<li><a href="#thumb11" class="thumbnail" style="background-image: url('../images/thumb11.png')"><span class="category">Hyundai Department<br/>Web/Mobile Page</span></a></li>
-		<li><a href="#thumb12" class="thumbnail" style="background-image: url('../images/thumb12.png')"><span class="category">Hyundai Department<br/>Mobile Page</span></a></li>
+		<li><a href="#thumb1" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb9.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb2" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb10.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb3" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb11.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb4" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb12.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb5" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb5.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb6" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb6.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb7" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb7.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb8" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb8.jpg)"><span class="category">Web development</span></a></li>
+		<li><a href="#thumb9" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb9.png)"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
+		<li><a href="#thumb10" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb10.png)"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
+		<li><a href="#thumb11" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb11.png)"><span class="category">Hyundai Department<br/>Web/Mobile Page</span></a></li>
+		<li><a href="#thumb12" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb12.png)"><span class="category">Hyundai Department<br/>Mobile Page</span></a></li>
 		</ul>
 		<!-- //thumbs -->
 		<!-- thumbs-content -->
@@ -210,15 +209,6 @@ $(document).ready(function() {
 	<a href="http://foo.com/bar.html#disqus_thread">Link</a>.
 </div>
 <script>
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
 (function() { // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');
 		s.src = '//supublisher-moong.disqus.com/embed.js';
