@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>수퍼블리셔 &#124; Portfolio</title>
+<title>박영후 &#124; Portfolio</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta http-equiv="x-rim-auto-match" content="none" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
@@ -11,215 +11,121 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="Description" content="박영후 포트폴리오" />
-<meta name="Keywords" content="박영후, 박영후 포트폴리오, 수퍼블리셔, 뭉 포트폴리오, 뭉 작업물" />
-<link rel="stylesheet" href="../css/parkyeonghoo.css" />
-<link rel="shortcut icon" type="image/x-icon" href="http://peace0kumi.dothome.co.kr/parkyeonghoo/images/favicon.ico" />
+<meta name="Keywords" content="박영후, 박영후 포트폴리오, 박영후 작업물, 수퍼블리셔, 뭉 포트폴리오, 뭉 작업물" />
+<link rel="stylesheet" href="../css/main.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script id="dsq-count-scr" src="//supublisher-moong.disqus.com/count.js" async></script>
-<script>
-$(function(){
-	// Utility
-	if (typeof Object.create !== 'function') {
-		Object.create = function(obj){
-			function F() {};
-				F.prototype = obj;
-				return new F();
-			};
-		}
-		(function($, window, document, undefined) {
-			var Portfolio = {
-				init: function(options, elem) {
-					var self = this;
-					self.$elem = $(elem);
-					self.$thumnail = $(elem).find('.thumbnail');
-					// Options
-					self.options = $.extend({}, $.fn.portfolio.options, options || {});
-					// Set columns width
-					self.setColWidth();
-					// On click
-					self.$thumnail.click(function() {
-					self.showContent($(this));
-					});
-				},
-				setColWidth: function() {
-					var self = this;
-					if ($(window).width() > 970) {
-						var colWidth = ((100 / self.options.cols));
-						self.$elem.find('li').css('width', colWidth + '%');
-					}
-				},
-				getContentPos: function(clicked) {
-					var self = this,
-						thumbnails = self.$elem.find('.thumbnail'),
-						contentPos = null;
-					for (var i = 0; i <= thumbnails.length; i++) {
-						// Get href
-						var href = clicked.attr('href');
-						if (href == $(thumbnails[i]).attr('href')) {
-							// If its not the last thumb
-							if (i !== (thumbnails.length - 1)) {
-								var cols = self.options.cols;
-								if ($(window).width() <= 1200 && $(window).width() > 970) cols = 3;
-								else if ($(window).width() <= 970 && $(window).width() > 590) cols = 2;
-								else if ($(window).width() <= 590) cols = 1;
-								// thumb position
-								var thumbPos = i + 1;
-								// If there's no reminder
-								var contentPos = 0;
-								if (thumbPos % cols !== 0)
-									contentPos = (cols - (thumbPos % cols)) + thumbPos;
-								else // If we have a reminder
-									contentPos = thumbPos;
-								// Clean & Validate (This fixes weird bug when there's only 2 thumbs)
-								if (contentPos > thumbnails.length) {
-									contentPos = thumbnails.length;
-								}
-							} else {
-							contentPos = i + 1;
-							}
-						}
-					}
-				return contentPos;
-				},
-				showContent: function(thumbnail) {
-					var $href = thumbnail.attr('href'),
-						self = this,
-						contentPos = self.getContentPos(thumbnail);
-					// Remove existing stuff first
-					self.$elem.find('li a.thumbnail .active-arrow').remove();
-					self.$elem.find('li.content').remove();
-					// Add active arrow
-					thumbnail.append('<span class="active-arrow"></span>');
-					// Add content
-					var $portfolioContent = $($href);
-					var html = '<li class="content"><span class="close">&times;</span>' + $portfolioContent.html() + '</li>';
-					self.$elem.find('li:eq(' + (contentPos - 1) + ')').after(html);
-					// Animate
-					self.$elem.find('li')[self.options.transition](500);
-					$('html, body').animate({
-						scrollTop: self.$elem.find('li.content').offset().top -150
-					}, 700);
-					// Close content
-					self.$elem.find('.close').click(function(){
-					self.$elem.find('li a.thumbnail .active-arrow').remove();
-					self.$elem.find('li.content').remove();
-					});
-				}
-			};
-			$.fn.portfolio = function(options) {
-				return this.each(function(){
-				var portfolio = Object.create(Portfolio);
-					portfolio.init(options, this);
-				});
-			};
-			// Default options
-			$.fn.portfolio.options = {
-				cols: 4,
-				transition: 'slideDown'
-			};
-		})(jQuery, window, document);
-})
-$(document).ready(function() {
-	$('.thumbs').portfolio({
-		cols: 4,
-		transition: 'slideDown'
-	});
-});
-</script>
 </head>
 <body>
 <div id="wrap">
+	<!-- header -->
 	<div id="header">
-		<h1><img src="http://peace0kumi.dothome.co.kr/parkyeonghoo/images/logo.png" alt="박영후 포트폴리오 로고" /></h1>
+		<h1><img src="../images/neonsign.png" alt="PARKYEONGHOO" /></h1>
+		<svg>
+			<circle cx="250" cy="100" r="100" fill="#f7f275" />
+		</svg>
 	</div>
+	<!-- //header -->
 	<!-- content -->
 	<div id="container">
-		<div class="content">
-			<!-- thumbs -->
-			<ul class="thumbs">
-			<li><a href="#thumb1" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb9.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb2" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb10.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb3" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb11.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb4" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb12.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb5" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb5.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb6" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb6.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb7" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb7.jpg)"><span class="category">Web development</span></a></li>
-			<li><a href="#thumb8" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb8.png)"><span class="category">CJ E&amp;M<br/>Film/Company Page</span></a></li>
-			<li><a href="#thumb9" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb9.png)"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
-			<li><a href="#thumb10" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb10.png)"><span class="category">Hyundai Department<br/>Main Page</span></a></li>
-			<li><a href="#thumb11" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb11.png)"><span class="category">Hyundai Department<br/>Web/Mobile Page</span></a></li>
-			<li><a href="#thumb12" class="thumbnail" style="background-image: url(http://peace0kumi.dothome.co.kr/parkyeonghoo/images/thumb12.png)"><span class="category">Hyundai Department<br/>Mobile Page</span></a></li>
-			</ul>
-			<!-- //thumbs -->
-			<!-- thumbs-content -->
-			<div class="thumbs-content">
-				<div id="thumb1">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
+		<div class="content-primary">
+			<div class="data-wrap wrap01">
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
 				</div>
-				<div id="thumb2">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
 				</div>
-				<div id="thumb3">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
 				</div>
-				<div id="thumb4">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
-				</div>
-				<div id="thumb5">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
-				</div>
-				<div id="thumb6">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
-				</div>
-				<div id="thumb7">
-					<p class="title"><a href="#" target="_blank" title="">Personal works</a></p>
-					<p></p>
-				</div>
-				<div id="thumb8">
-					<p class="title"><a href="works/html/20160301_film.html" target="_blank" title="CJ E&amp;M 영화">CJ E&amp;M Film/Company Page</a></p>
-					<p>CJ E&amp;M 영화 페이지와 CJ E&amp;M 회사소개 페이지</p>
-				</div>
-				<div id="thumb9">
-					<p class="title"><a href="works/html/20160826_main.html" target="_blank" title="현대백화점 8월 26일자 등록 메인화면">Hyundai Department Store Main Page</a></p>
-					<p></p>
-				</div>
-				<div id="thumb10">
-					<p class="title"><a href="works/html/20160902_main.html" target="_blank" title="현대백화점 9월 2일자 등록 메인화면">Hyundai Department Store Main Page</a></p>
-					<p></p>
-				</div>
-				<div id="thumb11">
-					<p class="title"><a href="works/html/20160913_weddingfair.html" target="_blank" title="현대백화점 중동점 웨딩페어 이벤트 화면">Hyundai Department Store Web/Mobile Page</a></p>
-					<p></p>
-				</div>
-				<div id="thumb12">
-					<p class="title"><a href="works/html/20161101_santacon_01.html" target="_blank" title="현대백화점 모두가 산타콘 다운로드 이벤트 화면">Hyundai Department Store Mobile Page</a></p>
-					<p></p>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
 				</div>
 			</div>
-			<!-- //thumbs-content -->
+			<div class="data-wrap wrap02">
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+			</div>
+			<div class="data-wrap wrap03">
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+			</div>
+			<div class="data-wrap wrap04">
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+			</div>
+			<div class="data-wrap wrap05">
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+				<div class="data-item">
+					<h3 class="title">CJ E&amp;M</h3>
+					<p class="text">CJ E&amp;M 영화/회사소개 퍼블리싱</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- //content -->
-<!-- disqus -->
-<div id="disqus_thread">
-	<a href="http://foo.com/bar.html#disqus_thread">Link</a>
-</div>
-<script>
-(function() { // DON'T EDIT BELOW THIS LINE
-	var d = document, s = d.createElement('script');
-		s.src = '//supublisher-moong.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<!-- //disqus -->
+	<!-- footer -->
+	<div id="footer">
+		<small>Copyright 2017 <strong>PARKYEONGHOO&amp;SUPUBLISHER</strong> all rights reserved.</small>
+	</div>
+	<!-- //footer -->
 </div>
 </body>
 </html>

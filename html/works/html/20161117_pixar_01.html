@@ -12,26 +12,20 @@
 <meta name="Keywords" content="Pixar, Pixar Global Page">
 <link rel="stylesheet" href="../css/20161117_pixar.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-	$('#gnb li').click(function(){
-		$(this).children('.local-navigations').slideToggle(500);
-	});
-});
-</script>
+<script src="../js/pixar.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false" ondragstart="return false">
 <div id="frame">
 	<!-- header -->
 	<div id="header">
-		<h1 id="siteTitle"><a href="20161117_pixar_01.html">PIXAR</a></h1>
+		<h1 id="siteTitle"><a href="javascript:void(0);">PIXAR</a></h1>
 		<!-- global-navigations -->
 		<div class="global-navigations" id="gnb">
 			<h2>GLOBAL NAVIGATIONS</h2>
 			<ul class="gnb" id="gnb">
 			<li class="gnb-item item-01">
 				<div class="gnb-item-name">
-					<a href="#"><span class="text">FEATURE FILMS</span></a>
+					<a href="javascript:void(0);" title="FEATURE FILMS"><span class="text">FEATURE FILMS</span></a>
 				</div>
 				<!-- local-navigations -->
 				<div class="local-navigations">
@@ -59,7 +53,7 @@ $(document).ready(function(){
 			</li>
 			<li class="gnb-item item-02">
 				<div class="gnb-item-name">
-					<a href="#"><span class="text">SHORT FILMS</span></a>
+					<a href="javascript:void(0);" title="SHORT FILMS"><span class="text">SHORT FILMS</span></a>
 				</div>
 				<!-- local-navigations -->
 				<div class="local-navigations">
@@ -74,7 +68,7 @@ $(document).ready(function(){
 			</li>
 			<li class="gnb-item item-03">
 				<div class="gnb-item-name">
-					<a href="#"><span class="text">CAREERS</span></a>
+					<a href="javascript:void(0);" title="CAREERS"><span class="text">CAREERS</span></a>
 				</div>
 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
@@ -90,7 +84,7 @@ $(document).ready(function(){
 			</li>
 			<li class="gnb-item item-04">
 				<div class="gnb-item-name">
-					<a href="#"><span class="text">ABOUT</span></a>
+					<a href="javascript:void(0);" title="ABOUT"><span class="text">ABOUT</span></a>
 				</div>
 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
@@ -117,7 +111,61 @@ $(document).ready(function(){
 	<div id="container">
 		<div id="content">
 			<div class="content-primary">
-				<h3></h3>
+				<div class="content-item feature-films">
+					<div class="data-item">
+						<div class="data-head">
+							<h3>FEATURE FILMS</h3>
+						</div>
+						<div class="data-body">
+							<ul class="data-list" id="dataList">
+							<li><a href="#"><span>FINDING DORY</span></a></li>
+							<li><a href="#"><span>THE GOOD DINOSAUR</span></a></li>
+							<li><a href="#"><span>INSIDEOUT</span></a></li>
+							<li><a href="#"><span>MONSTERS UNIVERSITY</span></a></li>
+							<li><a href="#"><span>BRAVE</span></a></li>
+							<li><a href="#"><span>CARS 2</span></a></li>
+							<li><a href="#"><span>TOY STORY 3</span></a></li>
+							<li><a href="#"><span>UP</span></a></li>
+							<li><a href="#"><span>WALL&middot;E</span></a></li>
+							<li><a href="#"><span>RATATOUILLE</span></a></li>
+							<li><a href="#"><span>CARS</span></a></li>
+							<li><a href="#"><span>THE INCREDIBLES</span></a></li>
+							<li><a href="#"><span>FINDING NEMO</span></a></li>
+							<li><a href="#"><span>MONSTERS. INC.</span></a></li>
+							<li><a href="#"><span>TOY STORY 2</span></a></li>
+							<li><a href="#"><span>A BUG'S LIFE</span></a></li>
+							<li><a href="#"><span>TOY STORY</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content-item short-films">
+					<div class="data-item">
+						<div class="data-head">
+							<h3>SHORT FILMS</h3>
+						</div>
+						<div class="data-body">
+						</div>
+					</div>
+				</div>
+				<div class="content-item careers">
+					<div class="data-item">
+						<div class="data-head">
+							<h3>CAREERS</h3>
+						</div>
+						<div class="data-body">
+						</div>
+					</div>
+				</div>
+				<div class="content-item about">
+					<div class="data-item">
+						<div class="data-head">
+							<h3>ABOUT</h3>
+						</div>
+						<div class="data-body">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -125,10 +173,10 @@ $(document).ready(function(){
 	
 	<!-- footer -->
 	<div id="footer">
-		<span><a href="#" target="_blank">FACEBOOK</a></span>
-		<span><a href="#" target="_blank">TWITTER</a></span>
-		<span><a href="#">TERMS OF USE</a></span>
-		<span><a href="#">PRIVACY POLICY</a></span>
+		<span class="footer-item"><a href="#" target="_blank" title="FACEBOOK NEW TAB">FACEBOOK</a></span>
+		<span class="footer-item"><a href="#" target="_blank" title="TWITTER NEW TAB">TWITTER</a></span>
+		<span class="footer-item"><a href="#">TERMS OF USE</a></span>
+		<span class="footer-item"><a href="#">PRIVACY POLICY</a></span>
 		<small>TM&amp;&copy; 1986-2016 PIXAR. ALL RIGHTS RESERVED.</small>
 	</div>
 	<!-- //footer -->
