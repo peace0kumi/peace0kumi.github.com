@@ -12,23 +12,35 @@
 <meta name="Keywords" content="Pixar, Pixar Global Page">
 <link rel="stylesheet" href="../css/20161117_pixar.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="../js/pixar.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.slider-wrap').slick({
+		infinite: true,
+		centerMode: true,
+		centerPadding: '100px',
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+});
+</script>
 </head>
 <body oncontextmenu="return false" ondragstart="return false">
 <div id="frame">
 	<!-- header -->
 	<div id="header">
-		<h1 id="siteTitle"><a href="javascript:void(0);">PIXAR</a></h1>
+		<h1 id="siteTitle"><a href="#">PIXAR</a></h1>
 		<!-- global-navigations -->
 		<div class="global-navigations" id="gnb">
 			<h2>GLOBAL NAVIGATIONS</h2>
 			<ul class="gnb" id="gnb">
 			<li class="gnb-item item-featurefilms">
 				<div class="gnb-item-name">
-					<a href="javascript:void(0);" title="FEATURE FILMS"><span class="text">FEATURE FILMS</span></a>
+					<a href="#contentFeature" title="FEATURE FILMS"><span class="text">FEATURE FILMS</span></a>
 				</div>
 				<!-- local-navigations -->
-				<div class="local-navigations">
+<!-- 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
 					<li><a href="#">FINDING DORY</a></li>
 					<li><a href="#">THE GOOD DINOSAUR</a></li>
@@ -48,29 +60,30 @@
 					<li><a href="#">A BUG'S LIFE</a></li>
 					<li><a href="#">TOY STORY</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- //local-navigations -->
 			</li>
 			<li class="gnb-item item-shortfilms">
 				<div class="gnb-item-name">
-					<a href="javascript:void(0);" title="SHORT FILMS"><span class="text">SHORT FILMS</span></a>
+					<a href="#contentShort" title="SHORT FILMS"><span class="text">SHORT FILMS</span></a>
 				</div>
 				<!-- local-navigations -->
-				<div class="local-navigations">
+<!-- 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
 					<li><a href="#">CARS TOONS</a></li>
 					<li><a href="#">TOY STORY TOONS</a></li>
 					<li><a href="#">THEATRICAL SHORTS</a></li>
 					<li><a href="#">HOME ENTERTAINMENT SHORTS</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- //local-navigations -->
 			</li>
 			<li class="gnb-item item-careers">
 				<div class="gnb-item-name">
-					<a href="javascript:void(0);" title="CAREERS"><span class="text">CAREERS</span></a>
+					<a href="#contentCareers" title="CAREERS"><span class="text">CAREERS</span></a>
 				</div>
-				<div class="local-navigations">
+				<!-- local-navigations -->
+<!-- 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
 					<li><a href="#">CAREER LISTINGS</a></li>
 					<li><a href="#">CAREER FAQS</a></li>
@@ -80,13 +93,15 @@
 					<li><a href="#">CREATING A DEMO REEL</a></li>
 					<li><a href="#">PATHS TO PIXAR</a></li>
 					</ul>
-				</div>
+				</div> -->
+				<!-- //local-navigations -->
 			</li>
 			<li class="gnb-item item-about">
 				<div class="gnb-item-name">
-					<a href="javascript:void(0);" title="ABOUT"><span class="text">ABOUT</span></a>
+					<a href="#contentAbout" title="ABOUT"><span class="text">ABOUT</span></a>
 				</div>
-				<div class="local-navigations">
+				<!-- local-navigations -->
+<!-- 				<div class="local-navigations">
 					<ul class="lnb" id="lnb">
 					<li><a href="#">WELCOME</a></li>
 					<li><a href="#">CONTACT US</a></li>
@@ -99,7 +114,8 @@
 					<li><a href="#">ART EXHIBITION</a></li>
 					<li><a href="#">COMPANY FAQS</a></li>
 					</ul>
-				</div>
+				</div> -->
+				<!-- //local-navigations -->
 			</li>
 			</ul>
 		</div>
@@ -110,87 +126,255 @@
 	<!-- content -->
 	<div id="container">
 		<div id="content">
-			<div class="content-primary">
-				<!-- feature-films -->
-				<div class="content-item feature-films">
-					<div class="data-item">
-						<div class="data-head">
-							<h3>FEATURE FILMS</h3>
-						</div>
-						<div class="data-body">
-							<ul class="data-list" id="dataList">
-							<li>
-								<span class="data-image">
-									<img src="../images/20161117/content_featurefilms01.png" alt="TOY STORY 4" />
-									<span class="data-caption">
-										<span class="film">TOY STORY 4</span>
-										<span class="date">2017.06.16 U.S. Release</span>
-										<span class="director">Brian Fee</span>
-										<span class="producer">Kevin Reher</span>
-										<a href="#"></a>
-									</span>
-								</span>
-							</li>
-							https://tympanus.net/Development/HoverEffectIdeas/index2.html
-							<li><a href="#"><span>THE INCREDIBLES 2</span></a></li>
-							<li><a href="#"><span>COCO</span></a></li>
-							<li><a href="#"><span>CARS 3</span></a></li>
-							<li><a href="#"><span>FINDING DORY</span></a></li>
-							<li><a href="#"><span>THE GOOD DINOSAUR</span></a></li>
-							<li><a href="#"><span>INSIDEOUT</span></a></li>
-							<li><a href="#"><span>MONSTERS UNIVERSITY</span></a></li>
-							<li><a href="#"><span>BRAVE</span></a></li>
-							<li><a href="#"><span>CARS 2</span></a></li>
-							<li><a href="#"><span>TOY STORY 3</span></a></li>
-							<li><a href="#"><span>UP</span></a></li>
-							<li><a href="#"><span>WALL&middot;E</span></a></li>
-							<li><a href="#"><span>RATATOUILLE</span></a></li>
-							<li><a href="#"><span>CARS</span></a></li>
-							<li><a href="#"><span>THE INCREDIBLES</span></a></li>
-							<li><a href="#"><span>FINDING NEMO</span></a></li>
-							<li><a href="#"><span>MONSTERS. INC.</span></a></li>
-							<li><a href="#"><span>TOY STORY 2</span></a></li>
-							<li><a href="#"><span>A BUG'S LIFE</span></a></li>
-							<li><a href="#"><span>TOY STORY</span></a></li>
-							</ul>
-						</div>
+			<!-- feature-films -->
+			<div class="content-item feature-films" id="contentFeature">
+				<div class="data-item">
+					<div class="data-head">
+						<h3>FEATURE FILMS</h3>
+					</div>
+					<div class="data-body">
+						<ul class="data-list" id="dataList">
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms21.png" alt="TOY STORY 4" />
+								<div class="data-caption">
+									<h4>TOY STORY 4</h4>
+									<a href="#" class="pop-event21-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms20.png" alt="THE INCREDIBLES 2" />
+								<div class="data-caption">
+									<h4>THE INCREDIBLES 2</h4>
+									<a href="#" class="pop-event20-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms19.png" alt="COCO" />
+								<div class="data-caption">
+									<h4>COCO</h4>
+									<a href="#" class="pop-event19-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms18.png" alt="CARS 3" />
+								<div class="data-caption">
+									<h4>CARS 3</h4>
+									<a href="#" class="pop-event18-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms17.png" alt="FINDING DORY" />
+								<div class="data-caption">
+									<h4>FINDING DORY</h4>
+									<a href="#" class="pop-event17-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms16.png" alt="THE GOOD DINOSAUR" />
+								<div class="data-caption">
+									<h4>THE GOOD DINOSAUR</h4>
+									<a href="#" class="pop-event16-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms15.png" alt="INSIDEOUT" />
+								<div class="data-caption">
+									<h4>INSIDEOUT</h4>
+									<a href="#" class="pop-event15-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms14.png" alt="MONSTERS UNIVERSITY" />
+								<div class="data-caption">
+									<h4>MONSTERS UNIVERSITY</h4>
+									<a href="#" class="pop-event14-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms13.png" alt="BRAVE" />
+								<div class="data-caption">
+									<h4>BRAVE</h4>
+									<a href="#" class="pop-event13-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms12.png" alt="CARS 2" />
+								<div class="data-caption">
+									<h4>CARS 2</h4>
+									<a href="#" class="pop-event12-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms11.png" alt="TOY STORY 3" />
+								<div class="data-caption">
+									<h4>TOY STORY 3</h4>
+									<a href="#" class="pop-event11-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms10.png" alt="UP" />
+								<div class="data-caption">
+									<h4>UP</h4>
+									<a href="#" class="pop-event10-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms09.png" alt="WALL&middot;E" />
+								<div class="data-caption">
+									<h4>WALL&middot;E</h4>
+									<a href="#" class="pop-event9-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms08.png" alt="RATATOUILLE" />
+								<div class="data-caption">
+									<h4>RATATOUILLE</h4>
+									<a href="#" class="pop-event8-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms07.png" alt="CARS" />
+								<div class="data-caption">
+									<h4>CARS</h4>
+									<a href="#" class="pop-event7-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms06.png" alt="THE INCREDIBLES" />
+								<div class="data-caption">
+									<h4>THE INCREDIBLES</h4>
+									<a href="#" class="pop-event6-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms05.png" alt="FINDING NEMO" />
+								<div class="data-caption">
+									<h4>FINDING NEMO</h4>
+									<a href="#" class="pop-event5-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms04.png" alt="MONSTERS. INC." />
+								<div class="data-caption">
+									<h4>MONSTERS. INC.</h4>
+									<a href="#" class="pop-event4-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms03.png" alt="TOY STORY 2" />
+								<div class="data-caption">
+									<h4>TOY STORY 2</h4>
+									<a href="#" class="pop-event3-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms02.png" alt="A BUG'S LIFE" />
+								<div class="data-caption">
+									<h4>A BUG'S LIFE</h4>
+									<a href="#" class="pop-event2-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-image">
+								<img src="../images/20161117/content_featurefilms01.png" alt="TOY STORY" />
+								<div class="data-caption">
+									<h4>TOY STORY</h4>
+									<a href="#" class="pop-event1-popup">MORE VIEW</a>
+								</div>
+							</div>
+						</li>
+						</ul>
 					</div>
 				</div>
-				<!-- //feature-films -->
-				<!-- short-films -->
-				<div class="content-item short-films">
-					<div class="data-item">
-						<div class="data-head">
-							<h3>SHORT FILMS</h3>
-						</div>
-						<div class="data-body">
-						</div>
-					</div>
-				</div>
-				<!-- //short-films -->
-				<!-- careers -->
-				<div class="content-item careers">
-					<div class="data-item">
-						<div class="data-head">
-							<h3>CAREERS</h3>
-						</div>
-						<div class="data-body">
-						</div>
-					</div>
-				</div>
-				<!-- //careers -->
-				<!-- about -->
-				<div class="content-item about">
-					<div class="data-item">
-						<div class="data-head">
-							<h3>ABOUT</h3>
-						</div>
-						<div class="data-body">
-						</div>
-					</div>
-				</div>
-				<!-- //about -->
 			</div>
+			<!-- //feature-films -->
+			<!-- short-films -->
+			<div class="content-item short-films" id="contentShort">
+				<div class="data-item">
+					<div class="data-head">
+						<h3>SHORT FILMS</h3>
+					</div>
+					<div class="data-body">
+						<div class="slider-wrap">
+							<div class="slider-item">
+								<a class="slider-text">1</a>
+							</div>
+							<div class="slider-item">
+								<a class="slider-text">2</a>
+							</div>
+							<div class="slider-item">
+								<a class="slider-text">3</a>
+							</div>
+							<div class="slider-item">
+								<a class="slider-text">4</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //short-films -->
+			<!-- careers -->
+			<div class="content-item careers" id="contentCareers">
+				<div class="data-item">
+					<div class="data-head">
+						<h3>CAREERS</h3>
+					</div>
+					<div class="data-body">
+					</div>
+				</div>
+			</div>
+			<!-- //careers -->
+			<!-- about -->
+			<div class="content-item about" id="contentAbout">
+				<div class="data-item">
+					<div class="data-head">
+						<h3>ABOUT</h3>
+					</div>
+					<div class="data-body">
+					</div>
+				</div>
+			</div>
+			<!-- //about -->
 		</div>
 	</div>
 	<!-- //content -->

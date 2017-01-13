@@ -8,7 +8,7 @@ $(function(){
 
 	$(window).scroll(function(){
 		didScroll = true;
-	})
+	});
 	
 	setInterval(function(){
 		if(didScroll){
@@ -30,28 +30,8 @@ $(function(){
 			}
 		}
 		lastScrollTop = thisScroll;
-	}
+	};
 	
-	//scroll
-	var spot = []
-	
-	$('.content-primary .content-item').each(function(i,e){
-		spot.push($(e).offset().top)
-	});
-	
-	$("#gnb li").click(function(){
-		var idx = $(this).index();
-		
-		$('html, body').animate({
-			scrollTop:spot[idx]
-		});
-		
-		$('#siteTitle a').click(function(){
-			$('html, body').animate({
-				scrollTop:0
-			});
-		});
-	});
 	
 	//mouse wheel
 	var windowH = $(window).height();
@@ -72,5 +52,34 @@ $(function(){
 			
 			return false;
 		}
-	})
+	});
+	
+	//popup
+	function blind(){
+		$('body').append('<div class="blind"></div>');
+		$('.blind').fadeTo("500","0.6");
+	}
+	
+	function popOpen(conts){
+		$('.content-item').append('<div class="popbox"></div>')
+		$('.content-item').children('.popbox').load(conts);
+	}
+	
+	$('[class^=pop-]').click(function(){
+		blind();
+		
+		var cont = $(this).attr('class');
+		var conts = cont.split('-'); //쪼개는 것
+		var fullUrl = "20161117_pixar_02"+".html ."+conts[1]; //popup.html .event*로 나옴
+		popOpen(fullUrl)
+	});
+
+	$('.content-item').on('click','.close',function(){
+		$('.popbox').fadeOut(function(){
+			$(this).remove();
+		})
+		$('.blind').fadeOut(function(){
+			$(this).remove();
+		})
+	});
 });
