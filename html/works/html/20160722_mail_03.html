@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="title" content="현대백화점 메일" />
+<meta name="Description" content="현대백화점" />
+<meta name="Keywords" content="현대백화점, 현대백화점 메일, 현대백화점 안내메일" />
+<meta name="author" content="현대백화점" />
+<title>현대백화점</title>
+<style type="text/css">
+/*
+ global
+ */
+ 
+/* frame */
+body																			{margin: 0; font-family: "돋움", Dotum, sans-serif;}
+#wrapper																		{overflow: hidden;}
+
+/* header */
+#header																			{padding-top: 50px;}
+#header h1																		{margin: 0; text-align: center;}
+#header h1 img																	{vertical-align: top;}
+
+/* content */
+.content-primary .content-info .para											{color: #333333;}
+.content-primary .content-info .para+.para										{margin-top: 20px;}
+.content-primary .content-info .para strong										{color: #164834;}
+.content-primary .content-info .para strong a									{color: inherit;}
+
+/* footer */
+#footer																			{margin: 0 auto; padding: 25px 0 58px; width: 720px; border-top: 1px #000 solid;}
+#footer .site-info .site-detail													{display: block;}
+#footer .site-info .site-detail:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#footer .site-info .site-detail img												{float: left;}
+
+/* font */
+.para																			{margin: 1em 0; line-height: 1.5;}
+
+/* btn reset */
+button.btn																		{overflow: visible; margin: 0; padding: 0; font-family: inherit; border: 0 none; background-color: transparent; -webkit-appearance: none;}
+a.btn																			{display: inline-block; text-decoration: none;}
+
+/* btn theme-a */
+.btn.theme-a span:after															{content: ' >'}
+.btn.theme-a.medium span														{padding: 0 32px; height: 28px; line-height: 28px; font-size: 12px; font-weight: bold;}
+.btn.theme-a.large span															{padding: 0 32px; height: 38px; line-height: 38px; font-size: 12px; font-weight: bold;}
+.btn.theme-a.state-a span														{display: inline-block; color: #666666; text-align: center; border: 1px #666666 solid;}
+.btn.theme-a.state-b span														{display: inline-block; color: #ffffff; text-align: center; border: 1px #000000 solid; background-color: #000;}
+
+/* data-table */
+.data-table.theme-a																{position: relative;}
+.data-table.theme-a:before														{content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background-color: #ffffff;}
+.data-table.theme-a:after														{content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background-color: #ffffff;}
+.data-table.theme-a table														{width: 100%; table-layout: fixed; border-collapse: collapse; border-spaicng: 0; border-top: 2px solid #333333;}
+.data-table.theme-a table caption												{overflow: hidden; width: 0; height: 0; line-height: 0; font-size: 0;}
+.data-table.theme-a table th													{padding: 15px 28px; font-size: 12px; text-align: left; color: #333333; border: 1px solid #e2e2e2; background-color: #f3f3f3;}
+.data-table.theme-a table td													{padding-left: 28px; font-size: 12px; text-align: left; color: #666666; border: 1px solid #e2e2e2; background-color: #ffffff;}
+
+/* data-list theme-b */
+.data-list.theme-b																{margin: 0; padding: 0;}
+.data-list.theme-b>li															{list-style: none; padding-left: 18px; font-size: 12px; line-height: 20px; color: #666666; background: url(../images/20160722/bullet_01.png) no-repeat 3px 5px;}
+.data-list.theme-b>li+li														{margin-top: 20px;}
+.data-list.theme-b>li>p															{margin: 0; padding: 5px 0 0 0;}
+.data-list.theme-b>li .data-list.theme-c										{margin-top: 5px;}
+
+/* data-list theme-c */
+.data-list.theme-c																{margin: 0; padding: 0;}
+.data-list.theme-c>li															{list-style: none; padding: 0 0 0 10px; font-size: 12px; line-height: 20px; background: url(../images/20160722/bullet_03.png) no-repeat 3px 12px;}
+
+/* info-board */
+.info-board.theme-a																{border: 2px #164834 solid;}
+.info-board.theme-a h2															{margin: 0; padding: 0; height: 48px; line-height: 48px; font-size: 16px; text-align: center; color: #ffffff; background-color: #164834;}
+.info-board.theme-a .board-body													{padding: 40px 28px 40px 28px;}
+.info-board.theme-a .board-body .board-item h3									{margin: 0 0 12px 0; padding: 0; font-size: 14px; color: #333333;}
+.info-board.theme-a .board-body .board-item+.board-item							{margin-top: 30px;}
+
+/*
+ content
+ */
+/* info-board */
+#content.expiration-date														{margin: 0 auto; padding: 50px 0; width: 720px;}
+#content.expiration-date .para													{font-size: 12px;}
+#content.expiration-date .info-board.theme-a									{margin-top: 50px;}
+#content.expiration-date .info-board.theme-a .board-body .button-area.medium	{width: 100%; margin: 10px 0 0 0; text-align: right;}
+#content.expiration-date .info-board.theme-a .board-body .button-area.large		{width: 100%; margin-top: 48px; text-align: center;}
+
+/* precautions */
+#content.expiration-date .precautions											{margin-top: 30px;}
+#content.expiration-date .precautions h2										{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; font-size: 0; line-height: 0;}
+#content.expiration-date .precautions .notice-list								{margin-top: 30px;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<!-- header -->
+	<div id="header">
+		<h1><img src="../images/20160722/expiration-guide.png" alt="현대백화점카드 유효기간 만료 예정 안내" /></h1>
+	</div>
+	<!-- //header -->
+	<!-- content -->
+	<div id="content" class="expiration-date">
+		<!-- content-primary -->
+		<div class="content-primary">
+			<div class="content-info">
+				<p class="para">항상 현대백화점을 아껴 주시고 이용해주신 회원님께 진심으로 감사드립니다.</p>
+				<p class="para">회원님께서 사용하고 계신 현대백화점카드의 유효기간이 만료될 예정임을 알려드립니다.</p>
+				<p class="para">유효기간 만료시 회원님께서 소지하고 계신 현대백화점카드의 사용이 불가하오니 이점 유의해주시기 바라며,<br /><strong>현대백화점카드의 계속 사용을 위한 카드 갱신발급을 원하시는 회원님께서는 아래의 <a href="#issuedForm">&lsquo;현대백화점카드 갱신 발급 신청서&rsquo;를 작성하신 후 &lsquo;카드 갱신발급 동의&rsquo; 버튼</a>을 눌러주시기 바랍니다.</strong></p>
+				<p class="para">참고로, 회원님께서 &lsquo;카드 갱신발급 동의&rsquo; 버튼을 누르신 후 공인인증서를 통한 인증을 완료하신 경우, 회원님의 동의일로부터<br />[영업일기준] 2일 이내에 현대백화점카드가 갱신발급되며, 갱신발급된 회원님의 현대백화점카드는 회원님께서 작성하신<br />아래의 &lsquo;현대백화점카드 갱신 발급 신청서&rsquo;에 기재된 수령지 주소로 발송됩니다.</p>
+				<p class="para">보다 나은 고객만족을 위해 항상 노력하는 현대백화점이 되겠습니다.<br />감사합니다.</p>
+			</div>
+			<!-- content-board -->
+			<div class="info-board theme-a" id="issuedForm">
+				<h2>현대백화점카드 갱신 발급 신청서</h2>
+				<div class="board-body">
+					<div class="board-item">
+						<h3>유효기간 만료 예정카드</h3>
+						<div class="data-table theme-a">
+							<table>
+							<caption>유효기간 만료 예정카드</caption>
+							<colgroup>
+								<col style="width: 145px;"/>
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="col">회원 성명</th>
+								<td>홍길동</td>
+							</tr>
+							<tr>
+								<th scope="col">발급대상 카드</th>
+								<td>본인회원 ( <strong>1</strong> 매), 가족회원 (  <strong>2</strong> 매)</td>
+							</tr>
+							<tr>
+								<th scope="col">유효기간</th>
+								<td>2016년 8월</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="board-item">
+						<h3>회원정보</h3>
+						<p class="para">회원님의 카드수령 주소와 연락처가 맞는지 정확하게 확인하신 후 &ldquo;갱신발급 동의&rdquo; 버튼을 선택해 주시기 바랍니다.</p>
+						<div class="data-table theme-a">
+							<table>
+							<caption>회원정보</caption>
+							<colgroup>
+								<col style="width:145px;"/>
+								<col />
+								<col style="width:145px;"/>
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>수령지 주소</th>
+								<td colspan="3">서울시 강남구 압구정동 456번지 현대백화점 본사</td>
+							</tr>
+							<tr>
+								<th>자택번호</th>
+								<td>02-1234-5678</td>
+								<th>휴대폰번호</th>
+								<td>010-2345-6789</td>
+							</tr>
+							<tr>
+								<th>직장번호</th>
+								<td colspan="3">02-5678-9012</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="button-area medium">
+						<a href="http://www.ehyundai.com/newPotal/card/MC/MC000016_V.do" target="_blank" title="새창으로 이동" class="btn theme-a medium state-a"><span>홈페이지에서 확인하기</span></a>
+					</div>
+					<div class="button-area large">
+						<a href="#" target="_blank" title="새창으로 이동" class="btn theme-a large state-b"><span>카드 갱신 발급 동의</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- //content-board -->
+		</div>
+		<!-- //content-primary -->
+		<!-- precautions -->
+		<div class="precautions">
+			<h2>주의사항</h2>
+			<ul class="data-list theme-b">
+			<li>본 메일을 수신하였음에도 회원님께 갱신 및 대체발급 불가 사유가 발생할 경우 또는 본 메일 수신일로부터 3개월 경과시에는,<br />&ldquo;카드 갱신발급 동의&rdquo;를 선택하신 후 공인인증서를 통한 인증을 완료하시더라도 카드 갱신발급이 불가합니다.</li>
+			<li><strong>교통기능 제휴카드 안내</strong>
+				<ul class="data-list theme-c">
+				<li>대경교통, T머니 제휴카드 소지회원인 경우 제휴 종료로 인해 현대백화점카드 갱신발급 신청시 일반카드로 전환되어 발급되며,<br />갱신 전 현대백화점카드에 충전된 교통카드 충전 잔액은 갱신발급된 카드에 이관하실 수 없습니다.</li>
+				<li>갱신 전 현대백화점카드에 충전된 교통카드 충전잔액은 계속 사용하실 수 있으며, 갱신 전 현대백화점카드의 도난, 분실, 폐기시<br />충전잔액에 대한 환불은 불가합니다.</li>
+				</ul>
+			</li>
+			<li><strong>현대백화점 홈페이지 내 회원정보 조회 및 변경 방법</strong> (http://www.ehyundai.com)
+				<p class="para">현대백화점 홈페이지 방문 &gt; 현대백화점카드 &gt; 나의백화점카드 &gt; 회원/결제정보변경 &gt; 회원정보변경<br />단, 현대백화점 홈페이지 가입 회원에 한하여 조회/변경 가능합니다.</p>
+			</li>
+			<li><strong>문의처</strong> : 현대백화점 회원상담실 ☏<strong>1588-4560</strong> (지역번호 없음)</li>
+			</ul>
+		</div>
+		<!-- //precautions -->
+	</div>
+	<!-- //content -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="site-info">
+			<span class="site-detail">
+				<img src="../images/20160722/email_footer_01.png" alt="주식회사 현대백화점 대표이사 : 이동호 외 2인" />
+				<img src="../images/20160722/email_footer_02.png" alt="서울 강남구 압구정로 201" />
+				<img src="../images/20160722/email_footer_03.png" alt="사업자등록번호 : 211-87-21455" />
+			</span>
+			<span class="site-detail">
+				<img src="../images/20160722/email_footer_04.png" alt="개인정보관리책임 : 회원운영관리담당 김광수" />
+				<img src="../images/20160722/email_footer_05.png" alt="문의 : hdmaster@ehyundai.com / 02-549-2233" />
+			</span>
+		</div>
+		<div class="site-copyright">
+			<img src="../images/20160722/email_footer_06.png" alt="copyright &copy; Hyundai Department Store. All rights reserved." />
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+<a href="20160722_mail_02.html" style="display:block; position:absolute; top:50%; left:50px; margin-top:-25%; font-family:'Malgun Gothic', '맑은 고딕', sans-serif; font-size:60px; color:#333333; text-decoration:none;">&lt; PREV PAGE</a>
+</body>
+</html>
