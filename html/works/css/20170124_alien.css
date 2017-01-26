@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:700);
+
+*{margin: 0; padding: 0; font-family: 'Oxygen', sans-serif;}
+*::selection{
+    background: #FFF2F6;
+    color: #000;
+    text-shadow: none;}
+*:focus{outline: none;}
+html,body{height: 100%;}
+body{position: relative; overflow: hidden;}
+ul{list-style: none;}
+a:visited{text-decoration: none;}
+a:active{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:link{text-decoration: none;}
+
+
+/*메뉴바*/
+.nav{
+width: 100%;
+height: 40px;
+position: relative;
+background-color: #FFF2F6;
+}
+.nav .home{
+display: inline-block;
+position: absolute;
+width: 50px;
+height: 40px;
+left: 900px;
+}
+.nav .home a{
+position: absolute;
+left: -850px;
+top: 3px;
+width: 100%;
+height: 100%;
+z-index: 1;
+background: url('../img/home.png') no-repeat 0 0;
+background-size: 40px;
+}
+.nav .profile{
+display: inline-block;
+position: absolute;
+width: 50px;
+height: 40px;
+left: 900px;
+}
+.nav .profile a{
+position: absolute;
+right: -60px;
+top: 3px;
+width: 100%;
+height: 100%;
+z-index: 1;
+background: url('../img/user.png') no-repeat 0 0;
+background-size: 40px;
+}
+.nav li{
+float: left;
+position: relative;
+left: 150px;
+line-height: 40px;
+padding: 0 50px;
+font-size: 12px;
+font-weight: bold;
+}
+.nav li a{
+height: 100%;
+color: #727272;
+}
+.nav li.on{
+background-color: #727272;    
+}
+.nav li.on a{
+color: #fff;
+}
+/*메뉴바*/
+
+
+/*슬라이드 배너*/
+.wrap{
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+.slidebanner{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+}
+.slidebanner ul{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-size: 0;
+}
+.slidebanner li{
+        display: inline-block;
+}
+.slidebanner li img{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 95%;
+}
+.slidebanner li a.dot{
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+        background: #FFF;
+        text-decoration: none;
+        margin: 0 3px;
+        top: 50px;
+        border: 1px #ccc dotted;
+}
+.slidebanner li.on a.dot{
+        background: #727272;
+}
+.slidebanner li.on img{
+        display: block;
+}
+.slidebanner .link{
+        display: none;
+        position: absolute;
+        left: 37.9%;
+        top: 15.6%;
+        width: 827px;
+        height: 466px;
+        z-index: 2;
+}
+.slidebanner .link a{
+        display: block;
+        width: 827px;
+        height: 466px;
+        z-index: 2;
+        cursor: pointer;
+}
+.slidebanner li.on .link{
+        display: block;
+}
+.slidebanner button{
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+}
+.slidebanner button.next{
+        right: 0;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background: url('../img/next.png') no-repeat 0 0;
+        background-size: 50px;
+        text-indent: -9999%;
+        border: none;
+        opacity: 0.2;
+}
+.slidebanner button.prev{
+        left: 0;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background: url('../img/prev.png') no-repeat 0 0;
+        background-size: 50px;
+        text-indent: -9999%;
+        border: none;
+        opacity: 0.2;
+}
+/*슬라이드 배너*/
+
+
+@media all and (max-width: 1380px){
+    .slidebanner li a{
+        display: none;
+    }
+}
+@media all and (max-width: 920px){
+    /*메뉴바*/
+    .nav{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #FFF2F6;
+    }
+    .nav .home a{
+    left: -860px;
+    top: 6px;
+    z-index: 1;
+    background-size: 30px;
+    }
+    .nav li{
+    left: 100px;
+    padding: 0 25px;
+    }
+    /*메뉴바*/
+    .slidebanner ul li img{
+        background-size: cover;
+    }
+    .slidebanner li a.dot{
+        display: none;
+    }
+}  
+
+@media all and (max-width: 620px){
+    /*메뉴바*/
+    .nav{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #FFF2F6;
+    }
+    .nav .home a{
+    left: -860px;
+    top: 6px;
+    z-index: 1;
+    background-size: 30px;
+    }
+    .nav li{
+    left: 100px;
+    padding: 0 15px;
+    font-size: 10px;
+    }
+    /*메뉴바*/
+    .slidebanner ul li img{
+        background-size: cover;
+    }
+    .slidebanner li a.dot{
+        display: none;
+    }
+}  
+
+@media all and (max-width: 430px){
+    .nav li{
+    display: none;
+    }
+    /*메뉴바*/
+    .slidebanner ul li img{
+    display: none;
+    }
+    .slidebanner ul li a.dot{
+    display: none;
+    }
+}

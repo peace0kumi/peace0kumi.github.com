@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: miss A ｜ Discography ::</title>
+    <link rel="stylesheet" href="font/flaticon.css" />
+    <style type="text/css">
+        
+        @import url(https://fonts.googleapis.com/css?family=Oswald); 
+        
+        *{font-family: 'Nanum Gothic';}
+        body{margin: 0;}
+        html{overflow-y: hidden;}
+        body,html{height: 100%;}
+        ul{list-style: none; margin: 0; padding: 0;}
+        
+        .menu{display: none;
+         border: 0;
+         width: 200px;
+         height: 61px;
+         background-color: #fff;
+         color: #fff;
+         font-size: 16px;
+         font-family: 'Oswald', sans-serif;
+         position: absolute;
+         right: 0;
+         top: 0;}
+        
+        .wrap{
+            height: 100%; 
+            width: 100%; 
+            background-color: #fff;
+            -webkit-background-size: cover;
+            background-size: cover;}
+
+        header{height: 100px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+        width: 96%;
+        padding: 0 2%;
+        position: absolute;
+        background-color: rgba(255,255,255,0.1);
+        overflow: hidden;
+        z-index: 1;}
+        
+        header h1{
+        cursor: pointer;
+        width: 104px;
+        height: 52px;
+        background: url(../images/missa-logo-s.png) no-repeat center center;
+        transition: 1s;
+        float: left;}
+        
+        header h1:hover{
+        transform: rotateY(180deg);}
+        header a{color: transparent;}
+    
+        header nav{float: right;}
+        header nav li{float: left; line-height: 100px;}
+        header nav li a{padding: 0 18px; display: block; text-decoration: none; color: #353535; font-family: 'Oswald', sans-serif;}
+        header nav li a:hover{border-top: 2px #353535 solid; color: #353535; background-color: rgba(255, 255, 255, 0.2); transition: 0.2s; box-shadow: inset 0px 3px #353535;}
+        header nav a.menu{text-decoration: none; color: #fff;}
+        
+        .contents{display: table;}
+        .contents h1{margin: 0; width: 100%; height: 110px; position: absolute; top: 101px; background-color: #F4F4F4; font-size: 40pt; font-family: 'Oswald', sans-serif; text-align: center; line-height: 110px;}
+        .contents .c_wrap{width: 1000px; border: 1px #f00 solid; display: table-cell; position: absolute; top: 28%; left: 23.5%;}
+        .contents article{width: 625px; border: 1px #f00 solid; float: right; display: table-cell;}
+        .contents article .album_title{width: 620px; height: 63px; border: 1px #f00 solid; background-image: url(http://missa.jype.com/images/discography/a-titlebg.png);}
+        .contents article .album_title h2{float: left; font-size: 1.5em; color: #fff; margin: 12px 12px;}
+        .contents article .album_title p{float: right; font-size: 12px; color: #fff; margin: 20px 12px;}
+        .contents aside{width: 370px; height: 627px; border: 1px #f00 solid; float: left;}
+        .contents aside ul{font-size: 7pt; color: #fff; text-align: center; width: 370px; height: 30px; border: 1px #f00 solid;}
+        .contents aside img{border: 1px #c5c5c5 solid;}
+        .contents aside li{background-image: url(http://missa.jype.com/images/discography/a-titlebg.png); float: left; border: 1px transparent solid; width: 10px; height: 11px; padding: 5px; border-radius: 20px; -webkit-border-radius: 20px; line-height: 10px; margin: 0 5px 10px 0;}
+        .contents aside ol{margin: 0; padding: 0;}
+        .contents aside ol p{list-style: none; font-family: 'Oswald', sans-serif; font-size: 12px; margin: 10px 0 0 0;}
+        .contents aside ol li{float: none; background-image: none; list-style-position: inside; width: 370px; font-family: 'Nanum Gothic',monospace; line-height: 10px; font-size: 12px; margin: 0; padding: 0;}
+        .contents article h3{font-size: 13px;}
+        .contents article p{font-size: 12px;}
+        .contents .album_list{width: 990px; border: 1px #f00 solid; clear: left;}
+        
+
+        footer{width: 100%;
+        height: 60px;
+        line-height: 60px;
+        position: fixed;
+        bottom: 0;
+        border-top: 1px transparent solid; 
+        background-color: rgba(0,0,0,0.2);}
+        footer .jyplogo{width: 115px; height: 45px; background: url(http://sunmi.jype.com/images/jyplogo-w.png) no-repeat; float: left; position: absolute; left: 135px; top: 5px;}    
+        footer .snslink{float: right; position: absolute; right: 100px;}
+        footer .snslink a:before{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #E4E4E4;}
+        
+        @media all and (max-width:770px) {
+            .wrap{
+            background-image: url(../images/missa-bg-720.jpg);}
+            
+            header{overflow: visible;}
+            nav .menu{display: block; width: 200px; height: 61px; line-height: 61px;}
+            nav a.menu{text-decoration: none; text-align: center;}
+        
+            nav ul{display: block;
+                    float: none;
+                    position: absolute;
+                    right: 0;
+                    top: 60px;
+                    width: 200px;}
+                
+            nav ul li{float: none;
+                    line-height: 42px;
+                    width: 200px;}
+                    
+            nav ul li:first-child{border-top: none;}
+            
+            .mainlogo{
+                top: 10%;
+                width: 250px;
+                height: 250px;
+                background-position: 50% 50%;
+                -webkit-background-size: cover;
+                background-size: cover;}
+
+            header nav ul{transition: 1000ms; height: 0; overflow: hidden; z-index: 1;}
+            header nav ul:target{transition: 1000ms; height: 270px; overflow: hidden;}
+            header nav ul li{background-color: rgba(255,255,255,0.3);}
+            header nav ul li a:hover{box-sizing: border-box;
+            border: 0;
+            background: none;
+            height: 40px;
+            box-shadow: none;
+            transform: translatex(10%);}
+            header nav ul li:hover{border-top: 2px #feedb8 solid;
+            color: #feedb8;
+            background-color: rgba(255,255,255,0.2);}
+        }
+        
+        @media all and (max-width:480px) {
+            .wrap{}
+            header{height: 40px;}
+            header h1{margin: 5px; width: 65px;
+            height: 30px; background-size: cover;
+            transform: scale(0.8,0.8);}
+            
+            nav .menu{display: block; width: 150px; height: 41px; font-size: 12px; line-height: 41px;}
+            nav ul{top: 40px; width: 150px;}
+            
+            footer{height: 37px; line-height: 37px;}
+            footer .jyplogo{transform: scale(0.7,0.7); margin: -2px;}
+            footer .snslink a:before{transform: scale(0.7,0.7);}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="index.html">home</a></h1>
+            <nav>
+                <a href="#a1" class="menu">MAIN MENU</a>
+                    <ul id="a1">
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="discography.html">DISCOGRAPHY</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">VIDEO</a></li>
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">SCHEDULE</a></li>
+                    </ul>
+            </nav>
+        </header>
+        
+        <section class="contents">
+            <h1>DISCOGRAPHY</h1>
+            <div class="c_wrap">
+                <aside>
+                    <ul class="buttonlist">
+                        <li>KR</li>
+                        <li>EN</li>
+                        <li>JP</li>
+                        <li>CH</li>
+                        <li>TH</li>
+                    </ul>
+                    <img src="http://missa.jype.com/upload/album/album_150320113646.jpg" alt="miss A Colors 앨범 사진" />
+                    <ol>
+                        <p>TRACKLIST</p>
+                        <li>한걸음 (One Step)</li>
+                        <li>다른 남자 말고 너 (Only You)</li>
+                        <li>Love Song</li>
+                        <li>녹아 (Melting)</li>
+                        <li>I Caught Ya</li>
+                        <li>Stuck</li>
+                    </ol>
+                </aside>
+                <article>
+                    <div class="album_title">
+                        <h2>Colors</h2>
+                        <p>2015-03-30</p>
+                    </div>
+                        <h3>도도하고 세련된 당당함, miss A '다른 남자 말고 너'<br />
+                        여자들의 적극적인 사랑을 대변한다! miss A '다른 남자 말고 너'<br />
+                        <br />
+                        - miss A의 세 번째 미니앨범 'Colors' 로 1년 5개월 만에 팬들 앞에 돌아오다.<br />
+                        - 자신있고 당당한 적극적인 여자들을 위한 앨범.<br />
+                        - 당당함과 한층 더 세련된 모습으로 miss A 멤버들이 선보이는 퍼포먼스가 담긴 앨범.<br />
+                        - 앨범 총 6곡 중 2곡 I Caught Ya(수지), Stuck(민) 작사.<br />
+                        - 힙합, 트랩비트, 어쿠스틱 피아노 등 다이나믹한 다양한 색채를 담은 이색적인 곡 수록.<br />
+                        </h3>
+                        <p>
+                        miss A가 세 번째 미니앨범이자 일곱 번째 프로젝트 앨범 'Colors' 로 돌아온다. <br />
+                        <br />
+                        1년 5개월 만에 돌아온 그녀를 miss A! 지난 앨범 '허쉬'로 어쿠스틱한 분위기와 인상적인 곡으로 속삭이는 듯한 가사와
+                        몽환적인 멜로디로 사랑을 받았던 miss A 이기에 이번 컴백 앨범에 대한 기대감을 더욱 고조시키고 있다. <br />
+                        <br />
+                        세번째 미니 앨범의 타이틀곡 '다른 남자 말고 너'는 대중적인 힙합과 트랙 리듬이 인상적인 곡으로 여자들의 적극적인 사랑방식을 대변해주는 인상적인 곡이다.<br />
+                        <br />
+                        미쓰에이 멤버들의 "다른 남자 말고 너" 라는 가사로 시작되는 표현이 자신이 원하는 남자와 하는 사랑은 뻔한 방식이 아니라고 말하며,
+                        씨스타의 'Touch my body'를 프로듀싱했던 블랙 아이드 필승의 곡으로 직설적이면서 진솔한 색채를 엿볼 수 있는 감각적인 곡이다. <br />
+                        <br />
+                        이외에도, Retro Neo Soul의 장르의 곡으로 Urban 느낌의 Intro 저음의 Groove와 EP와 어쿠스틱 피아노의 라인이 돋보이는 매력적인 곡 한걸음 (One step),
+                        트랩(Trap) 비트에 어우러진 바이올린의 콤비네이션으로 애절함과 요염함의 경계를 미묘하게 넘나드는 유혹의 노래 love song, 섹시하면서도 절제된 감성으로
+                        심플하고 강렬한 곡과 세련된 멜로디로 아무로 나미에 등 국내외 수많은 히트곡들로 유명한 노르웨이의 프로듀서 그룹 Dsign Music의 작품 녹아 (Melting),
+                        miss A 멤버 ‘수지’가 작사한 곡으로 바람 피는 장면을 직접 눈앞에 목격한 모습을 재미있게 묘사한 ‘딱 걸렸어’ 의미에 I Caught Ya, miss A 멤버 ‘민’이 작사한
+                        곡으로 다른 사람과 만나도 괜찮을까라는 위험한 사랑 이야기를 담은 Stuck, 총 6곡이 수록되었다. 
+                        층 더 성숙한 모습으로 1년 5개월 만에 컴백한 miss A가 신규 앨범 ‘다른 남자 말고 너’로 팬들을 찾아간다.  <br />
+                        <br />
+                        각기 다른 4명에 여자 miss A가 말하는 직설적이면서 당당한 사랑의 메시지 '다른 남자 말고 너' 로 miss A 특유의 당당한 매력을 느껴 보는 건 어떨까?<br />
+                        <br />
+                        <p>
+                    <div class="album_list">
+                        <ul>
+                            <li>
+                                <img src="http://missa.jype.com/upload/album/album_150320113646(1).jpg" alt="miss A 2015.03.30 발매된 color 앨범"/>
+                            </li>
+                            <li>
+                                <img src="http://missa.jype.com/upload/album/album_15031711259(1).JPG" alt="miss A 2013.11.06 발매된 Hush 앨범"/>
+                            </li>
+                            <li>
+                                <img src="http://missa.jype.com/upload/album/album_150317112350(1).jpg" alt="miss A 2012.10.15 발매된 남자없이 잘 살아 앨범"/>
+                            </li>
+                        </ul>
+                    </div>    
+                </article>
+            </div>
+        </section>
+    </div>
+    
+
+
+
+    <footer>
+        <a href="#"><div class="jyplogo"></div></a>
+        <div class="snslink">
+            <a href="#" class="icon-twitter"></a>
+            <a href="#" class="icon-facebook"></a>
+            <a href="#" class="icon-youtube"></a>
+            <a href="#" class="icon-youtube"></a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
