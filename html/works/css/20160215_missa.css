@@ -7,68 +7,39 @@ GLOBAL
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 /* frame */
-html								{overflow: hidden;}
-html, body							{height: 100%;}
-body								{margin: 0; padding: 0;}
-ul									{list-style: none; margin: 0; padding: 0;}
-.menu								{display: none; position: absolute; top: 0; right: 0; width: 200px; height: 61px; font-family: 'Oswald', sans-serif; font-size: 16px; color: #ffffff; border: 0; background-color: #333333;}
+html										{overflow: hidden;}
+html, body									{height: 100%;}
+body										{margin: 0; padding: 0;}
+ul											{list-style: none; margin: 0; padding: 0;}
+button										{display: inline-block; padding: 0; appearance: none; -webkit-appearance: none; font-size: inherit; border: 0 none; background-color: transparent;}
+a											{text-decoration: none;}
+#frame										{width: 100%; height: 100%;}
+#frame.index								{background: url(../images/20160215/missa-bg-pc.jpg) no-repeat 0 0; background-size: cover; -webkit-background-size: cover;}
+#frame.profile								{position: relative; background: url(../images/20160215/1.jpg) no-repeat 50% 50%; background-size: cover; -webkit-background-size: cover;}
 
-/* gnb */
-header								{overflow: hidden; position: absolute; width: 100%; height: 100px; padding: 0 20px; box-shadow: 0 1px 6px rgba(0,0,0,0.2); background-color: rgba(255,255,255,0.1);}
-header h1							{float: left; position: absolute; top: 4px; left: 45px; width: 104px; height: 52px; transition: 1s; -webkit-transition: 1s; background: url(../images/20160215/missa-logo-s.png) no-repeat center center; cursor: pointer;}
-header h1:hover						{transform: rotateY(180deg);}
-header a							{color: transparent;}
-header nav							{float: right; display: block; margin-right: 40px;}
-header nav li						{float: left; line-height: 100px;}
-header nav li a						{display: block; padding: 0 18px; font-family: 'Oswald', sans-serif; text-decoration: none; color: #e1b83d;}
-header nav li a:hover				{color: #feedb8; transition: 0.2s; border-top: 2px #feedb8 solid; box-shadow: inset 0px 3px #feedb8; background-color: rgba(255, 255, 255, 0.2);}
-header nav a.menu					{color: #ffffff; text-decoration: none;}
+/* header */
+#header										{overflow: hidden; position: fixed; z-index: 1; width: 100%; height: 102px; box-shadow: 0 1px 7px rgba(0,0,0,0.2); box-sizing: border-box; background-color: rgba(255,255,255,0.1);}
+#header:after								{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .data-head							{float: left; width: 104px; height: 102px;}
+#header .data-head .title					{margin: 0; padding: 0;}
+#header .data-head .title a					{display: block; width: 104px; height: 102px; padding: 0 25px; text-indent: -999em; transition: All 0.7s ease; -webkit-transition: All 0.7s ease; background: url(../images/20160215/missa-logo-s.png) no-repeat 50% 50%; cursor: pointer;}
+#header .data-head .title a:hover			{transform: rotateY(180deg);}
+#header .data-body							{float: right;}
+#header .data-body .title					{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#header .data-body .data-item				{width: 100%; height: 102px;}
+#header .data-body .data-item li			{float: left;}
+#header .data-body .data-item li a			{display: block; padding: 42px 18px; color: #e1b83d; font-size: 16px; line-height: 1; font-family: 'Oswald', sans-serif; text-decoration: none; box-sizing: border-box; transition: all 0.15s linear; -webkit-transition: all 0.15s linear;}
+#header .data-body .data-item li a:hover	{color: #feedb8; background-color: rgba(255,255,255,0.2); box-shadow: inset 0px 3px #feedb8;}
 
 /* footer */
-footer								{position: absolute; bottom: 0; width: 100%; height: 57px; line-height: 60px; background-color: rgba(0,0,0,0.2);}
-footer a:before						{display: inline-block; width: 30px; height: 30px; line-height: 30px; text-align: center; text-decoration: none; color: #000000; border-radius: 5px; background-color: #e4e4e4;}
-footer .jyplogo a					{float: left; position: absolute; z-index: 1; top: 5px; left: 7%; width: 115px; height: 45px; text-indent: -120%; background: url(../images/20160215/jyplogo-w.png) no-repeat;}
-footer .snslink						{float: right; position: relative; top: 15px; right: 3%; width: 180px; height: 30px; text-align: center;}
-footer .snslink a.sns				{float: left; display: inline-block; position: relative; width: 30px; height: 30px; margin: 0 10px 0 0; white-space: nowrap; vertical-align: middle; text-decoration: none; text-indent: -9999px;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-background-repeat: no-repeat;
-background-position: center center;
-background-color: #e4e4e4;
-}
-footer .snslink .tw					{background: url(../images/20160215/twitter_bird.png);}
-footer .snslink .fb					{background: url(../images/20160215/facebook.png);}
-footer .snslink .yt					{background: url(../images/20160215/youtube.png);}
-footer .snslink .fan				{background: url(../images/20160215/fans.png);}
-
-.wrap								{width: 100%; height: 100%; background: url(../images/20160215/missa-bg-pc.jpg) no-repeat top center; -webkit-background-size: cover; background-size: cover;}
-.mainlogo							{position: relative; top: 41.9%; left: 40.9%; margin: auto 0; width: 350px; height: 350px; transition: 1s; opacity: 0.8; background: url(../img/missa-bg-mainlogo.png) no-repeat;}
-.mainlogo:hover						{transform: scale(1.1,1.1);}
-
-/* media-query */
-@media all and (max-width: 769px){
-.wrap								{background-image: url(../images/20160215/missa-bg-720.jpg);}
-header								{overflow: visible;}
-nav .menu							{display: block; width: 200px; height: 61px; line-height: 61px;}
-nav a.menu							{text-decoration: none; text-align: center;}
-nav ul								{display: block; float: none; position: absolute; top: 60px; right: 0; width: 200px;}
-nav ul li							{float: none; width: 200px; line-height: 42px;}
-nav ul li:first-child				{border-top: none;}
-.mainlogo							{top: 10%; width: 250px; height: 250px; -webkit-background-size: cover; background-position: 50% 50%; -webkit-background-size: cover; background-size: cover;}
-header nav ul						{overflow: hidden; z-index: 1; height: 0; transition: 1000ms;}
-header nav ul:target				{overflow: hidden; height: 270px; transition: 1000ms;}
-header nav ul li					{background-color: rgba(255,255,255,0.3);}
-header nav ul li:hover				{color: #feedb8; border-top: 2px #feedb8 solid; background-color: rgba(255,255,255,0.2);}
-header nav ul li a:hover			{height: 40px; box-sizing: border-box; border: 0; box-shadow: none; transform: translatex(10%);}
-}
-
-@media all and (max-width: 481px){
-header								{height: 40px;}
-header h1							{width: 65px; height: 30px; margin: 5px; transform: scale(0.8,0.8); background-size: cover;}
-nav .menu							{display: block; width: 150px; height: 41px; line-height: 41px; font-size: 12px;}
-nav ul								{top: 40px; width: 150px;}
-footer								{height: 37px; line-height: 37px;}
-footer .jyplogo						{margin: -2px; transform: scale(0.7,0.7);}
-footer .snslink a:before			{transform: scale(0.7,0.7);}
-}
+#footer										{position: fixed; z-index: 1; bottom: 0; width: 100%; height: 57px; line-height: 1; background-color: rgba(0,0,0,0.2);}
+#footer:after								{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#footer .data-head							{position: absolute; top: 5px; left: 7%;}
+#footer .data-head a						{float: left; width: 115px; height: 57px; text-indent: -999em; background: url(../images/20160215/jyplogo-w.png) no-repeat 0 0;}
+#footer .data-body							{position: absolute; top: 14px; right: 7%;}
+#footer .data-body .data-item				{float: left; width: 30px; height: 30px; text-indent: -999em; background-position: 50% 50%; background-color: #e4e4e4; background-repeat: no-repeat; border-radius: 5px;}
+#footer .data-body .data-item+.data-item	{margin: 0 0 0 10px;}
+#footer .data-body .data-item.tw			{background-image: url(../images/20160215/twitter_bird.png);}
+#footer .data-body .data-item.fb			{background-image: url(../images/20160215/facebook.png);}
+#footer .data-body .data-item.yt			{background-image: url(../images/20160215/youtube.png);}
+#footer .data-body .data-item.fan			{background-image: url(../images/20160215/fans.png);}

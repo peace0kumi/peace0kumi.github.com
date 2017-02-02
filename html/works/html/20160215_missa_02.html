@@ -1,288 +1,100 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: miss A ｜ Profile ::</title>
-    <style type="text/css">
-    
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-    
-body{margin: 0;}
-html{overflow-y: hidden; overflow-x: hidden;}
-body,html{height: 100%;}
-ul{list-style: none; margin: 0; padding: 0;}
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+<meta name="Description" content="missA Official Web Page" />
+<meta name="Keywords" content="missA, 미쓰에이, 미스에이, JYP" />
+<meta name="Author" content="ParkYeongHoo, JYP Entertainment" />
+<title>:: miss A :: 박영후</title>
+<link rel="stylesheet" href="../css/20160215_missa.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style type="text/css">
+#frame.profile .data-list {position: absolute; z-index: 1; top: 23%; left: 8%; width: 230px; height: 230px;}
+#frame.profile .data-list:after {content: '';}
+#frame.profile .data-list .data-item {float: left; margin: 5px; width: 100px; height: 100px; opacity: 0.8; transition: 1s; -webkit-transition: 1s;}
+#frame.profile .data-list .data-item:hover {opacity: 1; transition: 1s; -webkit-transition: 1s;}
+#frame.profile .data-list .data-item a {display: block; height: 100%;}
+#frame.profile .data-list .data-item a img {width: 100%; height: 100%; border: 2px #ffffff solid; box-sizing: border-box;}
+#frame.profile .button-area{display: block;}
+#frame.profile .button-area .btn {position: absolute; z-index: 1; top: 50%; width: 50px; height: 50px; margin: -25px 0 10px; text-indent: -999em; background-repeat: no-repeat; background-position: 50% 50%; opacity: 0.7; cursor: pointer;}
+#frame.profile .button-area .btn:hover {opacity: 1;}
+#frame.profile .button-area .btn.prev {left: 5px; background-image: url(http://missa.jype.com/images/prevImgBtn.png);}
+#frame.profile .button-area .btn.next {right: 5px; background-image: url(http://missa.jype.com/images/nextImgBtn.png);}
 
-.menu{
-    display: none;
-    border: 0;
-    width: 200px;
-    height: 61px;
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    font-family: 'Oswald', sans-serif;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+#frame.profile .data-image .data-item {display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; text-indent: -999em; background-size: cover; -webkit-background-size: cover; background-position: 50% 50%; transition: all 1s ease; -webkit-transition: all 1s ease;}
+#feiPhoto {background-image: url(../images/20160215/1.jpg);}
+#ziaPhoto {background-image: url(../images/20160215/2.jpg);}
+#minPhoto {background-image: url(../images/20160215/3.jpg);}
+#suzyPhoto {background-image: url(../images/20160215/4.jpg);}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.data-list li a').each(function(){
+		$(this).click(function(){
+			var target = $(this).attr('href');
+			
+			$(target).css({
+				'display': 'block',
+				'opacity': '1'
+			}).siblings().css({
+				'display': 'none',
+			})
+			console.log(target)
+		});
+	});
 
-/*gnb*/
-header{
-    height: 100px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-    width: 100%;
-    padding: 0 20px;
-    position: absolute;
-    background-color: rgba(255,255,255,0.1);
-    overflow: hidden;
-    z-index: 10;
-}
+	var sectionIdx = $('.data-image .data-item').index();
 
-header h1{
-    cursor: pointer;
-    width: 104px;
-    height: 52px;
-    background: url(../img/missa-logo-s.png) no-repeat center center;
-    transition: 1s;
-    float: left;
-    position: absolute;
-    left: 45px;
-    top: 4px;
-}
-
-header a{color: transparent;}
-header h1:hover{transform: rotateY(180deg);}
-header nav{
-    float: right;
-    display: block;
-    margin-right: 40px;
-}
-header nav li{
-    float: left;
-    line-height: 100px;
-}
-header nav li a{
-    padding: 0 18px;
-    display: block;
-    text-decoration: none;
-    color: #e1b83d;
-    font-family: 'Oswald', sans-serif;}
-    
-header nav li a:hover{
-    border-top: 2px #feedb8 solid;
-    color: #feedb8;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: 0.2s;
-    box-shadow: inset 0px 3px #feedb8;
-}
-header nav a.menu {
-    text-decoration: none;
-    color: #fff;
-}
-/*gnb*/
-        
-
-/*profile*/
-.wrap{
-    height: 100%; 
-    width: 100%; 
-    background: url('http://missa.jype.com/images/profile/large/1.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;}
-
-
-/*photo button*/
-.profile .profile_photo{
-    width: 230px;
-    height: 230px;
-    position: absolute;
-    top: 23%;
-    left: 8%;
-    z-index: 1;
-    opacity: 0.8;
-    transition: 1s;
-}
-.profile .profile_photo:hover{
-    opacity: 1;
-    transition: 1s;
-}
-.profile .profile_photo img{
-    border: 2px #fff solid;
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin: 5px 5px;
-}
-button.previmgbtn:hover{
-    opacity: 1;
-}
-button.previmgbtn{
-    background: url(http://missa.jype.com/images/prevImgBtn.png) center center no-repeat;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin: -25px 10px 0 10px;
-    opacity: 0.7;
-}
-button.nextimgbtn:hover{
-    opacity: 1;
-}
-button.nextimgbtn{
-    background: url(http://missa.jype.com/images/nextImgBtn.png) center center no-repeat;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin: -25px 10px 0 10px;
-    opacity: 0.7;
-}
-button{
-    border: none;
-}
-section{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    opacity: 0;
-    background-position: center center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    transition: 1s;
-}
-section:target{
-    opacity: 1;
-}
-#photo1 {background-image: url(http://missa.jype.com/images/profile/large/1.jpg);}
-#photo2 {background-image: url(http://missa.jype.com/images/profile/large/2.jpg);}
-#photo3 {background-image: url(http://missa.jype.com/images/profile/large/3.jpg);}
-#photo4 {background-image: url(http://missa.jype.com/images/profile/large/4.jpg);}
-        
-        
-@media all and (max-width:770px) {
-    .wrap{}
-    
-    header{overflow: visible;}
-    nav .menu{display: block; width: 200px; height: 61px; line-height: 61px;}
-    nav a.menu{text-decoration: none; text-align: center;}
-
-    nav ul{display: block;
-            float: none;
-            position: absolute;
-            right: 0;
-            top: 60px;
-            width: 200px;}
-        
-    nav ul li{float: none;
-            line-height: 42px;
-            width: 200px;}
-            
-    nav ul li:first-child{border-top: none;}
-    
-    .mainlogo{
-        top: 10%;
-        width: 250px;
-        height: 250px;
-        background-position: 50% 50%;
-        -webkit-background-size: cover;
-        background-size: cover;}
-
-    header nav ul{transition: 1000ms; height: 0; overflow: hidden; z-index: 1;}
-    header nav ul:target{transition: 1000ms; height: 270px; overflow: hidden;}
-    header nav ul li{background-color: rgba(255,255,255,0.3);}
-    header nav ul li a:hover{box-sizing: border-box;
-    border: 0;
-    background: none;
-    height: 40px;
-    box-shadow: none;
-    transform: translatex(10%);}
-    header nav ul li:hover{border-top: 2px #feedb8 solid;
-    color: #feedb8;
-    background-color: rgba(255,255,255,0.2);}
-}
-
-
-@media all and (max-width:480px) {
-    .wrap{}
-    header{height: 40px;}
-    header h1{margin: 5px; width: 65px;
-    height: 30px; background-size: cover;
-    transform: scale(0.8,0.8);}
-    
-    nav .menu{display: block; width: 150px; height: 41px; font-size: 12px; line-height: 41px;}
-    nav ul{top: 40px; width: 150px;}
-    
-    footer{height: 37px; line-height: 37px;}
-    footer .jyplogo{transform: scale(0.7,0.7); margin: -2px;}
-    footer .snslink a:before{transform: scale(0.7,0.7);}
-    
-    .profile .profile_photo{width: 300px; height: 54px; position: absolute; top: 23%; left: 9%; z-index: 1; opacity: 0.8; background-position: center center;}
-    .profile .profile_photo img{border: 2px #fff solid; width: 50px; height: 50px; float: left; margin: 5px 5px;}
-}
-
-        
-    </style>
+	$('#prevBtn').click(function(){
+		console.log(sectionIdx)
+	})
+});
+</script>
 </head>
 <body>
-    <div class="wrap">   
-
-        <header>
-            <h1 class="logo">
-                <a href="index.html">home</a>
-            </h1>
-            <nav>
-                <a href="#a1" class="menu">MAIN MENU</a>
-                    <ul id="a1">
-                        <li><a href="profile.html">PROFILE</a></li>
-                        <li><a href="discography.html">DISCOGRAPHY</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
-                        <li><a href="#">VIDEO</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">SCHEDULE</a></li>
-                    </ul>
-            </nav>
-        </header>
-        
-            <div class="profile">
-                <div class="profile_photo">
-                    <ul>
-                      <li>
-                          <a href="#photo1">
-                              <img src="http://missa.jype.com/images/profile/thumbs/1.jpg" alt="">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#photo2">
-                              <img src="http://missa.jype.com/images/profile/thumbs/2.jpg" alt="">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#photo3">
-                              <img src="http://missa.jype.com/images/profile/thumbs/3.jpg" alt="">
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#photo4">
-                              <img src="http://missa.jype.com/images/profile/thumbs/4.jpg" alt="">
-                          </a>
-                      </li>
-                    </ul>
-                 </div>
-                      <section id="photo1"></section>
-                      <section id="photo2"></section>
-                      <section id="photo3"></section>
-                      <section id="photo4"></section>
-            </div>
-            <a href="#"><button class="previmgbtn"></button></a>
-            <a href="#"><button class="nextimgbtn"></button></a>
-    </div>
-    
-    
-    
+<div id="frame" class="profile">
+	<!-- header -->
+	<div id="header">
+		<div class="data-head">
+			<h1 class="title"><a href="20160215_missa_01.html">missA</a></h1>
+		</div>
+		<div class="data-body">
+			<h2 class="title"><a href="#gnbTop">MAIN MENU</a></h2>
+			<ul id="gnbTop" class="data-item">
+			<li><a href="20160215_missa_02.html">PROFILE</a></li>
+			<li><a href="#">DISCOGRAPHY</a></li>
+			<li><a href="#">GALLERY</a></li>
+			<li><a href="#">VIDEO</a></li>
+			<li><a href="#">NOTICE</a></li>
+			<li><a href="#">SCHEDULE</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //header -->
+	
+	<!-- content -->
+	<div id="content">
+		<div class="content-primary">
+			<ul class="data-list">
+			<li class="data-item"><a href="#feiPhoto"><img src="../images/20160215/1(1).jpg" alt=""></a></li>
+			<li class="data-item"><a href="#ziaPhoto"><img src="../images/20160215/2(1).jpg" alt=""></a></li>
+			<li class="data-item"><a href="#minPhoto"><img src="../images/20160215/3(1).jpg" alt=""></a></li>
+			<li class="data-item"><a href="#suzyPhoto"><img src="../images/20160215/4(1).jpg" alt=""></a></li>
+			</ul>
+			<div class="data-image">
+	 			<section id="feiPhoto" class="data-item">Fei Photo</section>
+				<section id="ziaPhoto" class="data-item">Zia Photo</section>
+				<section id="minPhoto" class="data-item">Min Photo</section>
+				<section id="suzyPhoto" class="data-item">Suzy Photo</section>
+			</div>
+			<div class="button-area" id="slideBtn">
+				<button id="prevBtn" class="btn prev">PREV</button>
+				<button id="nextBtn" class="btn next">NEXT</button>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+</div>
 </body>
 </html>
