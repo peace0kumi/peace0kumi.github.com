@@ -14,8 +14,7 @@ ul											{list-style: none; margin: 0; padding: 0;}
 button										{display: inline-block; padding: 0; appearance: none; -webkit-appearance: none; font-size: inherit; border: 0 none; background-color: transparent;}
 a											{text-decoration: none;}
 #frame										{width: 100%; height: 100%;}
-#frame.index								{background: url(../images/20160215/missa-bg-pc.jpg) no-repeat 0 0; background-size: cover; -webkit-background-size: cover;}
-#frame.profile								{position: relative; background: url(../images/20160215/1.jpg) no-repeat 50% 50%; background-size: cover; -webkit-background-size: cover;}
+img											{vertical-align: top; border: 0 none;}
 
 /* header */
 #header										{overflow: hidden; position: fixed; z-index: 1; width: 100%; height: 102px; box-shadow: 0 1px 7px rgba(0,0,0,0.2); box-sizing: border-box; background-color: rgba(255,255,255,0.1);}
@@ -43,3 +42,31 @@ a											{text-decoration: none;}
 #footer .data-body .data-item.fb			{background-image: url(../images/20160215/facebook.png);}
 #footer .data-body .data-item.yt			{background-image: url(../images/20160215/youtube.png);}
 #footer .data-body .data-item.fan			{background-image: url(../images/20160215/fans.png);}
+
+/*
+LOCAL
+*/
+/* index */
+#frame.index								{background: url(../images/20160215/missa-bg-pc.jpg) no-repeat 0 0; background-size: cover; -webkit-background-size: cover;}
+
+/* profile */
+#frame.profile								{position: relative; background: url(../images/20160215/1.jpg) no-repeat 50% 50%; background-size: cover; -webkit-background-size: cover;}
+#frame.profile .data-list					{position: absolute; z-index: 1; top: 23%; left: 8%; width: 230px; height: 230px;}
+#frame.profile .data-list:after				{content: '';}
+#frame.profile .data-list .data-item		{float: left; margin: 5px; width: 100px; height: 100px; opacity: 0.8; transition: 1s; -webkit-transition: 1s;}
+#frame.profile .data-list .data-item:hover	{opacity: 1; transition: 1s; -webkit-transition: 1s;}
+#frame.profile .data-list .data-item a		{display: block; height: 100%;}
+#frame.profile .data-list .data-item a img	{width: 100%; height: 100%; border: 2px #ffffff solid; box-sizing: border-box;}
+#frame.profile .button-area					{display: block;}
+#frame.profile .button-area .btn			{position: absolute; z-index: 1; top: 50%; width: 50px; height: 50px; margin: -25px 0 10px; text-indent: -999em; background-repeat: no-repeat; background-position: 50% 50%; opacity: 0.7; cursor: pointer;}
+#frame.profile .button-area .btn:hover		{opacity: 1;}
+#frame.profile .button-area .btn.prev		{left: 5px; background-image: url(http://missa.jype.com/images/prevImgBtn.png);}
+#frame.profile .button-area .btn.next		{right: 5px; background-image: url(http://missa.jype.com/images/nextImgBtn.png);}
+#frame.profile .data-image .data-item		{display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; text-indent: -999em; background-size: cover; -webkit-background-size: cover; background-position: 50% 50%; transition: all 1s ease; -webkit-transition: all 1s ease;}
+#frame.profile .data-image .data-item.active{display: block; opacity: 1;}
+#feiPhoto									{background-image: url(../images/20160215/1.jpg);}
+#ziaPhoto									{background-image: url(../images/20160215/2.jpg);}
+#minPhoto									{background-image: url(../images/20160215/3.jpg);}
+#suzyPhoto									{background-image: url(../images/20160215/4.jpg);}
+
+/* discography */

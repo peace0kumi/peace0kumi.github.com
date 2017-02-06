@@ -9,46 +9,38 @@
 <title>:: miss A :: 박영후</title>
 <link rel="stylesheet" href="../css/20160215_missa.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<style type="text/css">
-#frame.profile .data-list {position: absolute; z-index: 1; top: 23%; left: 8%; width: 230px; height: 230px;}
-#frame.profile .data-list:after {content: '';}
-#frame.profile .data-list .data-item {float: left; margin: 5px; width: 100px; height: 100px; opacity: 0.8; transition: 1s; -webkit-transition: 1s;}
-#frame.profile .data-list .data-item:hover {opacity: 1; transition: 1s; -webkit-transition: 1s;}
-#frame.profile .data-list .data-item a {display: block; height: 100%;}
-#frame.profile .data-list .data-item a img {width: 100%; height: 100%; border: 2px #ffffff solid; box-sizing: border-box;}
-#frame.profile .button-area{display: block;}
-#frame.profile .button-area .btn {position: absolute; z-index: 1; top: 50%; width: 50px; height: 50px; margin: -25px 0 10px; text-indent: -999em; background-repeat: no-repeat; background-position: 50% 50%; opacity: 0.7; cursor: pointer;}
-#frame.profile .button-area .btn:hover {opacity: 1;}
-#frame.profile .button-area .btn.prev {left: 5px; background-image: url(http://missa.jype.com/images/prevImgBtn.png);}
-#frame.profile .button-area .btn.next {right: 5px; background-image: url(http://missa.jype.com/images/nextImgBtn.png);}
-
-#frame.profile .data-image .data-item {display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; text-indent: -999em; background-size: cover; -webkit-background-size: cover; background-position: 50% 50%; transition: all 1s ease; -webkit-transition: all 1s ease;}
-#feiPhoto {background-image: url(../images/20160215/1.jpg);}
-#ziaPhoto {background-image: url(../images/20160215/2.jpg);}
-#minPhoto {background-image: url(../images/20160215/3.jpg);}
-#suzyPhoto {background-image: url(../images/20160215/4.jpg);}
-</style>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('.data-list li a').each(function(){
+	//thumbnail click
+	$('.data-list .data-item a').each(function(){
 		$(this).click(function(){
 			var target = $(this).attr('href');
-			
-			$(target).css({
-				'display': 'block',
-				'opacity': '1'
-			}).siblings().css({
-				'display': 'none',
-			})
-			console.log(target)
+
+			$(target).addClass('active').css('display','block')
+			.siblings().removeClass('active').css('display','none');
 		});
 	});
 
-	var sectionIdx = $('.data-image .data-item').index();
-
+	//next button click
+	$('#nextBtn').click(function(){
+		var nowImg =  $('.data-image .data-item.active').html();
+		
+		$('.data-image .data-item.active').removeClass('active').css('display','none').next().addClass('active').css('display','block');
+		if(nowImg == null){
+			$('.data-image li+li:first').addClass('active').css('display','block');
+		}
+	});
+	
+	//prev button click
 	$('#prevBtn').click(function(){
-		console.log(sectionIdx)
-	})
+		var nowImg =  $('.data-image .data-item.active').html();
+		var nowIdx = $('.data-image .data-item.active').index();
+		
+		$('.data-image .data-item.active').removeClass('active').css('display','none').prev().addClass('active').css('display','block');
+		if(nowImg == null || nowIdx == 0){
+			$('.data-image li:last').addClass('active').css('display','block');
+		}
+	});
 });
 </script>
 </head>
@@ -63,7 +55,7 @@ $(document).ready(function(){
 			<h2 class="title"><a href="#gnbTop">MAIN MENU</a></h2>
 			<ul id="gnbTop" class="data-item">
 			<li><a href="20160215_missa_02.html">PROFILE</a></li>
-			<li><a href="#">DISCOGRAPHY</a></li>
+			<li><a href="20160215_missa_03.html">DISCOGRAPHY</a></li>
 			<li><a href="#">GALLERY</a></li>
 			<li><a href="#">VIDEO</a></li>
 			<li><a href="#">NOTICE</a></li>
@@ -82,12 +74,12 @@ $(document).ready(function(){
 			<li class="data-item"><a href="#minPhoto"><img src="../images/20160215/3(1).jpg" alt=""></a></li>
 			<li class="data-item"><a href="#suzyPhoto"><img src="../images/20160215/4(1).jpg" alt=""></a></li>
 			</ul>
-			<div class="data-image">
-	 			<section id="feiPhoto" class="data-item">Fei Photo</section>
-				<section id="ziaPhoto" class="data-item">Zia Photo</section>
-				<section id="minPhoto" class="data-item">Min Photo</section>
-				<section id="suzyPhoto" class="data-item">Suzy Photo</section>
-			</div>
+			<ul class="data-image">
+	 			<li id="feiPhoto" class="data-item active">Fei Photo</li>
+				<li id="ziaPhoto" class="data-item">Zia Photo</li>
+				<li id="minPhoto" class="data-item">Min Photo</li>
+				<li id="suzyPhoto" class="data-item">Suzy Photo</li>
+			</ul>
 			<div class="button-area" id="slideBtn">
 				<button id="prevBtn" class="btn prev">PREV</button>
 				<button id="nextBtn" class="btn next">NEXT</button>
