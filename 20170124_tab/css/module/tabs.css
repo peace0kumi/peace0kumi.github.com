@@ -26,21 +26,19 @@
 .tabs.theme-a .tabs-item+.tabs-item						{border-left: 0;}
 
 /* theme-b */
-.tabs.theme-b											{}
-.tabs.theme-b .tabs-item								{display: block; position: relative; left: 0; height: 50px;}
-.tabs.theme-b .tabs-item:first-child,					
-.tabs.theme-b .tabs-item:last-child						{padding: 0; margin: 0;}
+.tabs.theme-b											{overflow: hidden;}
+.tabs.theme-b .tabs-item								{display: block; position: relative; left: -21px; height: 50px; padding: 0 20px;}
+.tabs.theme-b .tabs-item:before							{content: '|'; display: inline-block; position: absolute; top: 12px; left: -1px; width: 1px; color: #d9d9d9; font-size: 16px;}
 .tabs.theme-b .tabs-item.active							{color: #e36a35;}
 .tabs.theme-b .tabs-item.active:after					{z-index: -1;}
 .tabs.theme-b .tabs-item+.tabs-item						{}
-.tabs.theme-b .tabs-item+.tabs-item:after				{content: '|'; display: inline-block; position: absolute; top: 14px; left: -1px; width: 1px; color: #d9d9d9; font-size: 16px;}
 
 /* theme-c */
 .tabs.theme-c											{}
 .tabs.theme-c .tabs-item								{display: block; position: relative; width: 200px; height: 50px; text-align: center; background-color: #f7f7f7;}
 .tabs.theme-c .tabs-item.active							{color: #ffffff; background-color: #e36a35;}
-.tabs.theme-c .tabs-item+.tabs-item:after				{content: '|'; display: inline-block; position: absolute; top: 14px; left: -1px; width: 1px; color: #d9d9d9; font-size: 16px;}
 .tabs.theme-c .tabs-item.active:after					{z-index: -1;}
+.tabs.theme-c .tabs-item+.tabs-item:after				{content: '|'; display: inline-block; position: absolute; top: 12px; left: -1px; width: 1px; color: #d9d9d9; font-size: 16px;}
 
 /* footer */
 #footer													{padding: 10px; text-align: center; border-top: 1px #eeeeee solid;}
