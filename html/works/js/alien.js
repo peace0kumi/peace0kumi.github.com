@@ -1,46 +1,39 @@
 $(document).ready(function(){
 
+	//메뉴바 하버
+	$('#header .data-item').mouseenter(function(){
+		$(this).css({'background-color':'#bed44d'}).children('a').css({'color':'#1974c7'})
+	});
+	
+	$('#header .data-item').mouseleave(function(){
+		$(this).css({'background-color':'#1974c7'}).children('a').css({'color':'#ffffff'})
+	});
+	
 	//슬라이드 배너
-	var st = $('.slidebanner li');
-	var stIdx = $('.slidebanner li').first().index();
-	var nav = $('.nav li');
+	var st = $('.slide-list li');
+	var stIdx = $('.slide-list li').first().index();
+	var nav = $('#header .data-list li');
 	var hisnum = null;
 	var stimg = null;
-	st.eq(stIdx).addClass('on').find('img').css('display','block')
+	st.eq(stIdx).addClass('active').find('img').css('display','block')
 
 	//메인 페이지
 	//다음 클릭
-	$('.slidebanner .next').click(function(){
+	$('.button-area .next').click(function(){
 		stimg = st.eq(stIdx).find('img')
-		slideMotion(stimg,0,"-100%",800)
+		slideMotion(stimg,0,"-100%",500)
 		stIdx ++
 		stimg = st.eq(stIdx).find('img')
-		slideMotion(stimg,"100%",0,800)
+		slideMotion(stimg,"100%",0,500)
 	});
 
 	//이전 클릭
-	$('.slidebanner .prev').click(function(){
+	$('.button-area .prev').click(function(){
 		stimg = st.eq(stIdx).find('img')
-		slideMotion(stimg,0,"100%",800)
+		slideMotion(stimg,0,"100%",500)
 		stIdx --
 		stimg = st.eq(stIdx).find('img')
-		slideMotion(stimg,"-100%",0,800)
-	});
-
-	//메뉴바 하버
-	$('#header .data-item').hover(function(){
-		$(this).css({'background-color':'#bed44d'}).children('a').css({'color':'#1974c7'})
-	},function(){
-
-		var as = $('.slidebanner li.on').index();
-		var asd = $('.data-item li.active').index();
-
-		if(as+1 == asd){
-			$(this).css({'background-color':'#bed44d'}).children('a').css({'color':'#1974c7'})
-		}
-		else{
-			$(this).css({'background-color':'#bed44d'}).children('a').css({'color':'#1974c7'})
-		}
+		slideMotion(stimg,"-100%",0,500)
 	});
 
 	//번호 크기에 따라 이동이 변함
@@ -51,14 +44,14 @@ $(document).ready(function(){
 			
 			if(hisnum < stIdx){
 				stimg = st.eq(hisnum).find('img')
-				slideMotion(stimg,0,"-100%",800)
+				slideMotion(stimg,0,"-100%",500)
 				stimg = st.eq(stIdx).find('img')
-				slideMotion(stimg,"100%",0,800)
+				slideMotion(stimg,"100%",0,500)
 			}else if(hisnum > stIdx){
 				stimg = st.eq(hisnum).find('img')
-				slideMotion(stimg,0,"100%",800)
+				slideMotion(stimg,0,"100%",500)
 				stimg = st.eq(stIdx).find('img')
-				slideMotion(stimg,"-100%",0,800)
+				slideMotion(stimg,"-100%",0,500)
 			}
 		}
 	});
@@ -66,28 +59,28 @@ $(document).ready(function(){
 	//메뉴바 클릭시 이동
 	nav.on({
 		click:function(){
-			hisnum = $('.slidebanner li.on').index();
-			stIdx = $(this).index()-1;
+			hisnum = $('.slide-list li.active').index();
+			stIdx = $(this).index();
 			
-			$(this).addClass('on').siblings().removeClass('on')
+			$(this).addClass('active').siblings().removeClass('active')
 			
 			if(hisnum < stIdx){
 				stimg = st.eq(hisnum).find('img')
-				slideMotion(stimg,0,"-100%",800)
+				slideMotion(stimg,0,"-100%",500)
 				stimg = st.eq(stIdx).find('img')
-				slideMotion(stimg,"100%",0,800)
+				slideMotion(stimg,"100%",0,500)
 			}else if(hisnum > stIdx){
 				stimg = st.eq(hisnum).find('img')
-				slideMotion(stimg,0,"100%",800)
+				slideMotion(stimg,0,"100%",500)
 				stimg = st.eq(stIdx).find('img')
-				slideMotion(stimg,"-100%",0,800)
+				slideMotion(stimg,"-100%",0,500)
 			}
 		}
 	});
 	
 	//다음 이전 함수 재사용
 	function slideMotion(select,start,end,speed){
-		select.parent('li').addClass('on').siblings('li').removeClass('on')
+		select.parent('li').addClass('active').siblings('li').removeClass('active')
 		select.css({
 			left:start,
 			display:'block'
@@ -98,11 +91,11 @@ $(document).ready(function(){
 		if(stIdx == st.length){
 			stIdx=0;
 			stimg = st.eq(stIdx).find('img');
-			slideMotion(stimg,"100%",0,800);
+			slideMotion(stimg,"100%",0,500);
 		}else if(0>stIdx){
 			stIdx=st.length-1;
 			stimg = st.eq(stIdx).find('img');
-			slideMotion(stimg,"-100%",0,800);
+			slideMotion(stimg,"-100%",0,500);
 		}
 	}
 
@@ -120,7 +113,6 @@ $(document).ready(function(){
 	// 	  $(".slidebanner li img").text("pageX: " + event.pageX + ", pageY: " + event.pageY);
 	// })
 
-	// var xValue = event.pageX;
 	// var yValue = event.pageY;
 
 	// if(xValue <= 1650 && xValue > 700 && yValue <= 955 && yValue > 190){

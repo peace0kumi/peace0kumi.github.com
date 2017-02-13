@@ -7,33 +7,39 @@ GLOBAL
 @import url(https://fonts.googleapis.com/css?family=Oxygen:700);
 
 /* frame */
-html,body								{height: 100%;}
-body									{margin: 0; padding: 0;}
-#frame									{overflow: hidden;}
-ul										{list-style: none; margin: 0; padding: 0;}
-a										{text-decoration: none;}
-*::selection							{text-shadow: none; color: #ffffff; background: #1974c7;}
-*:focus									{outline: none;}
+html,body											{height: 100%;}
+body												{margin: 0; padding: 0; font-family: 'Oxygen', sans-serif;}
+#frame												{position: relative; overflow: hidden; width: 100%; height: 100%;}
+ul													{list-style: none; margin: 0; padding: 0;}
+a													{text-decoration: none;}
+button												{display: inline-block; padding: 0; appearance: none; -webkit-appearance: none; border: 0 none; background-color: transparent;}
+*::selection										{text-shadow: none; color: #ffffff; background: #1974c7;}
+*:focus												{outline: none;}
 
 /* header */
-#header									{position: relative; width: 100%; height: 40px; background-color: #1974c7;}
-#header .data-list						{}
-#header .data-list .data-item 			{float: left; position: relative; padding: 0 50px; line-height: 40px; font-size: 12px; font-weight: bold;}
-#header .data-list .data-item a			{height: 100%; color: #ffffff;}
-#header .data-list .data-item.active	{}
-#header .data-list .data-item.active a	{}
+#header												{position: fixed; width: 100%; height: 40px; background-color: #1974c7;}
+#header .data-list									{}
+#header .data-list .data-item 						{float: left; position: relative; padding: 0 50px; line-height: 40px; font-size: 12px; font-weight: bold;}
+#header .data-list .data-item a						{display: block; color: #ffffff;}
+#header .data-list .data-item.active				{background-color: #bed44d;}
+#header .data-list .data-item.active a				{color: #1974c7;}
 
 /* 
 LOCAL
 */
-.wrap{position: relative; width: 100%; height:100%;}
-.slidebanner{position: absolute; width: 100%; height: 100%;}
-.slidebanner ul{overflow: hidden; position: relative; width: 100%; height: 100%; text-align: center; font-size: 0;}
-.slidebanner li{display: inline-block;}
-.slidebanner li img{display: none; position: absolute; top: 0; left: 0; width: 95%;}
-.slidebanner li a.dot{display: block; position: relative; z-index: 1; top: 50px; width: 10px; height: 10px; margin: 0 3px; border: 1px #ccc dotted; background: #ffffff;}
-.slidebanner li.on a.dot{background: #727272;}
-.slidebanner li.on img{display: block;}
-.slidebanner button{position: absolute; top: 0; width: 50px; height: 50px; background-size: 50px;  text-indent: -999em; border: none; opacity: 0.2; cursor: pointer;}
-.slidebanner button.next{top: 50%; right: 0; background: url(../images/20170124/next.png) no-repeat 0 0;}
-.slidebanner button.prev{top: 50%; left: 0; background: url(../images/20170124/prev.png) no-repeat 0 0;}
+#content											{padding: 40px 0 0 0;}
+
+/* slide */
+.slide-banner										{position: absolute; width: 100%; height: 100%;}
+.slide-banner .slide-list							{overflow: hidden; position: relative; width: 100%; height: 100%; text-align: center; font-size: 0;}
+.slide-banner .slide-list li						{display: inline-block;}
+.slide-banner .slide-list li a						{display: block; position: relative; z-index: 1; top: 50px; width: 10px; height: 10px; margin: 0 3px; text-indent: -999em; border: 1px #cccccc dotted; background: #ffffff;}
+.slide-banner .slide-list li.active a				{background: #727272;}
+.slide-banner .slide-list li img					{display: none; position: absolute; top: 0; left: 0; width: 100%;}
+.slide-banner .slide-list li.active img				{display: block;}
+
+/* button */
+.button-area										{}
+.button-area .btn									{display: inline-block; width: 50px; height: 50px; text-indent: -999em; opacity: 0.2; cursor: pointer;}
+.button-area .btn.next								{position: absolute; z-index: 1; top: 50%; right: 0; background-image: url(../images/20170124/next.png); background-repeat: no-repeat; background-position: 0 0; background-size: 50px;}
+.button-area .btn.prev								{position: absolute; z-index: 1; top: 50%; left: 0; background-image: url(../images/20170124/prev.png); background-repeat: no-repeat; background-position: 0 0; background-size: 50px;}

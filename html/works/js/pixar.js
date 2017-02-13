@@ -23,7 +23,7 @@ $(function(){
 		if(Math.abs(lastScrollTop - thisScroll) <= delta)
 			return;
 		if(thisScroll > lastScrollTop && thisScroll > navbarHeight){
-			$('#header').css('top','-6vh');
+			$('#header').css('top','0');
 		}else{
 			if(thisScroll + $(window).height() < $(document).height()){
 				$('#header').css('top','0');
