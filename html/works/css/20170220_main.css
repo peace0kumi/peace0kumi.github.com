@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/*
+ * GLOBAL
+ */
+/* bxSlider */
+.bx-wrapper																						{}
+.bx-wrapper .bx-viewport																		{}
+.bx-wrapper .bx-viewport .bx-slider																{}
+.bx-wrapper .bx-viewport .bx-slider:after														{content: ''; display: block; clear: both; width: 0; height: 0; visiblity: hidden;}
+
+/* direction */
+.bx-wrapper .bx-controls .bx-controls-direction a												{}
+.bx-wrapper .bx-controls .bx-controls-direction a.bx-prev										{}
+.bx-wrapper .bx-controls .bx-controls-direction a.bx-next										{}
+.bx-wrapper .bx-controls .bx-controls-direction a.disabled										{}
+
+/* auto */
+.bx-wrapper .bx-controls .bx-controls-auto														{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item								{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item .bx-start						{}
+.bx-wrapper .bx-controls .bx-controls-auto .bx-controls-auto-item .bx-stop						{}
+
+/* pager */
+.bx-wrapper .bx-controls .bx-pager																{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item												{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link								{}
+.bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-link.active							{}
+
+/* layout */
+body																							{position: relative; z-index: 0; background-color: #ffffff;}
+.wrapper																						{overflow: hidden;}
+
+/* button reset */
+.btn																							{vertical-align: middle;}
+input.btn,
+button.btn																						{overflow: visible; margin: 0; padding: 0; border: 0 none; cursor: pointer; background-color: transparent; -webkit-appearance: none;}
+a.btn																							{display: inline-block; text-decoration: none;}
+em.btn																							{display: inline-block; font-style: normal;}
+
+/* btn theme */
+.btn.more																						{overflow: hidden; height: 24px; width: 95px; line-height: 24px; background: url(/images/webhome/main/20160919/btn_more.png) no-repeat 0 0;}
+.btn.more span																					{position: relative; z-index: -1;}
+.btn.detail																						{overflow: hidden; height: 34px; width: 130px; line-height: 34px; text-indent: -999em;}
+.btn.detail span																				{position: relative;}
+
+/*
+ * CONTENT
+ */
+/* main-visual */
+#content .main-visual																			{position: relative; overflow: hidden; left: 50%; margin-left: -1300px; width: 2600px; height: 579px;}
+#content .main-visual .item																		{height: 580px; overflow: hidden;}
+#content .main-visual .item .wrap																{position: relative; left: 50%; width: 2600px; height: 580px; margin-left: -1300px; text-align: center;}
+#content .main-visual .item .wrap .data-info													{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#content .main-visual .flex-direction a															{display: block; position: absolute; z-index: 1; top: 50%; margin-top: -55px; width: 50px; height: 111px; text-indent: -999em; overflow: hidden; background-image: url(/images/webhome/main/20170124/bg_bxslider_direction.png); background-repeat: no-repeat;}
+#content .main-visual .flex-direction a.flex-prev												{left: 50%; margin-left: -492px; background-position: 0 0;}
+#content .main-visual .flex-direction a.flex-next												{right: 50%; margin-right: -492px; background-position: 0 -111px;}
+
+/* main-visual */
+#content .main-visual .item.spring-flower .wrap													{background-image: url(../images/20170220/visual_flower_left.png), url(../images/20170220/visual_flower_right.png), url(../images/20170220/visual_flower_title.png), url(../images/20170220/visual_flower_text.png); background-position: 18% 0, 82% 0, 44.5% 105px, 54% 113px; background-color: #cceaea; background-repeat: no-repeat;}
+#content .main-visual .item.spring-flower .button-area											{position: absolute; z-index: 1; left: 50%; bottom: 40px; margin-left: -97px;}
+#content .main-visual .item.spring-flower .button-area a.btn									{display: inline-block; text-decoration: none;}
+#content .main-visual .item.spring-flower .button-area .btn										{overflow: hidden; width: 194px; height: 42px; text-indent: -999em; background-image: url(../images/20170220/visual_btn_off.png); background-repeat: no-repeat; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .main-visual .item.spring-flower .button-area .btn:hover,
+#content .main-visual .item.spring-flower .button-area .btn:focus								{background-image: url(../images/20170220/visual_btn_on.png);}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+	0% {transform: translate(0,-100px);}
+	100% {transform: translate(0,0);}
+}
+
+/* Standard syntax */
+@keyframes example {
+	0% {transform: translate(0,-100px);}
+	100% {transform: translate(0,0);}
+}
+
+/* hyundai-culture */
+#content .shopping-news																				{position: relative;}
+#content .shopping-news:after																			{content: ''; display: block; clear: both;}
+#content .shopping-news h2																				{margin: 70px auto 35px; text-align: center;}
+#content .shopping-news .more-btn																		{display: block; position: absolute; top: 0; right: 0;}
+#content .shopping-news .data-display .data-item														{float: left; overflow: hidden; position: relative; width: 482px; height: 310px;}
+#content .shopping-news .data-display .data-item+.data-item											{margin-left: 20px;}
+#content .shopping-news .data-display .data-item .data-container										{display: block; position: relative; width: 100%; height: 100%; background-repeat: no-repeat; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .shopping-news .data-display .data-item .data-container .data-head 							{display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+#content .shopping-news .data-display .data-item .data-container .data-head:before						{content: ''; display: block; position: absolute; z-index: 10; top: 10px; left: 10px; width: 463px; height: 289px; border-top: 1px solid #333333; border-bottom: 1px solid #333333; opacity: 0;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-moz-transform: scale(0,1);
+	transition: transform .4s ease-out .2s,opacity .4s ease-out;
+	-webkit-transition: -webkit-transform .4s ease-out .2s,opacity .4s ease-out;
+	-moz-transition: -moz-transform .4s ease-out .2s,opacity .4s ease-out;
+}
+#content .shopping-news .data-display .data-item .data-container .data-head:after						{content: ''; display: block; position: absolute; z-index: 10; top: 10px; left: 10px; width: 461px; height: 290px; border-left: 1px solid #333333; border-right: 1px solid #333333; opacity:0;
+	transform: scale(1,0);
+	-webkit-transform: scale(1,0);
+	-moz-transform: scale(1,0);
+	transition: transform .4s ease-out .2s,opacity .4s ease-out;
+	-webkit-transition: -webkit-transform .4s ease-out .2s,opacity .4s ease-out;
+	-moz-transition: -moz-transform .4s ease-out .2s,opacfity .4s ease-out;
+}
+#content .shopping-news .data-display .data-item .data-container:hover .data-head:before			{
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	opacity: 1;
+}
+#content .shopping-news .data-display .data-item .data-container:hover .data-head:after			{
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	opacity: 1;
+}
+#content .shopping-news .data-display .data-item .data-container .data-head .data-title,
+#content .shopping-news .data-display .data-item .data-container .data-body .text						{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0, 0, 0, 0);}
+#content .shopping-news .data-display .data-item .data-container .data-body							{width: 234px; height: 120px; position: absolute; top: 95px; left: 50%; margin-left: -121px;
+	transform:translate3d(0,-10px,0);
+	-webkit-transform:translate3d(0,-10px,0);
+	-moz-transform:translate3d(0,-10px,0);
+	opacity:0;
+	transition:transform .5s ease-out .2s, opacity .3s ease-out;
+	-webkit-transition:-webkit-transform .5s ease-out .2s, opacity .3s ease-out;
+	-moz-transition:-moz-transform .5s ease-out .2s, opacity .3s ease-out;
+}
+#content .shopping-news .data-display .data-item .data-container:hover .data-body,
+#content .shopping-news .data-display .data-item .data-container:focus .data-body			{
+	opacity: 1;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+}
+#content .shopping-news .data-display .data-item.kakao-plus .data-container .data-body					{background-image: url(../images/20170220/img_kakao_plus_text.png);}
+#content .shopping-news .data-display .data-item.membership .data-container .data-body					{background-image: url(../images/20170220/img_membership_text.png);}
+#content .shopping-news .data-display .kakao-plus .data-container 										{background-image: url(../images/20170220/img_kakao_plus_off.png);}
+#content .shopping-news .data-display .kakao-plus .data-container:hover,
+#content .shopping-news .data-display .kakao-plus .data-container:focus								{background-image: url(../images/20170220/img_kakao_plus_on.png);}
+#content .shopping-news .data-display .membership .data-container										{background-image: url(../images/20170220/img_membership_off.png);}
+#content .shopping-news .data-display .membership .data-container:hover,
+#content .shopping-news .data-display .membership .data-container:focus								{background-image: url(../images/20170220/img_membership_on.png);}
+
+/* ehyundai-story */
+#content .ehyundai-story h2																		{margin: 70px 0 35px 0; text-align: center;}
+#content .ehyundai-story h2 img																	{vertical-align: top;}
+#content .ehyundai-story .item-display:after													{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .ehyundai-story .item-display .item													{float: left; position: relative;}
+#content .ehyundai-story .item-display .item+.item												{margin-left: 20px;}
+#content .ehyundai-story .item-display .item .wrap												{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail									{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail .image							{display: block;}
+#content .ehyundai-story .item-display .item .wrap .thumbnail .image img						{display: block; width: 314px; height: 464px;}
+#content .ehyundai-story .item-display .item .wrap .data-info									{display: none; position: absolute; right: 0; bottom: 0; left: 0; height: 190px; background-color: red;}
+#content .ehyundai-story .item-display .item .wrap:hover .data-info								{display: block;}
+
+/* the-hyundai */
+#content .the-hyundai .item-display																{overflow: hidden;}
+#content .the-hyundai .item-display:after														{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .the-hyundai .item-display .item														{float: left; text-align: center;}
+#content .the-hyundai .item-display .item+.item													{margin-left: 20px;}
+#content .the-hyundai .item-display .item h2													{margin: 70px 0 35px;}
+#content .the-hyundai .item-display .item .data-info											{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0, 0, 0, 0);}
+#content .the-hyundai .item-display .item .wrap													{display: block; width: 482px; height: 236px; background-repeat: no-repeat; background-position: 0 0; -webkit-transition: all 0.5s; transition: all 0.5s;}
+#content .the-hyundai .item-display .item.hyundai-mall .wrap									{background-image: url(../images/20170220/img_thehyundai_off.png)}
+#content .the-hyundai .item-display .item.hyundai-mall .wrap:hover								{background-image: url(../images/20170220/img_thehyundai_on.png)}
+#content .the-hyundai .item-display .item.hyundai-academy .wrap									{background-image: url(../images/20170220/img_academy_off.png)}
+#content .the-hyundai .item-display .item.hyundai-academy .wrap:hover							{background-image: url(../images/20170220/img_academy_on.png)}
+#content .the-hyundai .item-display .item .wrap .text											{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0, 0, 0, 0);}
+
+/* floating-banner */
+.floating-banner																				{overflow: hidden; position: absolute; top: 800px; left: 50%; width: 158px; height: 261px; margin-left: 552px;}
+.floating-banner a																				{display: block; width: 158px; height: 26100px; background: url(../images/20170220/floating_banner.png);}
+.floating-banner.fixed																			{position: fixed; top: 180px;}
+.floating-banner .onclick .text																	{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0);}

@@ -2,8 +2,8 @@
 
 /* fonts */
 @import url(https://fonts.googleapis.com/css?family=Abel);
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900);
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* reset */
 html, body																	{height: 100%;}
@@ -42,3 +42,4 @@ img																			{vertical-align: top; border: 0 none;}
 #container .content-primary .data-item:hover .text							{display: block; position: absolute; top: 0; left: 20px; font-size: 1rem; color: #000000;}
 
 #footer																		{margin: 3vh; text-align: center;}
+#footer small																{font-family: 'Raleway', sans-serif;}
