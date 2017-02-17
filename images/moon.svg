@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="104.876px" height="104.065px" viewBox="0 0 104.876 104.065" enable-background="new 0 0 104.876 104.065"
+	 xml:space="preserve">
+<filter  width="150%" height="150%" y="-10%" x="-10%" id="AI_Woodgrain" filterUnits="objectBoundingBox">
+	<feGaussianBlur  result="blur" stdDeviation="4" in="SourceGraphic" id="blur"></feGaussianBlur>
+	<feOffset  result="offsetBlurredAlpha" in="blur" dx="4" dy="4" id="offset"></feOffset>
+	<feFlood  result="color" style="flood-color:black; flood-opacity:0.4" id="color"></feFlood>
+	<feComposite  result="offsetBlurredAlpha" operator="in" in2="offsetBlurredAlpha" in="color" id="shadowColor"></feComposite>
+	
+		<feDiffuseLighting  result="diffuse" in="blur" surfaceScale="5" id="diffuse" lighting-color="white" resultScale="1" diffuseConstant="1">
+		<feDistantLight  id="light2" azimuth="135" elevation="60"></feDistantLight>
+	</feDiffuseLighting>
+	
+		<feSpecularLighting  result="specularOut" in="blur" surfaceScale="5" lighting-color="white" specularExponent="10" specularConstant="1">
+		<feDistantLight  id="light" azimuth="135" elevation="60"></feDistantLight>
+	</feSpecularLighting>
+	<feComposite  result="specularOut" operator="in" in2="SourceAlpha" in="specularOut"></feComposite>
+	<feComposite  result="litPaint" operator="arithmetic" in2="diffuse" in="SourceGraphic" k4="0" k2="0" k3="0" k1="1">
+		</feComposite>
+	<feComposite  result="litPaint" operator="arithmetic" in2="specularOut" in="litPaint" k4="0" k2="1" k3="1" k1="0">
+		</feComposite>
+	<feMerge>
+		<feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+		<feMergeNode  in="litPaint"></feMergeNode>
+	</feMerge>
+	
+		<feTurbulence  stitchTiles="noStitch" result="Turbulence" in="SourceAlpha" baseFrequency=".05" type="fractalNoise" numOctaves="10">
+		</feTurbulence>
+	<feColorMatrix  result="Grayscale" in="Turbulence" type="matrix" values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1">
+		</feColorMatrix>
+	<feGaussianBlur  result="BlurredAlpha" stdDeviation="4" in="SourceAlpha"></feGaussianBlur>
+	<feOffset  result="OffsetBlurredAlpha" in="BlurredAlpha" dx="-4" dy="-5"></feOffset>
+	<feComposite  result="CompBlurTurb" operator="in" in2="OffsetBlurredAlpha" in="Grayscale"></feComposite>
+	<feGaussianBlur  result="CompBlurTurb2" stdDeviation="1.5" in="CompBlurTurb"></feGaussianBlur>
+	<feComponentTransfer  result="CompXferFire" in="Grayscale">
+		<feFuncR  type="table" tableValues="2 0"></feFuncR>
+		<feFuncG  type="table" tableValues=".7 0 "></feFuncG>
+		<feFuncB  type="table" tableValues=".1 0"></feFuncB>
+	</feComponentTransfer>
+	<feComposite  result="CompSourceFire" operator="in" in2="SourceGraphic" in="CompXferFire"></feComposite>
+	<feMerge  result="MergeAll">
+		<feMergeNode  in="CompSourceFire"></feMergeNode>
+	</feMerge>
+</filter>
+<g>
+	<g>
+		<circle fill="#BCB44F" cx="53.544" cy="52.332" r="49.999"/>
+	</g>
+	<g opacity="0.7" filter="url(#AI_Woodgrain)">
+		<path fill="#F5EF79" d="M99.357,51.041c0,30.667-21.97,50.548-50.292,49C18.565,98.375,2.714,78.375,2.732,51
+			C2.75,22.875,20.982,3.916,50.107,2.166C77.671,0.51,99.357,23.427,99.357,51.041z"/>
+	</g>
+	<circle opacity="0.8" fill="#F5EF79" cx="51.045" cy="51.332" r="50"/>
+</g>
+</svg>

@@ -20,7 +20,7 @@ img																			{vertical-align: top; border: 0 none;}
 /* header */
 #header																		{}
 #header h1																	{margin: 0; padding: 3vh 0 0 70vw;}
-#header svg																	{display: block; position: absolute; z-index: -1; top: 3vh; left: -5vw; width: 50vw; height: 50vh;}
+#header .svg																{display: block; position: absolute; z-index: -1; top: 3vh; left: 5vw;}
 
 /* container */
 #container 																	{padding: 10vh 14vw 0 18vw;}
@@ -29,17 +29,16 @@ img																			{vertical-align: top; border: 0 none;}
 #container .content-primary .data-item										{position: relative; float: left; width: 15.9vw; height: 18vh; vertical-align: middle; font-family: 'Noto Sans KR', sans-serif; font-size: inherit; background-color: #f1f1f1;/*  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.25))), -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), linear-gradient(to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); */}
 #container .content-primary .data-item+.data-item							{margin: 0 0 0 1vw;}
 #container .content-primary .data-item .title								{display: block; width: inherit; height: inherit; cursor: pointer;}
-#container .content-primary .data-item .title .sub-title					{display: block; position: absolute; top: 50%; margin: -15px 0 0 0; display: block; width: inherit; height: 30px; text-indent: -999em; background-repeat: no-repeat; background-position: 50% 100%;}
-#container .content-primary .data-item.cj-enm .title .sub-title				{background-image: url(../images/cj.png); background-size: auto 60px;}
-#container .content-primary .data-item.the-hyundai .title .sub-title 		{background-image: url(../images/thehyundai.png); background-size: auto 60px;}
+#container .content-primary .data-item .title .sub-title					{display: block; position: absolute; display: block; width: inherit; height: 18vh; text-indent: -999em; background-repeat: no-repeat; background-size: 15.9vw 36.1vh; background-position: 0 100%;}
+#container .content-primary .data-item.cj-enm .title .sub-title				{background-image: url(../images/cj_img.png);}
+/* #container .content-primary .data-item.the-hyundai .title .sub-title 		{background-image: url(../images/thehyundai.png); background-size: auto 60px;}
 #container .content-primary .data-item.miss-a .title .sub-title				{background-image: url(../images/missa.png); background-size: auto 60px;}
 #container .content-primary .data-item.pixar .title .sub-title				{background-image: url(../images/pixar.png); background-size: auto 60px;}
 #container .content-primary .data-item.disney .title .sub-title				{background-image: url(../images/disney.png); background-size: auto 60px;}
-#container .content-primary .data-item.yeo-jingoo .title .sub-title			{background-image: url(../images/yeojingoo.png); background-size: auto 60px;}
-#container .content-primary .data-item.alien .title .sub-title				{background-image: url(../images/alien.png); background-size: auto 60px;}
-#container .content-primary .data-item:hover .title .sub-title				{background-position: 50% 0;}
-#container .content-primary .data-item .text								{display: block; position: absolute; top: 0; left: 0px; font-size: 1rem; color: transparent; transition: left ease 0.5s; -webkit-transition: left ease 0.5s;}
-#container .content-primary .data-item:hover .text							{display: block; position: absolute; top: 0; left: 20px; font-size: 1rem; color: #000000;}
+#container .content-primary .data-item.alien .title .sub-title				{background-image: url(../images/alien.png); background-size: auto 60px;} */
+#container .content-primary .data-item:hover .title .sub-title				{background-position: 0 0;}
+/* #container .content-primary .data-item .text								{display: block; position: absolute; top: 0; left: 0px; font-size: 1rem; font-family: 'Raleway', sans-serif; color: transparent; transition: left ease 0.5s; -webkit-transition: left ease 0.5s;}
+#container .content-primary .data-item:hover .text							{display: block; position: absolute; top: 0; left: 20px; font-size: 1rem; color: #000000;} */
 
 #footer																		{margin: 3vh; text-align: center;}
 #footer small																{font-family: 'Raleway', sans-serif;}
