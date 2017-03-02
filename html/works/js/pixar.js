@@ -23,7 +23,7 @@ $(function(){
 		if(Math.abs(lastScrollTop - thisScroll) <= delta)
 			return;
 		if(thisScroll > lastScrollTop && thisScroll > navbarHeight){
-			$('#header').css('top','0');
+			$('#header').css('top','-6vh');
 		}else{
 			if(thisScroll + $(window).height() < $(document).height()){
 				$('#header').css('top','0');
@@ -31,7 +31,6 @@ $(function(){
 		}
 		lastScrollTop = thisScroll;
 	};
-	
 	
 	//mouse wheel
 	var windowH = $(window).height();
