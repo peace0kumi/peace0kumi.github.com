@@ -2,63 +2,51 @@
 
 /* fonts */
 @import url(https://fonts.googleapis.com/css?family=Abel);
-@font-face									{font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot); src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'), url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* reset */
-html										{-webkit-text-adjust: none; text-adjust: none;}
-body										{margin: 0; overflow-x: hidden; background-color: #56545f;}
-ul											{list-style: none; margin: 0; padding: 0;}
-a											{text-decoration: none;}
-a:link										{text-decoration: none;}
-a:visited									{text-decoration: none;}
-a:active									{text-decoration: none;}
-img											{width: 100%; vertical-align: top; border: 0 none;}
-*::selection								{text-shadow: none; color: #ffffff; background-color: #360aca;}
+html, body																			{height: 100%;}
+html																				{-webkit-text-adjust: none; text-adjust: none; font-size: 16px; scrollbar-3dLight-Color: #efefef; scrollbar-arrow-color: #263549; scrollbar-base-color: #efefef; scrollbar-Face-Color: #263549; scrollbar-Track-Color: #efefef; scrollbar-DarkShadow-Color: #efefef; scrollbar-Highlight-Color: #efefef; scrollbar-Shadow-Color: #efefef;}
+::-webkit-scrollbar																	{width: 8px; height: 8px; border: 3px solid #ffffff;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment											{display: block; height: 10px; background: #efefef;}
+::-webkit-scrollbar-track															{background: #efefef; -webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb															{height: 50px; width: 50px; background: rgba(255,100,100,.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+body 																				{margin: 0; background-image: url(../images/layout.png), linear-gradient(90deg, #263549, #b7b7b7); background-size: 100% 100%; -webkit-background-size: 100% 100%; background-repeat: repeat-y; background-attachment: local; background-position: 0 100%;}
+#wrap																				{overflow: hidden; height: auto; position: relative;}
+img																					{vertical-align: top; border: 0 none;}
 
 /* header */
-#header h1									{margin: 0; padding: 0;}
-#header img									{width: 100px; height: 100px;}
+#header																				{}
+#header h1																			{margin: 0; padding: 3vh 0 0 70vw;}
+#header .svg																		{display: block; position: absolute; z-index: -1; top: 3vh; left: 5vw;}
 
-/* disqus */
-#disqus_thread								{width: 100%; height: 100%;}
+/* container */
+#container 																			{padding: 10vh 14vw 0 18vw;}
+#container .content-primary .data-wrap:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#container .content-primary .data-wrap+.data-wrap									{margin-top: 2vh;}
+#container .content-primary .data-item												{position: relative; float: left; width: 15.9vw; height: 18vh; vertical-align: middle; font-family: 'Noto Sans KR', sans-serif; font-size: inherit; background-color: #f1f1f1;/*  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.25))), -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), linear-gradient(to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); */}
+#container .content-primary .data-item+.data-item									{margin: 0 0 0 1vw;}
+#container .content-primary .data-item .title										{display: block; width: inherit; height: inherit; cursor: pointer;}
+#container .content-primary .data-item .title .sub-title							{display: block; position: absolute; top: 50%; left: 50%; margin: -15px 0 0 -7.95vw; text-align: center; width: inherit; height: 30px; text-indent: -999em; background-repeat: no-repeat; background-position: 50% 50%; background-size: auto 30px; -webkit-background-size: auto 30px;}
+#container .content-primary .data-item.alien .title .sub-title						{background-image: url(../images/alien.png);}
+#container .content-primary .data-item.cj-enm .title .sub-title						{background-image: url(../images/cj.png);}
+#container .content-primary .data-item.miss-a .title .sub-title						{background-image: url(../images/missa.png);}
+#container .content-primary .data-item.pixar .title .sub-title						{background-image: url(../images/pixar.png);}
+#container .content-primary .data-item.the-hyundai .title .sub-title				{background-image: url(../images/thehyundai.png);}
+#container .content-primary .data-item:hover .title .sub-title						{display: block; position: absolute; top: 0; margin: 0 -7.95vw; width: inherit; height: 18vh; text-indent: -999em; background-repeat: no-repeat; background-position: 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; transition: ease 0.4s; -webkit-transition: ease 0.4s;}
+#container .content-primary .data-item.alien:hover .title .sub-title				{background-image: url(../images/alien_img.png);}
+#container .content-primary .data-item.cj-enm:hover .title .sub-title				{background-image: url(../images/cj_img.png);}
+#container .content-primary .data-item.miss-a:hover .title .sub-title				{background-image: url(../images/missa_img.png);}
+#container .content-primary .data-item.pixar:hover .title .sub-title				{background-image: url(../images/pixar_img.png);}
+#container .content-primary .data-item.the-hyundai.main01:hover .title .sub-title	{background-image: url(../images/hyundai-main.png);}
+#container .content-primary .data-item.the-hyundai.main02:hover .title .sub-title	{background-image: url(../images/hyundai-main2.png);}
+#container .content-primary .data-item.the-hyundai.main03:hover .title .sub-title	{background-image: url(../images/hyundai-main3.png);}
+#container .content-primary .data-item.the-hyundai.fair:hover .title .sub-title		{background-image: url(../images/hyundai-fair.png);}
+#container .content-primary .data-item.the-hyundai.mail:hover .title .sub-title		{background-image: url(../images/hyundai-mail.png);}
+#container .content-primary .data-item.the-hyundai.super:hover .title .sub-title	{background-image: url(../images/hyundai-super.png);}
+#container .content-primary .data-item.the-hyundai.santa:hover .title .sub-title	{background-image: url(../images/hyundai-santacon.png);}
 
-/* portfolio thunmb-nail */
-/* thumbs */
-ul.thumbs									{overflow: hidden; margin: 0; padding: 0;}
-ul.thumbs li								{display: inline-block; overflow: hidden; float: left; position: relative; height: 225px; padding: 0;}
-ul.thumbs li a.thumbnail					{display: block; width: 100%; height: 100%; z-index: 9; box-sizing: border-box; background-repeat: no-repeat; background-size: cover; -webkit-background-size: cover; background-color: #cecece; background-position-x: 50%; transition: opacity 0.3s; -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s;}
-ul.thumbs li a.thumbnail .category			{display: none; position: absolute; top: 0; left: 0; margin: 0; padding: 7px 10px; text-transform: uppercase; text-align: center; color: #6b6b6b; font-size: 16px; font-family: 'Abel', 'Nanum Gothic', sans-serif; font-weight: bold; background-color: #efefef; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease;}
-ul.thumbs li a.thumbnail .active-arrow		{position: absolute; z-index: 99; right: 0; bottom: -2px; left: 0; width: 0; height: 0; margin: 0 auto; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 25px solid #fff;}
-ul.thumbs li a.thumbnail:hover .category	{display: block;}
-ul.thumbs li.content						{display: none; float: left; position: relative; width: 100% !important; height: 100%; padding: 40px 0 30px; color: #ffffff; font-family: 'Abel', 'Nanum Gothic', sans-serif; background: none;}
-ul.thumbs li.content .close					{position: absolute; top: 0; right: 0; font-size: 50px; line-height: 50px; color: #c2c2c2; font-weight: normal; cursor: pointer;}
-ul.thumbs li.content .close:hover			{opacity: 0.7;}
-ul.thumbs li.content .title					{margin: 1em 0; padding-left: .8em; font-weight: bold; text-decoration: underline; text-transform: uppercase; font-size: 20px; font-family: 'Abel', 'Nanum Gothic', sans-serif; background-color: #360aca;}
-ul.thumbs li.content a						{color: #ffffff;}
-ul.thumbs li.content a:link					{color: #ffffff;}
-ul.thumbs li.content a:visited				{color: #d2d2d2;}
-/* thumbs-content */
-.thumbs-content								{display: none;}
-
-/* media query */
-@media (max-width: 1200px) and (min-width: 970px) {
-	ul.thumbs li {
-		width: 33.3333% !important;
-	}
-}
-@media (max-width: 1080px) {
-	.close {
-		right: 0 !important;
-		top: 7px !important;
-	}
-}
-@media (max-width: 970px) {
-	ul.thumbs li {
-		width: 50% !important;
-	}
-}
-@media (max-width: 590px) {
-	ul.thumbs li {
-		width: 100% !important;
-	}
-}
+#footer																				{margin: 3vh; text-align: center;}
+#footer small																		{font-family: 'Raleway', sans-serif;}
