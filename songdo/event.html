@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>현대프리미엄아울렛 송도점</title> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<script src="./assets/scripts/libs/jquery-1.11.1.min.js"></script>
+	<script src="./assets/scripts/libs/icheck.min.js"></script>
+	<script src="./assets/scripts/libs/clipboard.min.js"></script>
+	<script src="./assets/scripts/libs/ph-image.min.js"></script>
+	
+	<!-- custom -->
+	<script src="./assets/scripts/event.js"></script>
+	<!--[if lt IE 9]>
+		<script src="./assets/scripts/libs/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="./assets/styles/songdo_event.css">
+	<!-- Reflexion DEV 2016.4.25 개발 ADD --> 
+	<script> 
+		
+		$(function(){
+			$(".radio-spot01").click(function(){
+				  $(".copy-contents").val("현대프리미엄아울렛송도점이 4월 29일 오픈해요!\r\n럭셔리부터 스포츠팩토리까지 핫브랜드가 가득한 즐거운 쇼핑타임!\r\n#현대프리미엄아울렛송도점 온라인에서 만나보고 오픈이벤트 참여하세요.\r\nhttp://www.ehyundai.com/songdo/\r\n#이벤트 #월리송도아울렛을가다 #송도아울렛 #현대백화점"); 
+			}); 
+			$(".radio-spot02").click(function(){
+				 $(".copy-contents").val("현대프리미엄아울렛송도점이 4월 29일 오픈해요!\r\n월리와 친구들의 미각을 자극하는 전국 맛집이 가득한 딜리셔스 타임!\r\n#현대프리미엄아울렛송도점 온라인에서 만나보고 오픈이벤트 참여하세요.\r\nhttp://www.ehyundai.com/songdo/\r\n#이벤트 #월리송도아울렛을가다 #송도아울렛 #현대백화점"); 
+			}); 
+			$(".radio-spot03").click(function(){
+				 $(".copy-contents").val("현대프리미엄아울렛송도점이 4월 29일 오픈해요!\r\n월리와 친구들도 푹 빠진 다이내믹 쇼퍼테이먼트 체험을 즐겨봐! \r\n#현대프리미엄아울렛송도점 온라인에서 만나보고 오픈이벤트 참여하세요.\r\nhttp://www.ehyundai.com/songdo/ \r\n#이벤트 #월리송도아울렛을가다 #송도아울렛 #현대백화점"); 
+			}); 
+			$(".radio-spot04").click(function(){
+				  $(".copy-contents").val("현대프리미엄아울렛송도점이 4월 29일 오픈해요! \r\n유럽의 정취와 여유, 밤 11시까지 즐기는 다이닝 스팟, 가든테라스!\r\n#현대프리미엄아울렛송도점 온라인에서 만나보고 오픈이벤트 참여하세요.\r\nhttp://www.ehyundai.com/songdo/ \r\n#이벤트 #월리송도아울렛을가다 #송도아울렛 #현대백화점"); 
+			}); 
+		}); 
+
+		function is_ie() {
+		  if(navigator.userAgent.toLowerCase().indexOf("chrome") != -1) return false;
+		  if(navigator.userAgent.toLowerCase().indexOf("safari") != -1) return false;
+		  if(navigator.userAgent.toLowerCase().indexOf("msie") != -1) return true;
+		  if(navigator.userAgent.toLowerCase().indexOf("windows") != -1) return true;
+		  return false;
+		}
+
+		$(document).ready(function () {
+			$("#2nd_step").hide(); 
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1033932443284756&version=v2.6";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			/******************************************************************************/
+			//37라인에 appId 옆에 숫자를 실서버 ehyundai.com에서는 아래코드로 변경해주어야함 
+			//1743759882502339 = 리플렉션 테스트 앱아이디 (페북 앱도메인 = reflexion.co.kr) 
+			//1033932443284756 = 이현대 실서버 앱아이디(페북 앱도메인 = ehyudai.com) 
+			/******************************************************************************/
+			//복사하기 기능
+			$(".btn-copy").off("click");
+			$(".btn-copy").on("click", function () {
+				
+				var inputs  = $('#copy-contents'); 
+
+				var inputs_txt  = $('#copy-contents').val();
+				var buttons = document.querySelector('#copy-button');
+
+					if( is_ie() ) {
+						var feedmessage =inputs_txt; 
+						window.clipboardData.setData("Text",feedmessage);
+						alert("복사되었습니다.");
+						return true;
+	 				}
+					else {
+						if (navigator.userAgent.toLowerCase().indexOf("chrome") != -1)
+						{
+							inputs.select();
+							document.execCommand("copy",true);
+							alert("복사되었습니다.");
+							return true;
+						}
+						else if (navigator.userAgent.toLowerCase().indexOf("firefox") != -1)
+						{
+							inputs.select();
+							document.execCommand("copy",true);
+							alert("복사되었습니다.");
+							return true;
+						}
+						else if (navigator.userAgent.toLowerCase().indexOf("opera") != -1)
+						{
+							inputs.select();
+							document.execCommand("copy",true);
+							alert("복사되었습니다.");
+							return true;
+						}
+						
+						else if (navigator.userAgent.toLowerCase().indexOf("iphone") != -1 || navigator.userAgent.toLowerCase().indexOf("ipad") != -1 || navigator.userAgent.toLowerCase().indexOf("ipod") != -1)
+						{
+								$("#copy-contents").get(0).selectionStart=0;
+								$("#copy-contents").get(0).selectionEnd=999;
+								document.execCommand("copy",true);
+
+						}
+						else{ //사파리 
+								$("#copy-contents").get(0).selectionStart=0;
+								$("#copy-contents").get(0).selectionEnd=999;
+								document.execCommand("copy",true);
+						}
+					} 
+				
+			});
+
+
+			//페이스북 공유
+			$(".btn-share").off("click");
+			$(".btn-share").on("click", function () {
+
+				if (!$(".iradio").hasClass("checked")) {
+					alert("위 4개의 장소 중 마음에 들었던 곳을 선택해 주세요.");
+					return false;
+				}
+
+				Event.facebookfeed($('.iradio.checked').data("type"));        
+			});
+		});
+		
+		if (typeof (Event) == "undefined") {
+			var Event = {};
+		}
+
+		(function () {
+			var method = {
+				//페이스북 공유 메시지
+				feedmessage: function (type) {
+					var messageobj = {};
+					
+					var sel_optionval = $('.step01 input[type=radio]:checked').val()
+
+					switch (sel_optionval) {
+						case "01":
+							messageobj.title = "핫브랜드가 가득한 현대프리미엄아울렛 송도점 4.29 GRAND OPEN~!!";
+							messageobj.image = "http://www.ehyundai.com/songdo/assets/images/event/share_image_01.jpg";
+							break;
+						case "02":
+							messageobj.title = "전국 맛집이 가득한 현대프리미엄아울렛 송도점 4.29 GRAND OPEN~!!";
+							messageobj.image = "http://www.ehyundai.com/songdo/assets/images/event/share_image_02.jpg";
+							break;
+						case "03":
+							messageobj.title = "색다른 체험이 가득한 현대프리미엄아울렛 송도점 4.29 GRAND OPEN~!!";
+							messageobj.image = "http://www.ehyundai.com/songdo/assets/images/event/share_image_03.jpg";
+							break;
+						case "04":
+							messageobj.title = "유럽의 정취가 가득한 현대프리미엄아울렛 송도점 4.29 GRAND OPEN~!!";
+							messageobj.image = "http://www.ehyundai.com/songdo/assets/images/event/share_image_04.jpg";
+							break;
+					}
+
+					return messageobj;
+				},
+				//페이스북 feed
+				facebookfeed: function (chktype) {
+					var feedmessage = "";
+					var type = chktype;
+					var feedimg = "";
+					
+					var obj = Event.feedmessage(type);
+					feedmessage = obj.title;
+					feedimg = obj.image;
+					 
+					FB.ui({
+						method: 'feed', //stream.publish, feed 
+						name: feedmessage,  //본문 내용(큰 글씨)
+						link: "http://www.ehyundai.com/songdo/",
+						picture: feedimg,
+						
+						display: 'iframe' //iframe,popup 
+					}, function (response) {
+						   console.log(response);
+						   if (response && !response.error_code) {
+							 alert('공유가 완료되었습니다.');
+							 $("#2nd_step").show();
+
+							 $("#2nd_step").css( { "top" : '0'} ); 
+							 $('html, body').animate({scrollTop : '1500'}, 1000); 
+						
+							 $("#1st_step").hide(); 
+						   } else {
+						   }
+					});
+				}
+			};
+
+			$.extend(Event, method);
+		})(jQuery);
+
+	</script> 
+	
+	<script type="text/javascript">
+
+	var dupChk = false;	
+		$(function(){
+			$("#phone_num").change(function(e){
+				e.preventDefault();
+				dupChk = false;
+			});
+
+			// 이용동의 이미지 처리 교체 추가
+			$("#agree-btn").off("click");
+			$("#agree-btn").on("click", function () {
+
+				if (!$(".icheckbox").hasClass("checked")) {
+						$(".icheckbox").attr("class","icheckbox checked"); 
+						$("#agree-btn").attr("src", "./assets/images/event/check_agreement_selected.png"); 
+				} 
+				else{
+						$(".icheckbox").attr("class","icheckbox"); 
+						$("#agree-btn").attr("src", "./assets/images/event/check_agreement.png"); 
+				}
+			});
+			// 이용동의 이미지 처리 교체 추가 끝
+					
+			$(".btn-done").click(function(){
+				if($("#phone_num").val() == ''){
+					alert('휴대폰번호를 입력하세요.');
+					return;
+				}
+				if(!/^01[0-9]{8,9}$/.test($("#phone_num").val())){
+					alert('휴대폰번호 형식이 잘못되었습니다.\n예)01099991234');
+					return;
+				}
+				if(!dupChk){
+					alert('휴대폰번호 중복확인을 해주세요.');
+					return;
+				}	    	
+				
+				//if(!$("#agree_yn").prop("checked")){
+				if (!$(".icheckbox").hasClass("checked")) {
+					alert('이벤트 참여를 위한 개인정보 수집,이용 동의에 동의하셔야 이벤트 완료가 가능합니다.');
+					return;
+				}
+				goWally('complete');
+			});
+			
+			//중복확인
+			$("#posR").click(function(){
+				if($("#phone_num").val() == ''){
+					alert('휴대폰번호를 입력하세요.');
+					return;
+				}
+				if(!/^01[0-9]{8,9}$/.test($("#phone_num").val())){
+					alert('휴대폰번호 형식이 잘못되었습니다.\n예)01099991234');
+					return;
+				}
+				
+				goWally('dupChk');
+			});
+		});
+		
+		function goWally(type){
+			
+			$.ajax({
+				type:"post", 
+				url:"http://www.ehyundai.com/wally.do",
+				dataType:"json",
+				data : { "type":type, "hpNo":$("#phone_num").val(), "eventCd":"SD" },
+				success:function(data){
+					if(type == 'dupChk'){	//이벤트 참여 중복체크
+						if (data.code == '0000'){
+							alert(data.message);
+							dupChk = true;						
+						} else {
+							alert(data.message);
+							dupChk = true;						
+						} 
+					}else{	//이벤트 참여 처리
+						if (data.code == '0000'){
+							alert(data.message);
+							//$(".Fn_close").click();
+						} else {
+							alert(data.message);
+						} 
+					}
+				},
+				error:function(data){
+					alert('일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+				}
+			});
+		}
+		
+
+	</script>
+	<!-- Reflexion DEV 2016.4.25 개발 ADD 여기까지 --> 
+ 
+</head>
+<body class="event">
+
+	<header class="summary">
+		<div class="inner">
+			<h1>내 마음에 쏙~ 든 현대프리미엄아울렛 송도점 소문내자!</h1>
+			<p>페이스북에 공유하고 아이스크림 받아가세요</p>
+			<dl>
+				<dt>경품</dt>
+				<dd>총 300명을 추첨하여 베스킨라빈스 싱글레귤러 기프티콘</dd>
+
+				<dt>참여기간</dt>
+				<dd>4월 27일 - 이벤트 종료시까지</dd>
+
+				<dt>당첨자발표</dt>
+				<dd>이벤트 종료시 개별 연락 에정(6월초 경)</dd>
+			</dl>
+		</div>
+	</header>
+
+
+	<fiedlset class="event-container">
+		<legend>이벤트 참여하기</legend>
+	
+			<div id="1st_step" class="step">
+				<fieldset class="step01">
+					<legend><span class="txt">STEP 01. 월리와의 하루 중 <strong>가장 마음에 들었던 장소</strong>를 선택 후 <strong>페이스북에 공유</strong>하세요</span></legend>
+
+					<div class="select-radio">
+						<input type="radio" id="spot01" name="spots" value="01">
+						<label for="spot01" class="radio-spot01">
+							즐거운 쇼핑타임! - 럭셔리부터 스포츠까지 핫브랜드
+						</label>
+						
+						<input type="radio" id="spot02" name="spots" value="02">
+						<label for="spot02" class="radio-spot02">
+							딜리셔스 타임! - 미각을 자극하는 전국 맛집
+						</label>
+						
+						<input type="radio" id="spot03" name="spots" value="03">
+						<label for="spot03" class="radio-spot03">
+							이런 체험 처음이야 - 다이내믹 쇼퍼테이먼트 체험관
+						</label>
+						
+						<input type="radio" id="spot04" name="spots" value="04">
+						<label for="spot04" class="radio-spot04">
+							유럽의 정취와 여유! - 밤 11시까지 즐기는 가든테라스
+						</label>
+					</div>
+				</fieldset>
+
+
+				<fieldset class="step02">
+					<legend><span class="txt">STEP 02. 아래 내용을 복사하기 후 페이스북 공유 시 내용에 붙여주세요.</span></legend>
+
+					<p class="mobile-message">모바일에서는 아래 내용을 직접 선택하신 후 복사하세요.</p>
+					
+					<textarea id="copy-contents" class="copy-contents" readonly></textarea>
+
+					<button type="button" id="copy-button" class="btn-copy"><span class="txt">복사하기</span></button>
+				</fieldset>
+
+				<input type="submit" value="페이스북에 공유하기" class="btn-share">
+			</div>
+	
+			<div id="2nd_step" class="step">
+				<form onsubmit="return false;">
+				<fieldset class="step03">
+					<legend><span class="txt"><strong>기프티콘</strong>을 받으실 <strong>휴대폰번호를 입력</strong>해주세요.</span></legend>
+
+					<p class="phone">
+						<label for="">휴대폰번호</label>
+						<input type="text" placeholder="'-' 없이 입력해주세요" id="phone_num" class="txt-cell-phone" data-ph-image="./assets/images/event/placeholder.png">
+						<button type="button" id="posR" class="btn-confirm"><span class="txt">중복확인</span></button>
+					</p>
+
+					<div class="agreements">
+						<div class="txt">
+							<p>이벤트 참여를 위한 개인정보 수집 이용 동의서</p>
+							<ul>
+								<li>수집하는 개인정보 항목 : 휴대폰번호</li>
+								<li>개인정보의 수집 및 이용목적 : 중복참여 필터링, 기프티콘 문자발송</li>
+								<li>개인정보의 보유 및 이용기간 : 행사종료 후 1개월</li>
+							</ul>
+							<p>위의 개인정보 수집 및 이용에 대한 동의를 거부하실 권리가 있으나, 거부시 기프티콘 문자를 받아보실 수 없습니다.</p>
+						</div>
+					</div>
+
+					<input type="checkbox" id="agree_yn" name="" value="" />
+					<label><img src="./assets/images/event/check_agreement.png" alt="이벤트 참여를 위한 개인정보 수집·이용 동의" id="agree-btn"/></label>
+
+				</fieldset>
+				
+				<input type="submit" value="참여완료" class="btn-done">
+				</form>
+			</div>	
+	
+
+	</fiedlset>
+
+
+</body>
+</html>

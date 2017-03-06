@@ -58,11 +58,11 @@ a.btn																				{display: inline-block; text-decoration: none;}
 /* slick-slider */
 .slick-slider																		{display: block; position: relative; top: 50%; left: 50%; width: 100vw; height: 30vh; margin: 24vh 0 0 -50vw; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; cursor: pointer;}
 .slick-slider .slick-prev,
-.slick-slider .slick-next															{display: block; position: absolute; z-index: 1; top: -25%; width: 20px; height: 20px; margin-top: 24vh; padding: 0; outline: none; border: none; color: #ffffff; background-color: transparent; font-size: 0; line-height: 0;}
+.slick-slider .slick-next															{display: block; position: absolute; z-index: 1; top: -25%; width: 20px; height: 20px; margin-top: 24vh; padding: 0; outline: none; border: none; color: #666666; background-color: transparent; font-size: 0; line-height: 0;}
 .slick-slider .slick-prev															{left: 0;}
 .slick-slider .slick-next															{right: 20px;}
 .slick-slider .slick-prev:before,
-.slick-slider .slick-next:before													{font-size: 60px; font-family: 'Poppins', sans-serif; line-height: 1; opacity: 0.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; cursor: pointer;}
+.slick-slider .slick-next:before													{font-size: 60px; font-family: 'Poppins', sans-serif; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; cursor: pointer;}
 .slick-slider .slick-prev:before													{content: '<';}
 .slick-slider .slick-next:before													{content: '>';}
 .slick-list																			{display: block; overflow: hidden; position: relative; margin: 0; padding: 0;}
@@ -114,7 +114,7 @@ LOCAL
 .feature-films .data-item .data-body .data-list li .data-image:hover .data-caption	{-webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); -webkit-transition: -webkit-transform 0.4s, opacity 0.1s; -moz-transition: -moz-transform 0.4s, opacity 0.1s; transition: transform 0.4s, opacity 0.1s;}
 
 /* short-films */
-.short-films																		{background: #397ea9;}
+.short-films																		{background: #ffffff;}
 
 /* careers */
 .careers																			{background: #3d70ca;}

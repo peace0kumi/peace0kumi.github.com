@@ -1,44 +1,13 @@
 @charset "utf-8"; 
 
 /* fonts */
-@import url(https://fonts.googleapis.com/css?family=Abel);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400);
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
 /* reset */
-html, body																	{height: 100%;}
-html																		{-webkit-text-adjust: none; text-adjust: none; font-size: 16px; scrollbar-3dLight-Color: #efefef; scrollbar-arrow-color: #263549; scrollbar-base-color: #efefef; scrollbar-Face-Color: #263549; scrollbar-Track-Color: #efefef; scrollbar-DarkShadow-Color: #efefef; scrollbar-Highlight-Color: #efefef; scrollbar-Shadow-Color: #efefef;}
-::-webkit-scrollbar															{width: 8px; height: 8px; border: 3px solid #ffffff;}
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment									{display: block; height: 10px; background: #efefef;}
-::-webkit-scrollbar-track													{background: #efefef; -webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
-::-webkit-scrollbar-thumb													{height: 50px; width: 50px; background: rgba(255,100,100,.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
-body 																		{margin: 0; background-image: url(../images/ptn.png); background-color: #2e3e55; background-size: auto auto; -webkit-background-size: auto auto; background-repeat: repeat; background-attachment: local; background-position: 0 0;}
-#wrap																		{overflow: hidden; height: auto; position: relative;}
-img																			{vertical-align: top; border: 0 none;}
+html, body {height: 100%;}
+body {overflow-x: hidden; margin: 0; padding: 0; font-family: 'Oswald', sans-serif; background: #2c4157;}
+#frame {overflow-x: hidden; width: 100%; height: 100%;}
 
 /* header */
-#header																		{}
-#header h1																	{margin: 0; padding: 3vh 0 0 70vw;}
-#header .svg																{display: block; position: absolute; z-index: -1; top: 3vh; left: 5vw;}
-
-/* container */
-#container 																	{padding: 10vh 14vw 0 18vw;}
-#container .content-primary .data-wrap:after								{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#container .content-primary .data-wrap+.data-wrap							{margin-top: 2vh;}
-#container .content-primary .data-item										{position: relative; float: left; width: 15.9vw; height: 18vh; vertical-align: middle; font-family: 'Noto Sans KR', sans-serif; font-size: inherit; background-color: #f1f1f1;/*  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.25))), -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.25)), linear-gradient(to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0)); */}
-#container .content-primary .data-item+.data-item							{margin: 0 0 0 1vw;}
-#container .content-primary .data-item .title								{display: block; width: inherit; height: inherit; cursor: pointer;}
-#container .content-primary .data-item .title .sub-title					{display: block; position: absolute; display: block; width: inherit; height: 18vh; text-indent: -999em; background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 0; -webkit-background-size: 100% 0; transition: all 0.5s; -webkit-transition: all 0.5s;}
-#container .content-primary .data-item.cj-enm .title .sub-title				{}
-/* #container .content-primary .data-item.the-hyundai .title .sub-title 		{background-image: url(../images/thehyundai.png); background-size: auto 60px;}
-#container .content-primary .data-item.miss-a .title .sub-title				{background-image: url(../images/missa.png); background-size: auto 60px;}
-#container .content-primary .data-item.pixar .title .sub-title				{background-image: url(../images/pixar.png); background-size: auto 60px;}
-#container .content-primary .data-item.disney .title .sub-title				{background-image: url(../images/disney.png); background-size: auto 60px;}
-#container .content-primary .data-item.alien .title .sub-title				{background-image: url(../images/alien.png); background-size: auto 60px;} */
-#container .content-primary .data-item:hover .title .sub-title				{background-image: url(../images/cj_img.png); background-position: 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%;}
-/* #container .content-primary .data-item .text								{display: block; position: absolute; top: 0; left: 0px; font-size: 1rem; font-family: 'Raleway', sans-serif; color: transparent; transition: left ease 0.5s; -webkit-transition: left ease 0.5s;}
-#container .content-primary .data-item:hover .text							{display: block; position: absolute; top: 0; left: 20px; font-size: 1rem; color: #000000;} */
-
-#footer																		{margin: 3vh; text-align: center;}
-#footer small																{font-family: 'Raleway', sans-serif;}
+#header h1 {position: absolute; top: 50%; left: 50%; margin: 0; font-size: 20vw; line-height: 1; font-weight: 700; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; color: #f6f6f6; text-transform: uppercase; text-align: center; text-shadow: -1px -1px 0 #008040, 1px -1px 0 #008040, -1px 1px 0 #008040, 1px 1px 0 #008040;}
+#header h1:after {content: attr(data-heading); position: absolute; z-index: 2; top: 0; left: 0; overflow: hidden; width: 100%; mix-blend-mode: darken; color: #16899f; -webkit-transform: translate(0.4vw, 0.3vh); transform: translate(0.4vw, 0.3vh); text-align: center; text-shadow: 1px 0px 0px #008040, 0px 1px 0px #130b52, 2px 1px 0px #008040, 1px 2px 0px #130b52, 3px 2px 0px #008040, 2px 3px 0px #130b52, 4px 3px 0px #008040, 3px 4px 0px #130b52, 5px 4px 0px #008040, 4px 5px 0px #130b52, 6px 5px 0px #008040, 5px 6px 0px #130b52, 7px 6px 0px #008040;}
