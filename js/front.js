@@ -45,4 +45,21 @@ $(function(){
 		500);
 		return false;
 	});
+	
+	var bodyWidth = $('body').width();
+	var bodyHeight = $('body').height();
+	
+	//portarait and landscape
+	if(bodyWidth <= bodyHeight){
+		
+	}else if(bodyWidth > bodyHeight && bodyWidth < 1280){
+		alert('이 페이지는 세로 고정 모드에서만 정상적으로 작동됩니다.')
+		console.log(bodyWidth)
+	}
+	
+	//scroll hidden
+	$(document).ready(function(){
+		setTimeout(scrollTo, 0, 0, 1);
+	});
+	
 });
