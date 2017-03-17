@@ -1,5 +1,37 @@
 $(function(){
 	
+	//header
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var navbarHeight = $('#header').outerHeight();
+
+	$(window).scroll(function(){
+		didScroll = true;
+	});
+	
+	setInterval(function(){
+		if(didScroll){
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 250);
+	
+	function hasScrolled(){
+		var thisScroll = $(this).scrollTop();
+		
+		if(Math.abs(lastScrollTop - thisScroll) <= delta)
+			return;
+		if(thisScroll > lastScrollTop && thisScroll > navbarHeight){
+			$('#header').css('top','-5vh');
+		}else{
+			if(thisScroll + $(window).height() < $(document).height()){
+				$('#header').css('top','0');
+			}
+		}
+		lastScrollTop = thisScroll;
+	};
+	
 	//mouse wheel
 	var windowH = $(window).height();
 	
