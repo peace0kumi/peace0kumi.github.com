@@ -2,7 +2,7 @@
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
-@import url('http://fonts.googleapis.com/css?family=Noto+Sans');
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
 /* reset */
 html, body																			{height: 100%;}
@@ -38,70 +38,42 @@ a																					{text-decoration: none;}
 #container .content-item h3															{margin: 0; padding: 0; width: 0; height: 0; visibility: hidden;}
 
 /* resume */
-#container .content-item.item-resume												{overflow: hidden; position: relative; background-color: #2c4157; font-family: 'Noto Sans', 'Noto Sans CJK KR', '본고딕', 'Noto Sans Korean', '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, sans-serif;}
-#container .content-item.item-resume .resume-wrap									{position: absolute; top: 20vh; left: 50%; width: 40vw; height: 60vh; margin: 0 0 0 -20vw; box-shadow: 10px 10px 5px #333333; outline: 5px #c0c0c0 solid; background-color: #ffffff;}
-#container .content-item.item-resume h4												{margin: 0.8em 0; padding: 0 15px; text-align: right; font-size: 2rem; font-weight: 700; letter-spacing: -1px;}
-#container .content-item.item-resume .resume-body									{padding: 0 15px; text-align: left;}
-#container .content-item.item-resume .resume-item									{padding: 30px 0; border-top: 2px #333333 dotted;}
-#container .content-item.item-resume .resume-item .sub-title						{margin: 0; padding: 0; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.5px;}
-#container .content-item.item-resume .resume-item .sub-content						{margin: 0; padding: 10px 0 0 0; font-size: 1rem; font-weight: 300; letter-spacing: -1px;}
-#container .content-item.item-resume .resume-item.career .career-time				{color: #333333; font-style: italic;}
-#container .content-item.item-resume .resume-item.career .career-company			{margin: 0 0 0 5px; font-weight: bold;}
-#container .content-item.item-resume .resume-item.skill .sub-content li				{margin: 10px 0;}
-#container .content-item.item-resume .resume-images.hand							{position: absolute; right: 22vw; bottom: -7vh;}
+.content-item.resume																{overflow: hidden; position: relative; font-family: 'Noto Sans Korean', '맑은 고딕', 'Malgun Gothic', sans-serif; background-color: #2c4157;}
+.content-item.resume .resume-wrap													{position: absolute; top: 23vh; left: 50%; width: 40vw; height: 60vh; margin: 0 0 0 -20vw; box-shadow: 10px 10px 5px #333333; outline: 5px #c0c0c0 solid; background-color: #ffffff;}
+.content-item.resume h4																{margin: 0.8em 0; padding: 0 15px; text-align: right; font-size: 2rem; font-weight: 700; letter-spacing: -1px;}
+.content-item.resume .resume-body													{padding: 0 15px; text-align: left;}
+.content-item.resume .resume-item													{padding: 30px 0; border-top: 2px #333333 dotted;}
+.content-item.resume .resume-item .sub-title										{margin: 0; padding: 0; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.5px;}
+.content-item.resume .resume-item .sub-content										{margin: 0; padding: 10px 0 0 0; font-size: 1rem; font-weight: 400; letter-spacing: -1px;}
+.content-item.resume .resume-item.career .career-time								{color: #333333; font-style: italic;}
+.content-item.resume .resume-item.career .career-company							{margin: 0 0 0 5px; font-weight: bold;}
+.content-item.resume .resume-item.skill .sub-content li								{margin: 10px 0;}
+.content-item.resume .resume-images.hand											{position: absolute; right: 22vw; bottom: -7vh;}
 
 /* publishing */
-#container .content-item.item-publishing											{overflow: hidden; position: relative; box-shadow: inset 0 0 0 5vh #00ff7f;}
-#container .content-item.item-publishing .publishing-wrap							{padding: 5vh;}
-#container .content-item.item-publishing .publishing-wrap .data-item				{}
-#container .content-item.item-publishing .publishing-wrap .data-item:after			{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#container .content-item.item-publishing .publishing-wrap .data-item li				{float: left; width: 33.333333333333336%; height: 22.5vh; text-align: center; transition: all 0.3s; -webkit-transition: all 0.3s; border: 1px #eeeeee solid; box-sizing: border-box;}
-#container .content-item.item-publishing .publishing-wrap .data-item li:before		{content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
-#container .content-item.item-publishing .publishing-wrap .data-item li:hover		{background-color: #00ff7f; border: 0 none;}
-#container .content-item.item-publishing .publishing-wrap .data-item li:nth-child(2n):hover{background-color: #6fa8ff;}
-#container .content-item.item-publishing .publishing-wrap .data-item li:nth-child(3n):hover{background-color: #97ffc9;}
-#container .content-item.item-publishing .publishing-wrap .data-item li:hover a		{color: #000000;}
-#container .content-item.item-publishing .publishing-wrap .data-item li a			{display: inline-block; padding: 0 35%; box-sizing: border-box; vertical-align: middle; color: #959595; font-size: 1.5rem;}
-#container .content-item.item-publishing .publishing-wrap .data-item .wbr			{display: inline-block; line-height: inherit; text-decoration: inherit;}
+.content-item.publishing															{overflow: hidden; position: relative; box-shadow: inset 0 0 0 5vh #00ff7f;}
+.content-item.publishing .publishing-wrap											{padding: 5vh;}
+.content-item.publishing .publishing-wrap .data-item								{}
+.content-item.publishing .publishing-wrap .data-item:after							{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.content-item.publishing .publishing-wrap .data-item li								{float: left; width: 33.333333333333336%; height: 22.5vh; text-align: center; transition: all 0.3s; -webkit-transition: all 0.3s; border: 1px #eeeeee solid; box-sizing: border-box;}
+.content-item.publishing .publishing-wrap .data-item li:before						{content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+.content-item.publishing .publishing-wrap .data-item li:hover						{border: 0 none; background-color: #00ff7f;}
+.content-item.publishing .publishing-wrap .data-item li:nth-child(2n):hover			{background-color: #6fa8ff;}
+.content-item.publishing .publishing-wrap .data-item li:nth-child(3n):hover			{background-color: #97ffc9;}
+.content-item.publishing .publishing-wrap .data-item li:hover a						{color: #000000;}
+.content-item.publishing .publishing-wrap .data-item li a							{display: inline-block; padding: 0 35%; box-sizing: border-box; vertical-align: middle; color: #959595; font-size: 1.5rem;}
+.content-item.publishing .publishing-wrap .data-item .wbr							{display: inline-block; line-height: inherit; text-decoration: inherit;}
 
 /* contact */
-#container .content-item.item-contact												{background-color: #ffffff;}
+.content-item.contact																{position: relative; font-family: 'Noto Sans Korean', '맑은 고딕', 'Malgun Gothic', sans-serif; background-color: #ffffff;}
+.content-item.contact .contact-item													{}
+.content-item.contact .contact-item.info											{display: block; padding: 9vh 1.5vw; font-size: 1rem;}
+.content-item.contact .contact-item.info .info-item+.info-item						{margin: 5px 0 0 0;}
+.content-item.contact .contact-item.info .info-item .info-head						{font-weight: bold; letter-spacing: -0.3px; color: #00bd5f;}
+.content-item.contact .contact-item.info .info-item a								{text-decoration: none; color: #808080;}
+.content-item.contact .contact-item.map												{position: absolute; bottom: 0; width: 100%; height: 75%;}
+.content-item.contact .contact-item.map:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
 
 /* footer */
 #footer																				{text-align: center; background-color: #2c4157;}
 #footer small																		{font-family: 'Oswald', sans-serif; color: #ffffff;}
-
-/* media query */
-@media screen and (max-width: 1680px){
-	#container .content-item.item-resume .resume-wrap								{top: 13vh; height: 70vh;}
-}
-@media screen and (max-width: 1400px){
-	#container .content-item.item-publishing .publishing-wrap .data-item li a		{padding: 0 30%; font-size: 1.25rem;}
-}
-@media screen and (max-width: 1024px){
-	#container .content-item.item-resume h4											{font-size: 1rem;}
-	#container .content-item.item-resume .resume-item								{padding: 10px 0;}
-	#container .content-item.item-resume .resume-item .sub-title					{font-size: 1rem;}
-	#container .content-item.item-resume .resume-item .sub-content					{font-size: 1rem;}
-	#container .content-item.item-resume .resume-images.hand						{width: 45%; right: -5vw; bottom: -50px;}
-	#container .content-item.item-publishing .publishing-wrap .data-item li			{width: 50%; height: 15vh;}
-}
-@media screen and (max-width: 767px){
-	#container .content-item.item-resume .resume-wrap								{top: 7vh; width: 80vw; height: 80vh; margin: 0 0 0 -40vw;}
-	#container .content-item.item-resume h4											{margin: 10px 0; font-size: 1rem;}
-	#container .content-item.item-resume .resume-item .sub-title					{font-size: 1rem;}
-	#container .content-item.item-resume .resume-item .sub-content					{padding: 10px 0 0 0; font-size: 0.83rem;}
-	#container .content-item.item-resume .resume-item .sub-content li				{width: 100%; height: 7.5vh;}
-	#container .content-item.item-publishing .publishing-wrap .data-item li a		{font-size: 1rem;}
-}
-@media screen and (max-width: 581px){
-	#container .content-item.item-publishing .publishing-wrap .data-item li			{width: 100%; height: 7.5vh;}
-	#container .content-item.item-publishing .publishing-wrap .data-item li a		{padding: 0 37%; font-size: 0.83rem;}
-}
-@media screen and (max-width: 361px){
-	#container .content-item.item-resume .resume-item .sub-content					{padding: 5px 0 0 0; font-size: 0.7rem;}
-	#container .content-item.item-resume .resume-item .sub-title					{font-size: 0.73rem;}
-	#container .content-item.item-resume .resume-item.skill .sub-content li			{margin: 10px 0;}
-	#container .content-item.item-resume .resume-images.hand						{display: none;}
-	#container .content-item.item-publishing .publishing-wrap .data-item li a		{padding: 0 35%; font-size: 0.73rem;}
-}

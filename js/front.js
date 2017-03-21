@@ -89,6 +89,47 @@ $(function(){
 		console.log(bodyWidth)
 	}
 	
+	//daum map
+	var container = document.getElementById('map');
+	var options = {
+		center: new daum.maps.LatLng(37.544359, 126.941241),
+		level: 2
+	};
+	
+	var map = new daum.maps.Map(container, options);
+	
+	var circle = new daum.maps.Circle({
+		center : new daum.maps.LatLng(37.544359, 126.941241),
+		radius: 100, 
+		strokeWeight: 5, 
+		strokeColor: '#00ff7f',
+		strokeOpacity: 1,
+		strokeStyle: 'solid',
+		fillColor: '#9bffcd',
+		fillOpacity: 0.5 
+	});
+	circle.setMap(map);
+	
+	var marker = new daum.maps.Marker({ 
+		position: map.getCenter() 
+	});
+	marker.setMap(map);
+	
+	function setZoomable(zoomable) {
+		map.setZoomable(zoomable);
+	}
+	function setDraggable(draggable) {
+		map.setDraggable(draggable);
+	}
+	
+	if(bodyWidth <= 1024){
+		setZoomable(true);
+		setDraggable(true);
+	}else{
+		setZoomable(false);
+		setDraggable(false);
+	}
+	
 	//scroll hidden
 	$(document).ready(function(){
 		setTimeout(scrollTo, 0, 0, 1);

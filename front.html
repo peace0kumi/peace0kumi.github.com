@@ -14,7 +14,9 @@
 <meta name="Keywords" content="박영후, 박영후 포트폴리오, 박영후 작업물, 박영후 개인 포트폴리오" />
 <link rel="shortcut icon" href="images/favicon2.ico">
 <link rel="stylesheet" href="css/front.css" />
+<link rel="stylesheet" href="css/media.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://apis.daum.net/maps/maps3.js?apikey=ab0ce715097fc90f468f4f67da774e8b"></script>
 <script src="../js/front.js"></script>
 </head>
 <body>
@@ -43,7 +45,7 @@
 	<!-- content -->
 	<div id="container">
 		<div class="content-primary">
-			<div class="content-item item-resume" id="contentResume">
+			<div class="content-item resume" id="contentResume">
 				<h3>RESUME</h3>
 				<div class="resume-wrap">
 					<div class="resume-head"><h4>PARK YEONG HOO<br/>RESUME</h4></div>
@@ -70,27 +72,35 @@
 				</div>
 				<object type="image/svg+xml" data="images/handdrawn.svg" class="resume-images hand">현재 브라우저는 iframe을 지원하지 않습니다.</object>
 			</div>
-			<div class="content-item item-publishing" id="contentPublishing">
+			<div class="content-item publishing" id="contentPublishing">
 				<h3>PUBLISHING</h3>
 				<div class="publishing-wrap">
 					<ul class="data-item">
-					<li><a href="html/works/html/20160301_film.html">CJ E&amp;M</a></li>
-					<li><a href="html/works/html/20161117_pixar_01.html">PIXAR</a></li>
-					<li><a href="html/works/html/20170124_alien_01.html">ALIEN</a></li>
-					<li><a href="html/works/html/20160826_main.html">THE HYUNDAI<span class="wbr">MAIN-A</span></a></li>
-					<li><a href="html/works/html/20160902_main.html">THE HYUNDAI<span class="wbr">MAIN-B</span></a></li>
-					<li><a href="html/works/html/20170220_main.html">THE HYUNDAI<span class="wbr">MAIN-C</span></a></li>
-					<li><a href="html/works/html/20170112_giftset_pc.html">THE HYUNDAI<span class="wbr">GIFT SET</span></a></li>
-					<li><a href="html/works/html/20161101_santacon_01.html">THE HYUNDAI<span class="wbr">SANTACON</span></a></li>
-					<li><a href="html/works/html/20160901_superstage.html">THE HYUNDAI<span class="wbr">SUPER STAGE</span></a></li>
-					<li><a href="html/works/html/20160913_weddingfair.html">THE HYUNDAI<span class="wbr">WEDDING FAIR</span></a></li>
-					<li><a href="html/works/html/20160722_mail_01.html">THE HYUNDAI<span class="wbr">MAIL FORM</span></a></li>
-					<li><a href="html/works/html/20160215_missa_01.html">MISS A</a></li>
+					<li><a href="html/works/html/20160301_film.html" target="_blank">CJ E&amp;M</a></li>
+					<li><a href="html/works/html/20161117_pixar_01.html" target="_blank">PIXAR</a></li>
+					<li><a href="html/works/html/20160826_main.html" target="_blank">THE HYUNDAI<span class="wbr">MAIN-A</span></a></li>
+					<li><a href="html/works/html/20160902_main.html" target="_blank">THE HYUNDAI<span class="wbr">MAIN-B</span></a></li>
+					<li><a href="html/works/html/20170220_main.html" target="_blank">THE HYUNDAI<span class="wbr">MAIN-C</span></a></li>
+					<li><a href="html/works/html/20170112_giftset_mb.html" target="_blank">THE HYUNDAI<span class="wbr">GIFT SET</span></a></li>
+					<li><a href="html/works/html/20161101_santacon_01.html" target="_blank">THE HYUNDAI<span class="wbr">SANTACON</span></a></li>
+					<li><a href="html/works/html/20160901_superstage.html" target="_blank">THE HYUNDAI<span class="wbr">SUPER STAGE</span></a></li>
+					<li><a href="html/works/html/20160913_weddingfair.html" target="_blank">THE HYUNDAI<span class="wbr">WEDDING FAIR</span></a></li>
+					<li><a href="html/works/html/20160722_mail_01.html" target="_blank">THE HYUNDAI<span class="wbr">MAIL FORM</span></a></li>
+					<li><a href="html/works/html/20170124_alien_01.html" target="_blank">ALIEN</a></li>
+					<li><a href="html/works/html/20160215_missa_01.html" target="_blank">MISS A</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="content-item item-contact" id="contentContact">
+			<div class="content-item contact" id="contentContact">
 				<h3>CONTACT</h3>
+				<ul class="contact-item info">
+					<li class="info-item"><span class="info-head">/ NAME</span> 박영후 / 朴英厚 / PARKYEONGHOO</li>
+					<li class="info-item"><span class="info-head">/ MAIL</span> <a href="mailto:pyhoo78@gmail.com">pyhoo78@gmail.com</a></li>
+					<li class="info-item"><span class="info-head">/ BLOG</span> <a href="http://supublisher.tistory.com" target="_blank">티스토리</a> <a href="http://blog.naver.com/pyhoo78" target="_blank">네이버</a></li>
+					<li class="info-item"><span class="info-head">/ KAKAO</span> peace0kumi</li>
+					<li class="info-item"><span class="info-head">/ LOCATION</span> 하단 지도를 참조해주세요.</li>
+				</ul>
+				<div id="map" class="contact-item map"></div>
 			</div>
 		</div>
 	</div>

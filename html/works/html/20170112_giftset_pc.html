@@ -32,10 +32,12 @@
 div.event-container												{position: relative; width: 764px;}
 div.event-container img											{vertical-align: top;}
 div.event-container .event-hidden								{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
-div.event-container .button-area								{padding: 0 0 0 201px; background: url(http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_13.png) no-repeat 0 0;}
-div.event-container .button-area:after							{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-div.event-container .button-area .btn							{float: left;}
-div.event-container .button-area .btn.add						{margin: 0 0 0 30px;}
+div.event-container .button-area.link-mobile					{position: absolute; right: -28%;}
+div.event-container .button-area.link-mobile a					{display: block; font-size: 20px; font-weight: bold; line-height: 28px; letter-spacing: -0.3px;}
+div.event-container .button-area.link-other						{padding: 0 0 0 201px; background: url(http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_13.png) no-repeat 0 0;}
+div.event-container .button-area.link-other:after				{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+div.event-container .button-area.link-other .btn				{float: left;}
+div.event-container .button-area.link-other .btn.add			{margin: 0 0 0 30px;}
 
 /* tab */
 div.event-container .tab-navigation								{background: url(http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_03.png) repeat-y 0 0;}
@@ -70,6 +72,9 @@ jQuery(function(){
 </script>
 <!-- event-container -->
 <div class="event-container">
+	<div class="button-area link-mobile">
+		<a href="20170112_giftset_mb.html">SEE THE MOBILE VER</a>
+	</div>
 	<img src="http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_14.png" alt="" />
 	<div class="event-hidden">
 		<h4>Best 설 선물세트 추천</h4>
@@ -77,7 +82,7 @@ jQuery(function(){
 		<p>지난 명절 인기 선물세트를 한자리에 모아 추천합니다. 합리적인 가격의 실속세트부터 존경하는 분을 위한 품격있는 선물까지.</p>
 		<p>&ldquo;시간과 장소에 상관없이 <strong>온라인 채널에서 편리하게 선물</strong>하세요.&rdquo;</p>
 	</div>
-	<div class="button-area">
+	<div class="button-area link-other">
 		<a href="http://esuper.ehyundai.com" target="_blank" title="새창으로 이동" class="btn"><img src="http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_10.png" alt="e수퍼마켓" /></a>
 		<a href="http://www.hyundaihmall.com/front/dpa/searchSectItem.do?sectId=426406" target="_blank" title="새창으로 이동" class="btn add"><img src="http://www.ehyundai.com/images/event_images/20170112_giftset/img_pc_09.png" alt="Hmall" /></a>
 	</div>

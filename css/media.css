@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+/* common */
+@import url('front.css');
+
+/* media query */
+@media screen and (max-width: 1680px){
+	.content-item.resume .resume-wrap											{top: 14vh; height: 70vh;}
+}
+@media screen and (max-width: 1400px){
+	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 30%; font-size: 1.25rem;}
+}
+@media screen and (max-width: 1024px){
+	.content-item.resume h4														{font-size: 1rem;}
+	.content-item.resume .resume-item											{padding: 10px 0;}
+	.content-item.resume .resume-item .sub-title								{font-size: 1rem;}
+	.content-item.resume .resume-item .sub-content								{font-size: 1rem;}
+	.content-item.resume .resume-images.hand									{width: 45%; right: -5vw; bottom: -50px;}
+	.content-item.publishing .publishing-wrap .data-item li						{width: 50%; height: 15vh;}
+}
+@media screen and (max-width: 767px){
+	.content-item.resume .resume-wrap											{top: 10vh; width: 80vw; height: 83vh; margin: 0 0 0 -40vw;}
+	.content-item.resume h4														{margin: 10px 0; font-size: 1rem;}
+	.content-item.resume .resume-item .sub-title								{font-size: 1rem;}
+	.content-item.resume .resume-item .sub-content								{padding: 10px 0 0 0; font-size: 0.83rem;}
+	.content-item.resume .resume-item .sub-content li							{width: 100%;}
+	.content-item.publishing .publishing-wrap .data-item li a					{font-size: 1rem;}
+}
+@media screen and (max-width: 581px){
+	.content-item.publishing .publishing-wrap .data-item li						{width: 100%; height: 7.5vh;}
+	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 37%; font-size: 0.83rem;}
+	.content-item.contact .contact-item.info									{padding: 4vh 1.5vw; font-size: 0.73rem;}
+}
+@media screen and (max-width: 361px){
+	.content-item.resume .resume-item .sub-content								{padding: 5px 0 0 0; font-size: 0.7rem;}
+	.content-item.resume .resume-item .sub-title								{font-size: 0.73rem;}
+	.content-item.resume .resume-item.skill .sub-content li						{margin: 10px 0;}
+	.content-item.resume .resume-images.hand									{display: none;}
+	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 35%; font-size: 0.73rem;}
+}
