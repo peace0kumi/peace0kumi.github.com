@@ -1,7 +1,7 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 /* common */
-@import url('front.css');
+@import url(front.css);
 
 /* media query */
 @media screen and (max-width: 1680px){
