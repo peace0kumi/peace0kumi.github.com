@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/*
+ * GLOBAL
+ */
+html, body {height: 100%;}
+body {overflow: hidden; margin: 0; padding: 0;}
+#frame {position: relative; width: 100%; height: 100%; background: url(../images/20170401/main.png) no-repeat 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; cursor: url(../images/20170401/magnifier.cur), url(../images/20170401/magnifier.png), zoom-in;}
+#header .title {margin: 0; padding: 0; text-indent: -999em;}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="Description" content="셜록홈즈 그림자게임">
+<meta name="Keywords" content="Sherlock Holmes A game of shadows, 셜록홈즈, 셜록, Sherlock Holmes, Sherlock, 셜록홈즈 그림자게임, 그림자게임, A game of shadows">
+<title>Sherlock Holmes A Game of Shadows</title>
+<link rel="stylesheet" href="../css/20170401_sherlock.css">
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.event-open a').each(function(){
+		$('.event-open a').click(function(){
+			var target = $(this).attr('href');
+
+			$('#popupMask').css('display','block');
+			$(target).addClass('active').siblings().removeClass('active');
+			$('#closePopup').css('display','block');
+		});
+	});
+	
+	$('#closePopup').click(function(){
+		$('#popupMask').css('display','none');
+		$('.event-popup.active').removeClass('active').siblings().removeClass('active');
+		$('#closePopup').css('display','none');
+	});
+});
+</script>
+</head>
+<body>
+<div id="frame">
+	<!-- header -->
+	<div id="header">
+		<h1 class="title">셜록홈즈 그림자게임 SHERLOCK HOLMES A GAME OF SHADOWS</h1>
+	</div>
+	<!-- //header  -->
+	
+	<!-- content -->
+	<div id="content">
+		<div class="button-area synopsis">
+			<a href="#">Synopsis</a>
+		</div>
+		<div class="button-area gallery">
+			<a href="#">Gallery</a>
+		</div>
+		<div class="button-area character">
+			<a href="#">Character</a>
+		</div>
+	</div>
+	<!-- //content -->
+	
+	<!-- pop-up -->
+	<div id="popupS" class="popup-area">
+		
+	</div>
+	<div id="popupG" class="popup-area">
+		
+	</div>
+	<div id="popupC" class="popup-area">
+		
+	</div>
+	<!-- //pop-up -->
+</div>
+</body>
+</html>
