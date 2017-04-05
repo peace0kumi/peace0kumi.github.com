@@ -32,6 +32,39 @@ $(function(){
 		lastScrollTop = thisScroll;
 	};
 	
+	//smooth page move
+	$('.gnb-item.item-featurefilms').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop:$('#contentFeature').offset().top}, 
+		500);
+		return false;
+	});
+	
+	$('.gnb-item.item-shortfilms').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop:$('#contentShort').offset().top}, 
+		500);
+		return false;
+	});
+	
+	$('.gnb-item.item-careers').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop:$('#contentCareers').offset().top}, 
+		500);
+		return false;
+	});
+	
+	$('.gnb-item.item-about').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop:$('#contentAbout').offset().top}, 
+		500);
+		return false;
+	});
+	
 	//mouse wheel
 	var windowH = $(window).height();
 	

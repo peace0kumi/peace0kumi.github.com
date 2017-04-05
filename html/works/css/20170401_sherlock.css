@@ -1,9 +1,30 @@
 @charset "utf-8";
 
-/*
- * GLOBAL
- */
-html, body {height: 100%;}
-body {overflow: hidden; margin: 0; padding: 0;}
-#frame {position: relative; width: 100%; height: 100%; background: url(../images/20170401/main.png) no-repeat 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; cursor: url(../images/20170401/magnifier.cur), url(../images/20170401/magnifier.png), zoom-in;}
-#header .title {margin: 0; padding: 0; text-indent: -999em;}
+/* frame */
+html, body										{height: 100%;}
+body											{overflow: hidden; margin: 0; padding: 0;}
+button											{appearance: none; -webkit-appearance: none; display: inline-block; margin: 0; padding: 0; color: transparent; border: 0 none; font-size: inherit;}
+img												{vertical-align: top; border: 0 none;}
+h1												{margin: 0; padding: 0;}
+#frame											{position: relative; width: 100%; height: 100%; background: url(../images/20170401/main.png) no-repeat 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; cursor: url(../images/20170401/magnifier.cur), url(../images/20170401/magnifier.png), zoom-in;}
+#header .title									{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0); text-indent: -999em;}
+
+/* content */
+#content .button-area							{position: absolute; z-index: 1; width: 65px; height: 70px;}
+#content .button-area a							{display: block; width: 100%; height: 100%; text-indent: -999em; text-decoration: none;}
+#content .button-area a:hover					{cursor: url(../images/20170401/magnifier_on.cur), url(../images/20170401/magnifier_on.png), zoom-in;}
+#content .button-area.synopsis					{top: 85%; left: 22.5%;}
+#content .button-area.gallery					{top: 39%; left: 43.7%;}
+#content .button-area.character					{top: 70%; right: 7.3%;}
+
+/* pop-up */
+.popup-area										{position: relative; width: 100%; height: 100%;}
+.popup-area .popup-item							{display: none; position: fixed; z-index: 3; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.popup-area .popup-item.active					{display: block;}
+.popup-area .popup-item img						{}
+.popup-area .popup-item .popup-detail			{display: block; position: absolute; top: 34.5%; left: 16%; width: 147px; height: 30px;}
+.popup-area .popup-item .popup-detail:hover		{cursor: url(../images/20170401/magnifier_on.cur), url(../images/20170401/magnifier_on.png), zoom-in;}
+.popup-area .popup-item .popup-detail span		{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0); text-indent: -999em;}
+.close											{display: none; position: absolute; z-index: 4; top: 13%; left: 83%; width: 39px; height: 39px; background: url(../images/20170401/close.png) no-repeat 50% 50%; -webkit-background-size: 100%; background-size: 100%; cursor: pointer;}
+.close>span										{display: block; width: inherit; height: inherit; white-space: nowrap; text-indent: -999em;}
+.popup-mask										{display: none; position: fixed; z-index: 2; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.5);}

@@ -99,7 +99,7 @@ LOCAL
 #content .content-item .data-item .data-head										{}
 #content .content-item .data-item .data-head h3										{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
 
-/* feature-films */s
+/* feature-films */
 .feature-films																		{background-color: #ffffeb;}
 .feature-films .data-item .data-body												{}
 .feature-films .data-item .data-body .data-list										{}
@@ -1368,7 +1368,6 @@ h2,
 h3 {
   font-weight: 200;
 }
-
 
 /* about */
 .about																				{background: #2e46ad;}

@@ -11,8 +11,8 @@
 <script src="./../js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('.event-open a').each(function(){
-		$('.event-open a').click(function(){
+	$('.button-area a').each(function(){
+		$('.button-area a').click(function(){
 			var target = $(this).attr('href');
 
 			$('#popupMask').css('display','block');
@@ -23,9 +23,10 @@ $(document).ready(function(){
 	
 	$('#closePopup').click(function(){
 		$('#popupMask').css('display','none');
-		$('.event-popup.active').removeClass('active').siblings().removeClass('active');
-		$('#closePopup').css('display','none');
+		$('.popup-item.active').removeClass('active').siblings().removeClass('active');
+		$(this).css('display','none');
 	});
+
 });
 </script>
 </head>
@@ -40,27 +41,36 @@ $(document).ready(function(){
 	<!-- content -->
 	<div id="content">
 		<div class="button-area synopsis">
-			<a href="#">Synopsis</a>
+			<a href="#popupS">Synopsis</a>
 		</div>
 		<div class="button-area gallery">
-			<a href="#">Gallery</a>
+			<a href="#popupG">Gallery</a>
 		</div>
 		<div class="button-area character">
-			<a href="#">Character</a>
+			<a href="#popupC">Character</a>
 		</div>
 	</div>
 	<!-- //content -->
 	
 	<!-- pop-up -->
-	<div id="popupS" class="popup-area">
-		
+	<div class="popup-area synopsis">
+		<div id="popupS" class="popup-item">
+			<img src="../images/20170401/synopsis.png" alt="" />
+			<a href="20170401_sherlock_02.html" class="popup-detail"><span>London NW1 6AE</span></a>
+		</div>
 	</div>
-	<div id="popupG" class="popup-area">
-		
+	<div class="popup-area gallery">
+		<div id="popupG" class="popup-item">
+			<img src="../images/20170401/gallery.png" alt="" />
+		</div>
 	</div>
-	<div id="popupC" class="popup-area">
-		
+	<div class="popup-area character">
+		<div id="popupC" class="popup-item">
+			<img src="../images/20170401/character.png" alt="" />
+		</div>
 	</div>
+	<button class="close" id="closePopup"><span>닫기</span></button>
+	<div id="popupMask" class="popup-mask"></div>
 	<!-- //pop-up -->
 </div>
 </body>
