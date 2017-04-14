@@ -23,7 +23,7 @@ $(function(){
 		if(Math.abs(lastScrollTop - thisScroll) <= delta)
 			return;
 		if(thisScroll > lastScrollTop && thisScroll > navbarHeight){
-			$('#header').css('top','-6vh');
+			$('#header').css('top','0');
 		}else{
 			if(thisScroll + $(window).height() < $(document).height()){
 				$('#header').css('top','0');
@@ -33,6 +33,14 @@ $(function(){
 	};
 	
 	//smooth page move
+	$('#siteTitle').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop:$('#contentIndex').offset().top}, 
+		500);
+		return false;
+	});
+	
 	$('.gnb-item.item-featurefilms').click(function(e){
 		e.preventDefault();
 		$('html, body').animate({
@@ -117,27 +125,22 @@ $(function(){
 	
 	//card section
 	$(function() {
-		$('.material-card > .mc-btn-action').click(function () {
-			var card = $(this).parent('.material-card');
-			var icon = $(this).children('i');
-			icon.addClass('fa-spin-fast');
+		$('.card-item > .button-area').click(function () {
+			var card = $(this).parent('.card-item');
+			var icon = $(this).children('span');
+			icon.addClass('card-rotate');
 
-			if (card.hasClass('mc-active')) {
-				card.removeClass('mc-active');
-
+			if (card.hasClass('active')) {
+				card.removeClass('active');
 				window.setTimeout(function() {
 					icon
-					.removeClass('fa-arrow-left')
-					.removeClass('fa-spin-fast')
-					.addClass('fa-bars');
+					.removeClass('card-rotate');
 				}, 800);
 			} else {
-				card.addClass('mc-active');
+				card.addClass('active');
 				window.setTimeout(function() {
 					icon
-					.removeClass('fa-bars')
-					.removeClass('fa-spin-fast')
-					.addClass('fa-arrow-left');
+					.removeClass('card-rotate');
 				}, 800);
 			}
 		});
