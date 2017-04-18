@@ -99,10 +99,10 @@ $(function(){
 		$('body').append('<div class="blind"></div>');
 		$('.blind').fadeTo("500","0.6");
 	}
-	
+
 	function popOpen(conts){
-		$('.content-item').append('<div class="popbox"></div>')
-		$('.content-item').children('.popbox').load(conts);
+		$('.content-item.feature-films').append('<div class="popbox"></div>')
+		$('.content-item.feature-films').children('.popbox').load(conts);
 	}
 	
 	$('[class^=pop-]').click(function(){
@@ -111,10 +111,12 @@ $(function(){
 		var cont = $(this).attr('class');
 		var conts = cont.split('-'); //쪼개는 것
 		var fullUrl = "20161117_pixar_02"+".html ."+conts[1]; //popup.html .event*로 나옴
-		popOpen(fullUrl)
+		popOpen(fullUrl);
+		
+		return false;
 	});
 
-	$('.content-item').on('click','.close',function(){
+	$('.content-item.feature-films').on('click','.close',function(){
 		$('.popbox').fadeOut(function(){
 			$(this).remove();
 		})
@@ -122,6 +124,7 @@ $(function(){
 			$(this).remove();
 		})
 	});
+	
 	
 	//card section
 	$(function() {

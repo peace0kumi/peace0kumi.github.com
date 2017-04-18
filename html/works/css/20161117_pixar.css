@@ -27,17 +27,17 @@ button.btn																			{overflow: visible; margin: 0; padding: 0; border: 
 a.btn																				{display: inline-block; text-decoration: none;}
 
 /* pop-up */
-.blind																				{display: none; position: absolute; z-index: 0; top: 0; left: 0; width: 100%; height: 100%; background: #000000;}
-.popbox																				{position: absolute; z-index: 1; top: 12.5%; left: 50%; margin: -15vh 0 0 -15vw; width: 30vw; height: 30vh; border: 10px #bcddfe solid; box-sizing: border-box; background-color: #ffffff;}
+.blind																				{display: none; position: absolute; z-index: 3; top: 0; left: 0; width: 100%; height: 500%; background: #000000;}
+.popbox																				{position: fixed; z-index: 4; top: 50%; left: 50%; margin: -15vh 0 0 -15vw; width: 30vw; height: 30vh; border: 10px #bcddfe solid; box-sizing: border-box; background-color: #ffffff;}
 .popbox .popwrap																	{font-family: 'Roboto', 'Arial', sans-serif;}
 .popbox .popwrap h4																	{margin: 0; padding: 20px 0 20px 10px; font-size: 1.5rem;}
 .popbox .popwrap ul																	{padding: 0 0 0 10px;}
 .popbox .popwrap ul li+li															{margin: 5px 0 0 0;}
 .popbox .popwrap p																	{padding: 0 0 0 10px;}
-.popbox .btn.close																	{position: absolute; top: 0; right: 0; width: 38px; height: 38px; text-indent: -999em; background: url(../images/20161117/popup_close.png) no-repeat 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; cursor: pointer;}
+.popbox .btn.close																	{position: absolute; z-index: 5; top: 0; right: 0; width: 38px; height: 38px; text-indent: -999em; background: url(../images/20161117/popup_close.png) no-repeat 0 0; background-size: 100% 100%; -webkit-background-size: 100% 100%; cursor: pointer;}
 
 /* header */
-#header																				{position: fixed; z-index: 4; top: 0; width: 100%; height: 6vh; transition: top 0.2s ease-in-out; background-color: #ffffff;}
+#header																				{position: fixed; z-index: 5; top: 0; width: 100%; height: 6vh; transition: top 0.2s ease-in-out; background-color: #ffffff;}
 #header #siteTitle																	{display: block; position: absolute; z-index: 1; top: 2vh; left: 1.5vw; overflow: hidden; width: 100px; margin: 0; padding: 0; border: 0 none;}
 #header #siteTitle a																{display: block; text-indent: -9999px; background: url(../images/20161117/gnb_logo.png) no-repeat 0 0; background-size: contain; -webkit-background-size: contain; background-position: 50% 0; -webkit-background-position: 50% 0;}
 
@@ -201,7 +201,14 @@ LOCAL
 
 /* about */
 .about																				{background: #ffffff;}
-
+.about .data-item																	{}
+.about .data-item .data-body:after													{content: ''; display: blcok; clear: both; width: 0; height: 0; visiblity: hidden;}
+.about .data-item .data-body .data-caption,
+.about .data-item .data-body .data-image											{float: left;}
+.about .data-item .data-body .data-caption											{overflow: hidden; width: 50%; height: calc(100vh - 6vh);}
+.about .data-item .data-body .data-caption .data-detail								{padding: 10vh 10vw; font-family: 'Raleway', 'Arial', sans-serif; font-size: 1rem;}
+.about .data-item .data-body .data-image											{width: 50%; height: calc(100vh - 6vh);; background: url(../images/20161117/about-bg.png) no-repeat 50% 50%; background-size: auto 100%;}
+.about .data-item .data-body .data-image .data-detail								{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
 
 /* footer */
 #footer																				{position: relative; bottom: 0; width: 100vw; text-align: center; font-size: 12px; background-color: #ffffff;}
