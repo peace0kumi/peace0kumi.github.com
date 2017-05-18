@@ -5,7 +5,8 @@
 
 /* media query */
 @media screen and (max-width: 1680px){
-	.content-item.resume .resume-wrap											{top: 14vh; height: 70vh;}
+	.content-item.resume .resume-wrap											{top: 11vh; height: 82vh;}
+	.content-item.contact .contact-item.info										{padding: 5vh 1.5vw;}
 }
 @media screen and (max-width: 1400px){
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 30%; font-size: 1.25rem;}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+html, body {height: 100%;}
+body {overflow-x: hidden; margin: 0; padding: 0; font-size: 16px;}
+ul {list-style: none; margin: 0; padding: 0;}
+#frame {height: 100%; font-family: 'Spoqa Han Sans', '맑은 고딕', sans-serif;}
+#header {height: 150px; padding: 0 15%; background-color: #009a3e;}
+#header #siteTitle {float: left; margin: 0; padding: 0; height: 150px; vertical-align: middle; font-family: 'Fjalla One', sans-serif; font-style: italic;}
+#header #siteTitle:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header #siteTitle .hyper-link {display: table; height: 100%; text-decoration: none;}
+#header #siteTitle .hyper-link .text {display: table-cell; vertical-align: middle; color: #ffffff;}
+
+/* global-navigations */
+#header .global-navigations .gnb:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .global-navigations .gnb-name {display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
+#header .global-navigations .gnb {display: flex; display: -webkit-flex; height: 150px; margin: 0;}
+#header .global-navigations .gnb-item {position: relative; float: left; height: 100%; flex: 1; -webkit-flex: 1; text-align: center;}
+#header .global-navigations .gnb-item:before {content: ''; display: inline-block; width: 1px; height: 100%; margin-right: 0; vertical-align: middle;}
+#header .global-navigations .gnb-item .hyper-link {display: inline-block; font-size: 1.35rem; color: #ffffff; font-weight: bold; text-decoration: none;}
+
+/* local-navigations */
+#header .local-navigations {display: none; position: absolute; top: 89px; padding: 10px 30px 30px; background-color: #009a3e;}
+#header .local-navigations .lnb:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .local-navigations .lnb-name {display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
+#header .local-navigations .lnb-wrap+.lnb-wrap {margin-top: 15px;}
+#header .local-navigations .lnb-wrap .lnb-detail {margin: 0 0 10px 0; padding: 0; text-align: left; font-size: 1rem; color: #ffffff;}
+#header .local-navigations .lnb-wrap .lnb {text-align: left;}
+#header .local-navigations .lnb-wrap .lnb-item {float: left; width: 100%;}
+#header .local-navigations .lnb-wrap .lnb-item+.lnb-item {margin-top: 5px;}
+#header .local-navigations .lnb-wrap .lnb-item .hyper-link {font-size: 1rem; color: #000000; font-weight: normal;}
+
+/* footer */
+#footer .goto-top												{position: fixed; z-index: 10; right: 20px; top: 20px; opacity: 0; -webkit-transition: all 0.6s; transition: all 0.6s;}
+#footer .goto-top a												{display: block; width: 48px; height: 48px; line-height: 48px; font-size: 12px; text-align: center; color: #ffffff; text-decoration: none; background-image: url(../images/20170421/bg-panels.png); background-repeat: no-repeat; background-position: 0 -96px;}
+#footer .goto-top a:hover										{background-position: -48px -96px;}
+#footer .goto-top a .text										{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.scroll-start #footer .goto-top									{opacity: 1;}
+.scroll-end #footer .goto-top									{bottom: 360px; -webkit-transition: all 0s; transition: all 0s;}

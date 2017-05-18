@@ -85,8 +85,9 @@ $(function(){
 	if(bodyWidth <= bodyHeight){
 		
 	}else if(bodyWidth > bodyHeight && bodyWidth < 1280){
-		alert('이 페이지는 세로 고정 모드에서만 정상적으로 작동됩니다.')
-		console.log(bodyWidth)
+		alert('이 페이지는 세로 고정 모드에서만 정상적으로 작동됩니다.');
+		$('#frame').css('visibility','hidden');
+		$('body').css('background-color','#2c4157');
 	}
 	
 	//daum map
@@ -134,5 +135,5 @@ $(function(){
 	$(document).ready(function(){
 		setTimeout(scrollTo, 0, 0, 1);
 	});
-	
+		
 });
