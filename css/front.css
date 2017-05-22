@@ -46,7 +46,7 @@ a																					{text-decoration: none;}
 .content-item.resume .resume-item.career .career-time								{color: #333333; font-style: italic;}
 .content-item.resume .resume-item.career .career-company							{margin: 0 0 0 5px; font-weight: bold;}
 .content-item.resume .resume-item.skill .sub-content li								{margin: 10px 0;}
-.content-item.resume .resume-images.hand											{position: absolute; right: 22vw; bottom: -7vh;}
+.content-item.resume .resume-images.hand											{position: absolute; right: 22vw; bottom: -8vh;}
 
 /* publishing */
 .content-item.publishing															{overflow: hidden; position: relative; box-shadow: inset 0 0 0 5vh #00ff7f;}

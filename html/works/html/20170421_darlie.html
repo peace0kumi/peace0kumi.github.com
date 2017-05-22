@@ -13,7 +13,19 @@
 <link rel="stylesheet" type="text/css" href="../css/20170421_darlie.css" />
 <!--[if lt IE 9]><script type="text/javascript" src="./../js/library/libs/html5shiv-printshiv.js"></script><![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="../js/darlie.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.slider-wrap').slick({
+		infinite: true,
+		centerMode: true,
+		centerPadding: '100px',
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+});
+</script>
 </head>
 <body>
 <div id="frame">
@@ -88,7 +100,40 @@
 	<!-- //haeder -->
 	<!-- content -->
 	<div id="content">
-		<div class="data-item">
+		<div class="data-visual">
+			<div class="slider-wrap">
+				<div class="slider-item">
+					<a class="slider-text"><img src="../images/20170421/visual-slide.jpg" alt="" class="slider-image"/></a>
+				</div>
+				<div class="slider-item">
+					<a class="slider-text"><img src="../images/20170421/visual-slide.jpg" alt="" class="slider-image"/></a>
+				</div>
+				<div class="slider-item">
+					<a class="slider-text"><img src="../images/20170421/visual-slide.jpg" alt="" class="slider-image"/></a>
+				</div>
+				<div class="slider-item">
+					<a class="slider-text"><img src="../images/20170421/visual-slide.jpg" alt="" class="slider-image"/></a>
+				</div>
+			</div>
+		</div>
+		<div class="data-wrap">
+			<div class="data-item theme-a">
+				<span class="data-image"><img src="" alt="" /></span>
+			</div>
+			<div class="data-item theme-a">
+				<span class="data-image"><img src="" alt="" /></span>
+			</div>
+			<div class="data-item theme-a">
+				<span class="data-image"><img src="" alt="" /></span>
+			</div>
+		</div>
+		<div class="data-wrap">
+			<div class="data-item theme-b">
+				<span class="data-image"><img src="" alt="" /></span>
+			</div>
+			<div class="data-item theme-b">
+				<span class="data-image"><img src="" alt="" /></span>
+			</div>
 		</div>
 	</div>
 	<!-- //content -->
