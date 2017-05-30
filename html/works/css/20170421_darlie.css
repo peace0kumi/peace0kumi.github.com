@@ -26,7 +26,7 @@ img {width: 100%; border: 0 none;}
 #header .global-navigations .gnb-item:before {content: ''; display: inline-block; width: 1px; height: 100%; margin-right: 0; vertical-align: middle;}
 #header .global-navigations .gnb-item .hyper-link {display: inline-block; font-size: 1.35rem; color: #ffffff; font-weight: bold; text-decoration: none;}
 /* local-navigations */
-#header .local-navigations {display: none; position: absolute; top: 89px; padding: 10px 30px 30px; background-color: #009a3e;}
+#header .local-navigations {display: none; position: absolute; z-index: 2; top: 89px; padding: 10px 30px 30px; background-color: #009a3e;}
 #header .local-navigations .lnb:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
 #header .local-navigations .lnb-name {display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
 #header .local-navigations .lnb-wrap+.lnb-wrap {margin-top: 15px;}
@@ -77,7 +77,7 @@ img {width: 100%; border: 0 none;}
 .slick-vertical .slick-slide														{display: block; height: auto; border: 1px solid transparent;}
 .slick-arrow.slick-hidden															{display: none;}
 .slider-wrap .slider-item .slider-image												{display: block; width: 100%; height: auto; vertical-align: top;}
-.slider-wrap .slider-item .slider-text												{display: block; position: relative; margin: 10px; height: 50vh; line-height: 50vh; vertical-align: middle; font-size: 36px; text-align: center; color: #3498db; background: #ffffff;}
+.slider-wrap .slider-item .slider-text												{display: block; position: relative; height: 50vh; line-height: 50vh; vertical-align: middle; font-size: 36px; text-align: center; color: #3498db; background: #ffffff;}
 
 /* footer */
 #footer .goto-top												{position: fixed; z-index: 10; right: 20px; top: 20px; opacity: 0; -webkit-transition: all 0.6s; transition: all 0.6s;}
