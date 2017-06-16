@@ -135,5 +135,14 @@ $(function(){
 	$(document).ready(function(){
 		setTimeout(scrollTo, 0, 0, 1);
 	});
-		
+	
+	//device check > favicon spread
+	if(Detectizr.os.name === 'ios') {
+		$('head').append('<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/favicon_180x180.png" />');
+	} else if(Detectizr.os.name === 'android') {
+		$('head').append('<link rel="apple-touch-icon-precomposed" href="../images/favicon_152x152.png" />');
+		$('head').append('<link rel="icon" sizes="196x196" href="../images/favicon_196x196.png" />');
+	} else {
+		$('head').append('<link rel="shortcut icon" href="../images/favicon.ico" />');
+	};
 });
