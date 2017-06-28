@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* layout */
+body{font-family: "Malgun Gothic", "맑은 고딕", sans-serif; font-size: 1rem; color: #222222; margin: 0; -webkit-overflow-scrolling: touch;}
+a{text-decoration: none; color: #0094d9;}
+a:hover, a:focus{text-decoration: underline;}
+.frame{min-height: 100vh; display: flex; flex-direction: column; justify-content: space-around;}
+.demo{display: flex; justify-content: center;}
+.demo:first-child{margin-top: 0;}
+
+/* common */
+.highlight{padding-left: 0; margin-top: 0; margin-bottom: 0; list-style: none; display: flex; flex-wrap: wrap; align-items: center; vertical-align: middle;}
+.highlight-item{display: inline-block; margin-right: 10px; line-height: 1; text-decoration: none; color: var(--highlightPageTextColor, inherit); font-weight: bold; font-size: 0.875rem;}
+
+/*
+* types of highlight
+*/
+.highlight_type1 .highlight-item{
+	padding: 7px 10px;
+	background-color: var(--highlightPageActiveBgColor);
+	color: var(--highlightPageActiveTextColor);
+}
+
+/* type 2 */
+.highlight_type2 .highlight-item{
+	border: 2px solid transparent;
+	padding: 5px 8px;
+	border-color: var(--highlightPageActiveBgColor);
+	color: var(--highlightPageActiveTextColor);
+}
+
+/* type 3 */
+.highlight_type3 .highlight-item{
+	border-radius: 50%;
+}
+
+/* type 4 */
+.highlight_type4 .highlight-item{
+	border-radius: 2px;
+}
+
+/* type 5 */
+.highlight_type5 .highlight-item{
+	padding: 10px 15px;
+}
+
+/* type 6 */
+.highlight_type6 {
+}
+
+.highlight_type6 .highlight-item {
+	border-radius: 24px;
+	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+	margin: 1em 0.5em;
+	padding: 0.5em 1em;
+	border: none;
+	color: #ffffff;
+	background-color: #5668ca;
+}
+
+/*
+* Declaring a variable
+*/
+.highlight_type1{
+	--highlightPageActiveBgColor: #4557bb;
+	--highlightPageTextColor: #0094d9;
+	--highlightPageActiveTextColor: #ffffff;
+}
+.highlight_type2{
+	--highlightPageTextColor: #0094d9;
+	--highlightPageActiveTextColor: #4557bb;
+	--highlightPageActiveBgColor: #4557bb;
+}
+.highlight_type5{
+	--highlightPageTextColor: #ffffff;
+	--highlightPageActiveBgColor: #5668ca;
+}
