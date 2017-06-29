@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">convention</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- content -->
+		<section class="page-content convention-css" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h2 id="contentName" class="content-name" tabindex="0">CSS</h2>
+			</div>
+			<!-- //content-head -->
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">문서</h3>
+					<div class="subsection">
+						<h4 class="subsection-name">선언</h4>
+						<p class="para">CSS 선언은 external방식을 권장한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;link rel="stylesheet" type="text/css" href="category.css" /&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">charset</h4>
+						<p class="para">external방식의 문서 charset은 utf-8을 기본으로 하며, HTML과 동일한 인코딩을 문서 첫 줄에 공백 없이 선언한다.</p>
+						<p class="para">파일을 저장할 때는 반드시 선언한 인코딩과 동일한 인코딩을 선택한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: css">
+@charset "utf-8";
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">초기화</h4>
+						<p class="para">module로 초기화 하며, element의 user agent stylesheet 속성은 초기화 하지 않는다.</p>
+					</div>
+				</div>
+				<!-- //section -->
+				
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">표기법</h3>
+					<div class="subsection">
+						<h4 class="subsection-name">기본 형식</h4>
+						<p class="para">속성 간 개행하지 않으며, 선택자와 속성 및 속성값은 한 칸씩 공백을 둔다. 단 중괄호 '{}' 가 중첩되는 경우 예외로 한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: css">
+.selector {property: value; property: value;}
+
+@media all and (min-width: value;) {
+	.selector {property: value; property: value;}
+}
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">선택자</h4>
+						<p class="para">선택자는 class를 기본으로 한다. 태그네임을 선택자로 사용하는 경우는 user agent stylesheet를 초기화할 경우만 허용한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: css">
+.selector {font-size: 1em; line-height: 1.5; color: #000000;}
+p.selector {margin: 0;}
+span.selector {display: block;}
+
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">속성(properties) 선언 순서</h4>
+						<ol class="bui-data-list theme-a">
+						<li>content</li>
+						<li>display</li>
+						<li>overflow</li>
+						<li>float</li>
+						<li>clear</li>
+						<li>position
+							<ol>
+							<li>z-index</li>
+							<li>top</li>
+							<li>right</li>
+							<li>bottom</li>
+							<li>left</li>
+							</ol>
+						</li>
+						<li>width</li>
+						<li>height</li>
+						<li>margin
+							<ol>
+							<li>margin-top</li>
+							<li>margin-right</li>
+							<li>margin-bottom</li>
+							<li>margin-left</li>
+							</ol>
+						</li>
+						<li>padding
+							<ol>
+							<li>padding-top</li>
+							<li>padding-right</li>
+							<li>padding-bottom</li>
+							<li>padding-left</li>
+							</ol>
+						</li>
+						<li>font
+							<ol>
+							<li>font-style</li>
+							<li>font-variant</li>
+							<li>font-weight</li>
+							<li>font-stretch</li>
+							<li>font-size</li>
+							<li>line-height</li>
+							<li>font-family</li>
+							<li>white-space</li>
+							<li>text-align</li>
+							</ol>
+						</li>
+						<li>border
+							<ol>
+							<li>border-width</li>
+							<li>border-style</li>
+							<li>border-color</li>
+							</ol>
+						</li>
+						<li>background
+							<ol>
+							<li>background-color</li>
+							<li>background-image</li>
+							<li>background-repeat</li>
+							<li>background-position-x</li>
+							<li>background-position-y</li>
+							</ol>
+						</li>
+						<li>etc</li>
+						</ol>
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">주석 표기</h4>
+						<p class="para">주석은 선택자와 동일 라인에 표기 하지 않으며, 분류와 모듈명을 반드시 기입한다.</p>
+						<p class="para">수정 및 추가작업 후에는 날짜와 함께 수정내역을 기입한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: css">
+/*
+ * module name
+ */
+.module {property: value; property: value;}
+
+/* module type 2016-01-01 수정 내용 */
+.module.type {property: value; property: value;}
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+				</div>
+				<!-- //section -->
+				
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">네이밍</h1>
+					<section class="subsection">
+						<h1 class="subsection-name">선택자</h1>
+						<p class="para">약어 사용을 지양하며, 네이밍의 시작은 반드시 영문 소문자로 시작한다. 단어별 구분은 id의 경우 카멜 표기법(Camel Notation)으로 class의 경우 hyphen으로 표기한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: css">
+#myPage {property: value; property: value;}
+.my-page {property: value; property: value;}
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">규약</h1>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">정의</th>
+								<th scope="col">예시</th>
+							</tr>
+							<tr>
+								<td style="text-align: center;">module</td>
+								<td>레이아웃과 관계없이 단독으로 사용 가능한 <abbr title="User Interface Object">UIO</abbr></td>
+								<td>em, form, btn, data-list, data-table, tabs... 등의 약속어가 존재</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">theme</td>
+								<td><!-- 모듈이 기본적으로 가지는 디자인 스타일을 의미 --></td>
+								<td>theme-a, theme-b, theme-c... 로 확장</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">type</td>
+								<td>테마 내의 디자인 분류</td>
+								<td>type-a, type-b, type-c... 로 확장</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">outline</td>
+								<td>모듈이 위치할 문서구조 단위</td>
+								<td>x-small, small, medium, large, x-large 로 확장</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">level</td>
+								<td>상황적 의미 또는 정보의 중요도</td>
+								<td>… fall-03, fall-02, fall-01, rise-01, rise-02, rise-03... 로 확장</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">symbols</td>
+								<td>픽토그램 등의 시각적 표현이 필요할 경우</td>
+								<td>before-*, after-*</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">function</td>
+								<td>상호작용의 기능 및 상태</td>
+								<td>active, current...</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</section>
+				</section>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+@import url(./layout.front.css);
+@import url(./module.form.css);
+@import url(./module.button.css);
+@import url(./module.global.css);
+
+/**
+ * global
+ */
+/* more */
+.aside .btn.more .text															{
+	width: 2rem;
+	height: 2rem;
+	font-size: .75rem;
+	color: #2594c0;
+}
+
+.aside .btn.more .text:after													{content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsiPgoJPGxpbmUgaWQ9InBsdXMwMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjU5NGMwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgeDE9IjgiIHkxPSIyNCIgeDI9IjQwIiB5Mj0iMjQiLz4KCTxsaW5lIGlkPSJwbHVzMDEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1OTRjMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHgxPSIyNCIgeTE9IjgiIHgyPSIyNCIgeTI9IjQwIi8+Cjwvc3ZnPg==); background-repeat: no-repeat; background-position: 0 0; background-size: 2rem auto;}
+
+/* .android4 .aside .btn.more .text												{-webkit-mask-image: url(./../../img/global/symbols.png); mask-image: url(./../../img/global/symbols.png);} */
+
+/**
+ * layout
+ */
+
+/**
+ * splash
+ */
+.splash																			{position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background-color: #2594c0; opacity: 1; -webkit-box-flex: 1; -webkit-flex: 1; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: flex; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;}
+.splash:before																	{content: ''; display: block; width: 48vw; height: 48vw; max-width: 30rem; max-height: 30rem; -webkit-mask-image: url(./../../img/global/splash_ci.svg); -webkit-mask-size: 100% auto; -webkit-mask-position: 0 0; -webkit-mask-repeat: no-repeat; background-color: #ffffff;}
+.android4 .splash:before														{width: 15rem; height: 15rem; -webkit-mask-image: url(./../../img/global/splash_ci.png); mask-image: url(./../../img/global/splash_ci.png);}
+html[lang=en] .splash:before													{-webkit-mask-position: 0 100%;}
+html[lang=en].android4 .splash:before											{-webkit-mask-position: 0 100%;}
+
+.section																		{}
+.section .section-name															{margin: 0 0 .5rem 0; line-height: 2rem; font-size: 1.25rem; color: #2594c0; font-family: NotoSansKR-Regular, sans-serif; font-weight: normal;}
+.section .subsection .subsection-name											{margin: 0 0 .25rem 0; line-height: 1.5rem; font-size: .75rem; font-family: NotoSansKR-Bold, sans-serif;}
+
+/**
+ * content
+ */
+/* 주요 콘텐츠 */
+.main-contents																	{padding: 3.5rem 1rem 2.5rem 1rem; background-color: #4e98bd; background-image: url(./../../img/main/contents_01.png), url(./../../img/main/contents_02.png); background-repeat: no-repeat, no-repeat; background-position: 100% 100%, 0 0; background-size: 20rem auto, 20rem auto;}
+.main-contents .section-name													{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; line-height: 1px; font-size: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.main-contents ul																{margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15);}
+.main-contents ul li+li															{border-top: 1px solid rgba(255,255,255,.15);}
+.main-contents ul li a															{display: block; position: relative; padding: .75rem 0; line-height: 2rem; font-size: 1.25rem; text-decoration: none; color: #ffffff;}
+.main-contents ul li a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -1rem;
+	width: 2rem;
+	height: 2rem;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogI3RyYW5zcGFyZW50OyI+IDxwb2x5bGluZSBpZD0ibmV4dCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIxNyw5LjAwMSAzMiwyNC4wMDEgMTcsMzkuMDAxIi8+IDwvc3ZnPg==);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	-webkit-background-size: 2rem auto;
+	background-size: 2rem auto;
+}
+
+/* 최근 업무사례 */
+.section.business-case															{position: relative; padding: 2rem 1rem;}
+.section.business-case .aside													{position: absolute; top: 2rem; right: 1rem;}
+
+/* 법인 소식 */
+.section.corporate-news															{position: relative; padding: 1rem; background-color: #f8f8f8;}
+.section.corporate-news .aside													{position: absolute; top: 1rem; right: 1rem;}
+.section.corporate-news .aside .btn.more .text:after													{content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjhmODsiPgoJPGxpbmUgaWQ9InBsdXMwMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjU5NGMwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgeDE9IjgiIHkxPSIyNCIgeDI9IjQwIiB5Mj0iMjQiLz4KCTxsaW5lIGlkPSJwbHVzMDEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1OTRjMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHgxPSIyNCIgeTE9IjgiIHgyPSIyNCIgeTI9IjQwIi8+Cjwvc3ZnPg==); background-repeat: no-repeat; background-position: 0 0; background-size: 2rem auto;}
+
+/* 뉴스레터 */
+.section.news-letter															{position: relative; padding: 2rem 1rem;}
+.section.news-letter .subsection+.subsection									{margin-top: 1.5rem;}
+.section.news-letter .aside														{position: absolute; top: 2rem; right: 1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

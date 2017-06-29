@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="Description" content="SUNNY BANK" />
+<meta name="Keywords" content="SUNNY BANK" />
+<meta name="Author" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+<title>BUI</title>
+<link rel="stylesheet" type="text/css" media="screen and (-webkit-max-device-pixel-ratio: 1)" href="./../../css/layout/desktop.css" />
+<link rel="stylesheet" type="text/css" media="screen and (-webkit-min-device-pixel-ratio: 1.5)" href="./../../css/layout/mobile.css" />
+<link rel="stylesheet" type="text/css" href="./../../css/front/snippet.css" />
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout/desktop.css" />
+<script type="text/javascript" src="../../js/libs/js/html5.js"></script>
+<script type="text/javascript" src="../../js/libs/s/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../../script/library/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./../../../../script/library/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../../script/library/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../script/library/libs/swiper.js"></script>
+<script type="text/javascript" src="../../../script/library/module/bui.js"></script>
+<script type="text/javascript" src="../../../script/library/module/bui.template.js"></script>
+</head>
+<body>
+<div id="frame">
+	<div class="skip-nav">
+		<a href="#contentName" id="skipContent">본문 바로가기</a>
+	</div>
+	<div class="frame-header">
+		<!-- header -->
+		<div id="header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<!-- page-navigations -->
+			<div class="page-navigations">
+				<span class="page-navigations-group"><a class="pnb-item" href="#lcoalNavigations"><span class="text">메뉴</span></a></span>
+			</div>
+			<!-- //page-navigations -->
+			<!-- local-navigations -->
+			<nav class="lnb" id="lnb">
+				<h1>목차</h1>
+			</nav>
+			<!-- //local-navigations -->
+		</div>
+		<!-- //header -->
+	</div>
+	<hr />
+	<div class="frame-body">
+		<!-- aside --><!-- //aside -->
+		<!-- content -->
+		<section id="content" class="snippet-table">
+			<!-- content-header -->
+			<div class="content-header">
+				<h1>options</h1>
+			</div>
+			<!-- //content-header -->
+			<!-- content-primary -->
+			<div class="content-primary">
+				<section>
+					<h1>theme a</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">module</th>
+							<td>option-select</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-a</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<div class="option-select theme-a medium">
+								<label class="select-item"><span class="form radio theme-a medium"><input type="radio" name="options-01" Name="항목 선택" checked="checked" class="elem" /> <span class="text">Select Options</span></span></label>
+								<label class="select-item"><span class="form radio theme-a medium"><input type="radio" name="options-01" Name="항목 선택" class="elem" /> <span class="text">Select Options</span></span></label>
+								<label class="select-item"><span class="form checkbox theme-a medium"><input type="checkbox" Name="항목 선택" checked="checked" class="elem" /> <span class="text">Select Options</span></span></label>
+								<label class="select-item"><span class="form checkbox theme-a medium"><input type="checkbox" Name="항목 선택" class="elem" /> <span class="text">Select Options</span></span></label>
+							</div>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;div class="option-select theme-a medium"&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form radio theme-a medium"&gt;&lt;input type="radio" name="options-01" Name="항목 선택" checked="checked" class="elem" /&gt; &lt;span class="text"&gt;Select Options&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form radio theme-a medium"&gt;&lt;input type="radio" name="options-01" Name="항목 선택" class="elem" /&gt; &lt;span class="text"&gt;Select Options&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form checkbox theme-a medium"&gt;&lt;input type="checkbox" Name="항목 선택" checked="checked" class="elem" /&gt; &lt;span class="text"&gt;Select Options&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form checkbox theme-a medium"&gt;&lt;input type="checkbox" Name="항목 선택" class="elem" /&gt; &lt;span class="text"&gt;Select Options&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-b</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-b</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<div class="option-select theme-b">
+								<div class="select-item">
+									<label class="form checkbox theme-a medium"><input type="checkbox" Name="Speedup 누구나 환전 서비스 약관 선택" class="elem" /> <span class="text">Speedup 누구나 환전 서비스 약관</span></label>
+									<a href="#" class="btn small state-d"><span class="text">상세보기</span></a>
+								</div>
+								<div class="select-item">
+									<label class="form checkbox theme-a medium"><input type="checkbox" Name="[비여신用]공통필수 개인정보 수집,이용 동의서 선택" checked="checked" class="elem" /> <span class="text">[비여신用]공통필수 개인정보 수집,이용 동의서</span></label>
+									<a href="#" class="btn small state-d"><span class="text">상세보기</span></a>
+								</div>
+							</div>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;div class="option-select theme-b"&gt;
+	&lt;div class="select-item"&gt;
+		&lt;label class="form checkbox theme-a medium"&gt;&lt;input type="checkbox" Name="Speedup 누구나 환전 서비스 약관 선택" class="elem" /&gt; &lt;span class="text"&gt;Speedup 누구나 환전 서비스 약관&lt;/span&gt;&lt;/label&gt;
+		&lt;a href="#" class="btn small state-d"&gt;&lt;span class="text"&gt;상세보기&lt;/span&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="select-item"&gt;
+		&lt;label class="form checkbox theme-a medium"&gt;&lt;input type="checkbox" Name="[비여신用]공통필수 개인정보 수집,이용 동의서 선택" checked="checked" class="elem" /&gt; &lt;span class="text"&gt;[비여신用]공통필수 개인정보 수집,이용 동의서&lt;/span&gt;&lt;/label&gt;
+		&lt;a href="#" class="btn small state-d"&gt;&lt;span class="text"&gt;상세보기&lt;/span&gt;&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-c</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-c</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<span class="option-select theme-c">
+								<span class="select-item"><label class="form"><input type="radio" name="additionItem" Name="전체 선택" checked="checked" class="elem"> <span class="text">전체</span></label></span>
+								<span class="select-item"><label class="form"><input type="radio" name="additionItem" Name="수령대기 선택" class="elem"> <span class="text">수령대기</span></label></span>
+								<span class="select-item"><label class="form"><input type="radio" name="additionItem" Name="출고완료 선택" class="elem"> <span class="text">출고완료</span></label></span>
+							</span>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;span class="option-select theme-c"&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="additionItem" Name="전체 선택" checked="checked" class="elem"&gt; &lt;span class="text"&gt;전체&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="additionItem" Name="수령대기 선택" class="elem"&gt; &lt;span class="text"&gt;수령대기&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="additionItem" Name="출고완료 선택" class="elem"&gt; &lt;span class="text"&gt;출고완료&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-d</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-d</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<fieldset class="option-select theme-d">
+								<legend>통신사 선택 서식</legend>
+								<span class="select-item"><label class="form"><input type="radio" name="selectSpecialCategoryTelecom" checked="checked" class="elem" /> <span class="text">SKT 알뜰폰</span></label></span>
+								<span class="select-item"><label class="form"><input type="radio" name="selectSpecialCategoryTelecom" class="elem" /> <span class="text">KT 알뜰폰</span></label></span>
+								<span class="select-item"><label class="form"><input type="radio" name="selectSpecialCategoryTelecom" class="elem" /> <span class="text">LG U+ 알뜰폰</span></label></span>
+							</fieldset>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;fieldset class="option-select theme-d"&gt;
+	&lt;legend&gt;통신사 선택 서식&lt;/legend&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="selectSpecialCategoryTelecom" checked="checked" class="elem" /&gt; &lt;span class="text"&gt;SKT 알뜰폰&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="selectSpecialCategoryTelecom" class="elem" /&gt; &lt;span class="text"&gt;KT 알뜰폰&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+	&lt;span class="select-item"&gt;&lt;label class="form"&gt;&lt;input type="radio" name="selectSpecialCategoryTelecom" class="elem" /&gt; &lt;span class="text"&gt;LG U+ 알뜰폰&lt;/span&gt;&lt;/label&gt;&lt;/span&gt;
+&lt;/fieldset&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-e</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>themee</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<fieldset class="option-select theme-e">
+								<legend>계좌번호 선택 서식</legend>
+								<span class="select-item">
+									<label class="form">
+										<input type="radio" name="selectSelectCurrency" checked="checked" class="elem" />
+										<span class="text">
+											<span class="name">100-111-053984</span>
+											<span class="name">김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한</span>
+										</span>
+									</label>
+								</span>
+								<span class="select-item">
+									<label class="form">
+										<input type="radio" name="selectSelectCurrency" class="elem" />
+										<span class="text">
+											<span class="name">100-111-053984</span>
+											<span class="name">김신한김신한김신한김신한김신한김신한김신한</span>
+										</span>
+									</label>
+								</span>
+							</fieldset>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;fieldset class="option-select theme-e"&gt;
+	&lt;legend&gt;계좌번호 선택 서식&lt;/legend&gt;
+	&lt;span class="select-item"&gt;
+		&lt;label class="form"&gt;
+			&lt;input type="radio" name="selectSelectCurrency" checked="checked" class="elem" /&gt;
+			&lt;span class="text"&gt;
+				&lt;span class="name"&gt;100-111-053984&lt;/span&gt;
+				&lt;span class="name"&gt;김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한김신한&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/label&gt;
+	&lt;/span&gt;
+	&lt;span class="select-item"&gt;
+		&lt;label class="form"&gt;
+			&lt;input type="radio" name="selectSelectCurrency" class="elem" /&gt;
+			&lt;span class="text"&gt;
+				&lt;span class="name"&gt;100-111-053984&lt;/span&gt;
+				&lt;span class="name"&gt;김신한김신한김신한김신한김신한김신한김신한&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/label&gt;
+	&lt;/span&gt;
+&lt;/fieldset&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-f</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-f</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<div class="option-select theme-f">
+								<label class="select-item">
+									<span class="form">
+										<input type="radio" name="radio-01" Name="신한 계좌 출금 방식 선택" class="elem">
+										<span class="text"><strong class="em state-c">신한 계좌 출금 방식</strong> 인터넷뱅킹(계좌보유)<wbr />/이용계좌등록 고객</span>
+									</span>
+								</label>
+								<label class="select-item">
+									<span class="form">
+										<input type="radio" name="radio-01" Name="가상 계좌 입금 방식 선택" checked="checked" class="elem">
+										<span class="text"><strong class="em state-c">가상 계좌 입금 방식</strong> 일반 고객, 비 고객<wbr />누구나 가능</span>
+									</span>
+								</label>
+							</div>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;div class="option-select theme-f"&gt;
+	&lt;label class="select-item"&gt;
+		&lt;span class="form"&gt;
+			&lt;input type="radio" name="radio-01" Name="신한 계좌 출금 방식 선택" class="elem"&gt;
+			&lt;span class="text"&gt;&lt;strong class="em state-c"&gt;신한 계좌 출금 방식&lt;/strong&gt; 인터넷뱅킹(계좌보유)&lt;wbr /&gt;/이용계좌등록 고객&lt;/span&gt;
+		&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label class="select-item"&gt;
+		&lt;span class="form"&gt;
+			&lt;input type="radio" name="radio-01" Name="가상 계좌 입금 방식 선택" checked="checked" class="elem"&gt;
+			&lt;span class="text"&gt;&lt;strong class="em state-c"&gt;가상 계좌 입금 방식&lt;/strong&gt; 일반 고객, 비 고객&lt;wbr /&gt;누구나 가능&lt;/span&gt;
+		&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-g</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-g</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<div class="option-select theme-g">
+								<span class="select-item">
+									<label class="form checkbox theme-b medium">
+										<input type="checkbox" Name="마이신한포인트 사용하기 선택" checked="checked" class="elem" />
+										<span class="text">마이신한포인트 사용하기</span>
+									</label>
+								</span>
+							</div>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;div class="option-select theme-g"&gt;
+	&lt;span class="select-item"&gt;
+		&lt;label class="form checkbox theme-b medium"&gt;
+			&lt;input type="checkbox" Name="마이신한포인트 사용하기 선택" checked="checked" class="elem" /&gt;
+			&lt;span class="text"&gt;마이신한포인트 사용하기&lt;/span&gt;
+		&lt;/label&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				
+				<section>
+					<h1>submit-form theme-h</h1>
+					<p class="para">module prefix "option-select"으로 element의 기본 속성이 reset 됩니다.</p>
+					<section>
+						<h1>options</h1>
+						<!-- data-table -->
+						<table class="bui-table theme-a">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 8em;" />
+							<col />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">option-select</th>
+							<td>submit-form</td>
+						</tr>
+						<tr>
+							<th scope="row">theme</th>
+							<td>theme-h</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</section>
+					<section>
+						<h1>rendering preivew</h1>
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<!-- option-select -->
+							<div class="option-select theme-h">
+								<label class="select-item"><span class="form radio"><input type="radio" name="searchType" Name="전체기간 선택" checked="checked" class="elem" /> <span class="text">전체기간</span></span></label>
+								<label class="select-item"><span class="form radio"><input type="radio" name="searchType" Name="기간지정 선택" class="elem" /><span class="text">기간지정</span></span></label>
+							</div>
+							<!-- //option-select -->
+						</div>
+						<!-- //module-preivew -->
+					</section>
+					<section>
+						<h1>HTML Syntax</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- option-select --&gt;
+&lt;div class="option-select theme-h"&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form radio"&gt;&lt;input type="radio" name="searchType" Name="전체기간 선택" checked="checked" class="elem" /&gt; &lt;span class="text"&gt;전체기간&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+	&lt;label class="select-item"&gt;&lt;span class="form radio"&gt;&lt;input type="radio" name="searchType" Name="기간지정 선택" class="elem" /&gt;&lt;span class="text"&gt;기간지정&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;!-- //option-select --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+					
+				</section>
+			</div>
+			<!-- //content-primary -->
+		</section>
+		<!-- //content -->
+	</div>
+	<hr />
+	<div class="frame-foot">
+		<!-- footer -->
+		<footer id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+		<!-- //footer -->
+	</div>
+</div>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../js/front/snippet.js"></script>
+</body>
+</html>

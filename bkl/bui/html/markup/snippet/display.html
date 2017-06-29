@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-button" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">display</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+			
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">data-display theme-a</h3>
+					<p class="para">콘텐츠 전시에 따른 테마를 지정합니다.</p>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">option</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>data-display</td>
+							</tr>
+							<tr>
+								<th scope="row">theme</th>
+								<td>theme-a</td>
+							</tr>
+							<tr>
+								<th scope="row">type</th>
+								<td>type-a</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+
+					<div class="subsection">
+						<h4 class="subsection-name">example</h4>
+						<ul class="tab theme-bui">
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent11">result</a></li>
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent12">HTML</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-code -->
+							<div class="module-result" id="moduleTabsContent11">
+								<p class="para">type-a</p>
+								<!-- data-display -->
+								<ul class="data-display theme-a type-a">
+								<li class="data-item">
+									<div class="data-container">
+										<div class="data-frame">
+											<div class="data-head">
+												<em class="data-name em rise-01">자동차 이용시</em>
+											</div>
+											<div class="data-body">
+												<p class="para">강남 테헤란로 역삼역에서 강남역 방향으로<span class="wbr">150m</span></p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-container">
+										<div class="data-frame">
+											<div class="data-head">
+												<em class="data-name em rise-01">자동차 이용시</em>
+											</div>
+											<div class="data-body">
+												<p class="para">강남 테헤란로 역삼역에서 강남역 방향으로 150m </p>
+												<p class="para">강남 테헤란로 역삼역에서 강남역 방향으로 150m </p>
+											</div>
+										</div>
+									</div>
+								</li>
+								</ul>
+								<!-- //data-display -->
+							</div>
+							<!-- //module-code -->
+							
+							<!-- module-code -->
+							<div class="module-code" id="moduleTabsContent12">
+<pre class="code-enable brush: xml">
+&lt;!-- data-display --&gt;
+&lt;ul class="data-display theme-a type-a"&gt;
+&lt;li class="data-item"&gt;
+	&lt;div class="data-container"&gt;
+		&lt;div class="data-frame"&gt;
+			&lt;div class="data-head"&gt;
+				&lt;em class="data-name em rise-01"&gt;자동차 이용시&lt;/em&gt;
+			&lt;/div&gt;
+			&lt;div class="data-body"&gt;
+				&lt;p class="para"&gt;강남 테헤란로 역삼역에서 강남역 방향으로&lt;span class="wbr"&gt;150m&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="data-item"&gt;
+	&lt;div class="data-container"&gt;
+		&lt;div class="data-frame"&gt;
+			&lt;div class="data-head"&gt;
+				&lt;em class="data-name em rise-01"&gt;자동차 이용시&lt;/em&gt;
+			&lt;/div&gt;
+			&lt;div class="data-body"&gt;
+				&lt;p class="para"&gt;강남 테헤란로 역삼역에서 강남역 방향으로 150m &lt;/p&gt;
+				&lt;p class="para"&gt;강남 테헤란로 역삼역에서 강남역 방향으로 150m &lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //data-display --&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+			
+			
+			
+			
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">data-display theme-b</h3>
+					<p class="para">콘텐츠 전시에 따른 테마를 지정합니다.</p>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">option</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>data-display</td>
+							</tr>
+							<tr>
+								<th scope="row">theme</th>
+								<td>theme-b</td>
+							</tr>
+							<tr>
+								<th scope="row">type</th>
+								<td>type-a</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+
+					<div class="subsection">
+						<h4 class="subsection-name">example</h4>
+						<ul class="tab theme-bui">
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent13">result</a></li>
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent14">HTML</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-code -->
+							<div class="module-result" id="moduleTabsContent13">
+								<p class="para">type-a</p>
+								<!-- data-display -->
+								<ul class="data-display theme-b type-a">
+								<li class="data-item">
+									<a href="#" class="data-container">
+										<span class="data-media"><span class="thumbnail"><img src="./../../../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지" /></span></span>
+										<span class="data-frame">
+											<span class="data-head">
+												<span class="data-name"><strong class="text">홍길동</strong></span>
+											</span>
+											<span class="data-foot">
+												<span class="part">전문위원</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="data-item">
+									<a href="#" class="data-container">
+										<span class="data-media"><span class="thumbnail"><img src="./../../../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지" /></span></span>
+										<span class="data-frame">
+											<span class="data-head">
+												<span class="data-name"><strong class="text">홍길동</strong></span>
+											</span>
+											<span class="data-foot">
+												<span class="part">전문위원</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="data-item">
+									<a href="#" class="data-container">
+										<span class="data-media"><span class="thumbnail"><img src="./../../../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지" /></span></span>
+										<span class="data-frame">
+											<span class="data-head">
+												<span class="data-name"><strong class="text">홍길동</strong></span>
+											</span>
+											<span class="data-foot">
+												<span class="part">전문위원</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								</ul>
+								<!-- //data-display -->
+							</div>
+							<!-- //module-code -->
+							
+							<!-- module-code -->
+							<div class="module-code" id="moduleTabsContent14">
+<pre class="code-enable brush: xml">
+&lt;!-- data-display --&gt;
+&lt;ul class="data-display theme-b type-a"&gt;
+&lt;li class="data-item"&gt;
+	&lt;a href="#" class="data-container"&gt;
+		&lt;span class="data-media"&gt;&lt;span class="thumbnail"&gt;&lt;img src="./../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지"&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class="data-frame"&gt;
+			&lt;span class="data-head"&gt;
+				&lt;span class="data-name"&gt;&lt;strong class="text"&gt;정해신&lt;/strong&gt;&lt;/span&gt;
+			&lt;/span&gt;
+			&lt;span class="data-foot"&gt;
+				&lt;span class="part"&gt;전문위원&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/span&gt;
+	&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="data-item"&gt;
+	&lt;a href="#" class="data-container"&gt;
+		&lt;span class="data-media"&gt;&lt;span class="thumbnail"&gt;&lt;img src="./../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지"&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class="data-frame"&gt;
+			&lt;span class="data-head"&gt;
+				&lt;span class="data-name"&gt;&lt;strong class="text"&gt;정해신&lt;/strong&gt;&lt;/span&gt;
+			&lt;/span&gt;
+			&lt;span class="data-foot"&gt;
+				&lt;span class="part"&gt;전문위원&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/span&gt;
+	&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="data-item"&gt;
+	&lt;a href="#" class="data-container"&gt;
+		&lt;span class="data-media"&gt;&lt;span class="thumbnail"&gt;&lt;img src="./../../img/@database/thumbnail_199x279_01.jpg" alt="인물 이미지"&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class="data-frame"&gt;
+			&lt;span class="data-head"&gt;
+				&lt;span class="data-name"&gt;&lt;strong class="text"&gt;정해신&lt;/strong&gt;&lt;/span&gt;
+			&lt;/span&gt;
+			&lt;span class="data-foot"&gt;
+				&lt;span class="part"&gt;전문위원&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/span&gt;
+	&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //data-display --&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+				
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<script type="text/javascript">
+	$('.temp').buiToggle();
+</script>
+</body>
+</html>

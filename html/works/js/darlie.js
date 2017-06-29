@@ -5,10 +5,10 @@ $(document).ready(function(){
 		$(this).find('.local-navigations').slideDown();
 	}).mouseleave(function(){
 		$(this).find('.local-navigations').slideUp();
-    });
+	});
 	
 	//go to top
-	$(function() {
+/*	$(function() {
 		var $gotop = $('#frame .goto-top');
 		var $gotopMovBtn = $gotop.find('>a');
 		var footerHeight = $('#footer').height();
@@ -36,6 +36,6 @@ $(document).ready(function(){
 				$gotop.hide();
 			}
 		});
-	});
+	});*/
 	
 });

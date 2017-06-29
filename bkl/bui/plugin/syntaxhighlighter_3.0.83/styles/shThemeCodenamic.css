@@ -1,0 +1,65 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+
+.syntaxhighlighter								{overflow-y: hidden; overflow-x: auto; border: 1px solid #cfd6d9; background-color: #f3f5f6;}
+/* .syntaxhighlighter								{overflow-y: hidden; overflow-x: auto; background-color: #f3f5f6; border-left: 4px solid #00b8f1;} */
+.syntaxhighlighter table						{table-layout: fixed; font-family: 'Courier New', sans-serif; font-size: .75rem;}
+.syntaxhighlighter table caption				{color: black;}
+
+.syntaxhighlighter .line						{white-space: nowrap;}
+.syntaxhighlighter .line.alt1					{background-color: #f3f5f6;}
+.syntaxhighlighter .line.alt2					{background-color: #f3f5f6;}
+.syntaxhighlighter .line.highlighted.alt1,
+.syntaxhighlighter .line.highlighted.alt2		{background-color: #e0e0e0;}
+.syntaxhighlighter .line.highlighted.number		{color: black;}
+
+.syntaxhighlighter .gutter						{border-right: 1px solid #e6e9eb;}
+.syntaxhighlighter .gutter .line				{padding: 0 1em; text-align: right; color: #c8d2d7;}
+.syntaxhighlighter .gutter .line.highlighted	{background-color: #6ce26c; color: white;}
+
+.syntaxhighlighter .code						{padding: 1em;}
+.syntaxhighlighter .code .container code		{font-family: inherit;}
+
+.syntaxhighlighter.printing .line .content		{border: none;}
+
+.syntaxhighlighter.collapsed					{overflow: visible;}
+.syntaxhighlighter.collapsed .toolbar			{color: blue; background: white; border: 1px solid #6ce26c;}
+.syntaxhighlighter.collapsed .toolbar a			{color: blue;}
+.syntaxhighlighter.collapsed .toolbar a:hover	{color: red;}
+
+.syntaxhighlighter .toolbar						{color: white; background: #6ce26c; border: none;}
+.syntaxhighlighter .toolbar a					{color: white;}
+.syntaxhighlighter .toolbar a:hover				{color: black;}
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a						{color: black;}
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a					{color: #008200;}
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a					{color: blue;}
+.syntaxhighlighter .keyword						{color: #006699;}
+.syntaxhighlighter .preprocessor				{color: gray;}
+.syntaxhighlighter .variable					{color: #aa7700;}
+.syntaxhighlighter .value						{color: #009900;}
+.syntaxhighlighter .functions					{color: #ff1493;}
+.syntaxhighlighter .constants					{color: #0066cc;}
+.syntaxhighlighter .script						{font-weight: bold; color: #006699; background-color: none;}
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a					{color: gray;}
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a					{color: #ff1493;}
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a					{color: red;}

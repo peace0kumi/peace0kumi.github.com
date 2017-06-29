@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@import url(./layout.front.css);
+@import url(./module.form.css);
+@import url(./module.button.css);
+@import url(./module.global.css);
+
+/**
+ * layout
+ */
+.page-content .content-head														{margin: 3rem 0 2rem 0; padding: 0 1rem;}
+.page-content .content-head .content-name										{margin: 0; font-size: 2rem; color: #2594c0; line-height: 2.5rem; font-weight: normal; font-family: NotoSansKR-Light, sans-serif;}
+
+.page-content .content-body														{overflow: hidden;}
+.page-content .content-body .section											{margin-right: 1rem; margin-bottom: 2rem; margin-left: 1rem;}
+.page-content .content-body .section .section-name								{margin: 2rem 0 1rem 0; line-height: 1.75rem; font-size: 1.25rem; font-weight: normal; color: #404040;}
+.page-content .content-body .section .subsection 								{}
+.page-content .content-body .section .subsection .subsection-name				{margin: 0; line-height: 1.5rem; font-size: 1rem; font-weight: normal; font-family: NotoSansKR-Medium, sans-serif;}
+
+/**
+ * module
+ */
+.page-content .content-body .para												{margin: 1rem 0; line-height: 1.5rem; font-size: 1rem; color: #404040;}
+.page-content .content-body .post-sort											{margin: 2rem 0 1rem 0;}
+.page-content .content-body .post-display										{margin: 1rem 0;}
+.page-content .content-body .post-control										{margin: 2rem 0;}
+.page-content .content-body .submit-form										{margin: 1rem 0;}
+.page-content .content-body .data-display										{margin: 1rem 0;}
+
+.page-content .content-body>.para												{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body .wbr												{display: inline-block; line-height: inherit; text-decoration: inherit;}
+.page-content .content-body>.post-sort											{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-control										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.submit-form										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.data-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.button-area										{margin: 2rem 0; padding: 0 1rem;}
+
+/**
+ * content
+ */
+
+/* policy-notice */
+/* .policy-notice .content-body .para												{color: #404040;} */
+.policy-notice .content-body .para.em											{font-family: NotoSansKr-Medium, sans-serif;}
+.policy-notice .content-body a													{color: inherit;}
+.policy-notice .content-body strong.em											{display: inline-block; white-space: normal;}
+.policy-notice .content-body .privacy-policy h4									{margin: 1.5rem 0 1rem 0; line-height: 1.5rem; font-size: 1rem; font-weight: normal; color: #404040; font-family: NotoSansKR-Medium, sans-serif;}
+/* .policy-notice .content-body .privacy-policy p									{margin: 1rem 0; line-height: 1.5rem; font-size: 1rem; color: #404040;} */
+.policy-notice .content-body .privacy-policy ul									{margin: 1rem 0; padding: 0; list-style: none;}
+.policy-notice .content-body .privacy-policy ul>li								{position: relative; font-size: 1rem; line-height: 1.5rem; color: #404040;}
+.policy-notice .content-body .privacy-policy ul>li+li							{margin-top: .5rem;}
+.policy-notice .content-body .privacy-policy ol									{margin: 1rem 0; padding: 0 0 0 1rem;}
+.policy-notice .content-body .privacy-policy ol>li								{position: relative; font-size: 1rem; line-height: 1.5rem; color: #404040;}
+.policy-notice .content-body .privacy-policy ol>li+li							{margin-top: .5rem;}
+.policy-notice .content-body .privacy-policy .subsection ul>li					{padding-left: .625rem;}
+.policy-notice .content-body .privacy-policy .subsection ul>li:before			{content: ''; display: block; position: absolute; top: .75rem; left: 0; width: 4px; height: 1px; background-color: #404040;}

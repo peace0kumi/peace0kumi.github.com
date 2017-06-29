@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@import url(./layout.front.css);
+@import url(./module.form.css);
+@import url(./module.button.css);
+@import url(./module.global.css);
+
+/**
+ * layout
+ */
+.frame-body																		{
+	padding-top: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.page-content .content-head														{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; line-height: 1px; font-size: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.page-content .content-head .content-name										{margin: 0; font-size: 2rem; color: #2594c0; line-height: 2.5rem; font-weight: normal; font-family: NotoSansKR-Light, sans-serif;}
+
+.page-content .content-body														{}
+.page-content .content-body .section											{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body .section .section-name								{margin: 2rem 0 1rem 0; line-height: 1.75rem; font-size: 1.25rem; font-weight: normal;}
+.page-content .content-body .section .subsection 								{}
+.page-content .content-body .section .subsection .subsection-name				{margin: 0; line-height: 1.5rem; font-size: 1rem; font-weight: normal; font-family: NotoSansKR-Medium, sans-serif;}
+
+/**
+ * module
+ */
+.page-content .content-body .para												{margin: .75rem 0; line-height: 1.5rem;}
+.page-content .content-body .wbr												{display: inline-block; text-decoration: inherit;}
+.page-content .content-body .post-sort											{margin: 2rem 0 1rem 0;}
+.page-content .content-body .post-display										{margin: 1rem 0;}
+.page-content .content-body .post-control										{margin: 2rem 0;}
+.page-content .content-body .submit-form										{margin: 1rem 0;}
+.page-content .content-body .data-display										{margin: 1rem 0;}
+
+.page-content .content-body>.para												{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-sort											{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-control										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.submit-form										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.data-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.button-area										{margin: 2rem 0; padding: 0 1rem;}
+
+/**
+ * content
+ */
+.page-content.error .content-body .info-board.theme-a.type-a					{margin: 0 1rem; /* padding: 0 1rem; */ text-align: center;}
+.page-content.error .content-body .button-area									{margin: 2rem auto;}

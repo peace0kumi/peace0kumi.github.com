@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-toggle" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">toggle</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">basic system text button</h1>
+					<p class="para">module prefix "btn"으로 element의 기본 속성이 reset 됩니다.</p>
+					<p class="para">사용목적에따라 화면 이동(anchor), 서식 전송(submit), 동작 제어(button)등 역할(element)에 맞게 마크업 하며, &lt;input type="submit" /&gt;은 표현의 한계로 &lt;button type="submit"&gt;으로 대체합니다.</p>
+					<p class="para">아웃라인(outline) 대비 크기를 결정 후 상태(state)값에 따라 컬러를 적용합니다.</p>
+					<p class="para"><a href="./toggle.html">bui-toggle</a>과 함께 사용할 수 있습니다.</p>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">general</h1>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 10em;" />
+								<col style="width: 10em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th>options</th>
+								<th>default</th>
+								<th>discription</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td style="text-align: center;">mode</td>
+								<td style="text-align: center;">normal</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">event</td>
+								<td style="text-align: center;">click</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">activeClass</td>
+								<td style="text-align: center;">active</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">focusout</td>
+								<td style="text-align: center;">false</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">clickout</td>
+								<td style="text-align: center;">false</td>
+								<td></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</section>
+					
+					
+					<br /><br />
+					
+						<!-- module-preivew -->
+						<div class="module-preivew">
+							<a href="#toggleNormalContent1" class="btn theme-a small state-b bui-toggle-normal active"><span class="text">toggle normal 1</span></a>
+							<a href="#toggleNormalContent2" class="btn theme-a small state-b bui-toggle-normal"><span class="text">toggle normal 2</span></a>
+<!-- 							<a href="#toggleTargetContent3" class="btn theme-a small state-b bui-toggle-direct"><span class="text">toggle button 3</span></a> -->
+							
+							<div id="toggleNormalContent1">toggle normal content 1</div>
+							<div id="toggleNormalContent2">toggle normal content 2</div>
+							<div id="toggleNormalContent3">toggle normal content 3</div>
+<!-- 							<div id="toggleNormalContent3">toggle normal content 3</div> -->
+							
+							
+							<div class="tabs bui-toggle-tabs">
+								<a href="#toggleTabsContent1" class="btn theme-a small state-b"><span class="text">toggle tabs 1</span></a>
+								<a href="#toggleTabsContent2" class="btn theme-a small state-b"><span class="text">toggle tabs 2</span></a>
+								<a href="#toggleTabsContent3" class="btn theme-a small state-b"><span class="text">toggle tabs 3</span></a>
+								<a href="#toggleTabsContent4" class="btn theme-a small state-b"><span class="text">toggle tabs 4</span></a>
+								
+							</div>
+							
+							<div id="toggleTabsContent1">toggle tabs content 1</div>
+							<div id="toggleTabsContent2">toggle tabs content 2</div>
+							<div id="toggleTabsContent3">toggle tabs content 3</div>
+							<div id="toggleTabsContent4">toggle tabs content 4</div>
+							
+							
+							<div class="tabs bui-toggle-tabs">
+								<a href="#toggleTabsContent11" class="btn theme-a small state-b"><span class="text">toggle tabs 1</span></a>
+								<a href="#toggleTabsContent22" class="btn theme-a small state-b"><span class="text">toggle tabs 2</span></a>
+								<a href="#toggleTabsContent33" class="btn theme-a small state-b"><span class="text">toggle tabs 3</span></a>
+								<a href="#toggleTabsContent44" class="btn theme-a small state-b"><span class="text">toggle tabs 4</span></a>
+								
+							</div>
+							
+							<div id="toggleTabsContent11">toggle tabs content 1</div>
+							<div id="toggleTabsContent22">toggle tabs content 2</div>
+							<div id="toggleTabsContent33">toggle tabs content 3</div>
+							<div id="toggleTabsContent44">toggle tabs content 4</div>
+							
+							<style type="text/css">
+								.btn.bui-toggle-normal.active .text {color: red;}
+								.bui-toggle-target {display: none; margin: 30px 0; padding: 30px; font-size: 28px; color: #ffffff; background-color: tomato;}
+								.bui-toggle-target.active {display: block;}
+							</style>
+						</div>
+						<!-- //module-preivew -->
+				</section>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<script type="text/javascript">
+	$('.bui-toggle-normal').buiToggle();
+</script>
+</body>
+</html>

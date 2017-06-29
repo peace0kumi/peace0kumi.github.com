@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-typography" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">typography</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<section class="section">
+					<h1 class="section-name">em</h1>
+					<p class="para">다른 문맥과의 관련성 때문에 참조 목적으로 표시되거나 강조 표시된 텍스트를 나타냅니다.</p>
+					<section class="subsection">
+						<h1 class="subsection-name">options</h1>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>em</td>
+							</tr>
+							<tr>
+								<th scope="row">level</th>
+								<td>fall-02 to rise-04</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</section>
+					
+					
+					<section class="subsection">
+						<h1 class="subsection-name">example</h1>
+						<ul class="tab theme-bui">
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent01">result</a></li>
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent02">HTML</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-code -->
+							<div class="module-code" id="moduleTabsContent02">
+<pre class="code-enable brush: xml">
+&lt;span class="em fall-02"&gt;emphasize&lt;/span&gt;
+&lt;span class="em fall-01"&gt;emphasize&lt;/span&gt;
+&lt;span class="em rise-01"&gt;emphasize&lt;/span&gt;
+&lt;span class="em rise-02"&gt;emphasize&lt;/span&gt;
+&lt;span class="em rise-03"&gt;emphasize&lt;/span&gt;
+&lt;span class="em rise-04"&gt;emphasize&lt;/span&gt;
+
+&lt;strong class="em fall-02"&gt;emphasize&lt;/strong&gt;
+&lt;strong class="em fall-01"&gt;emphasize&lt;/strong&gt;
+&lt;strong class="em rise-01"&gt;emphasize&lt;/strong&gt;
+&lt;strong class="em rise-02"&gt;emphasize&lt;/strong&gt;
+&lt;strong class="em rise-03"&gt;emphasize&lt;/strong&gt;
+&lt;strong class="em rise-04"&gt;emphasize&lt;/strong&gt;
+	
+&lt;em class="em fall-02"&gt;emphasize&lt;/em&gt;
+&lt;em class="em fall-01"&gt;emphasize&lt;/em&gt;
+&lt;em class="em rise-01"&gt;emphasize&lt;/em&gt;
+&lt;em class="em rise-02"&gt;emphasize&lt;/em&gt;
+&lt;em class="em rise-03"&gt;emphasize&lt;/em&gt;
+&lt;em class="em rise-04"&gt;emphasize&lt;/em&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+							<!-- module-result -->
+							<div class="module-result" id="moduleTabsContent01">
+								<p class="para">a<p>
+								<a href="#" class="em fall-02">emphasize</a>
+								<a href="#" class="em fall-01">emphasize</a>
+								<a href="#" class="em rise-01">emphasize</a>
+								<a href="#" class="em rise-02">emphasize</a>
+								<a href="#" class="em rise-03">emphasize</a>
+								<a href="#" class="em rise-04">emphasize</a>
+							
+								<p class="para">span<p>
+								<span class="em fall-02">emphasize</span>
+								<span class="em fall-01">emphasize</span>
+								<span class="em rise-01">emphasize</span>
+								<span class="em rise-02">emphasize</span>
+								<span class="em rise-03">emphasize</span>
+								<span class="em rise-04">emphasize</span>
+								
+								<p class="para">strong<p>
+								<strong class="em fall-02">emphasize</strong>
+								<strong class="em fall-01">emphasize</strong>
+								<strong class="em rise-01">emphasize</strong>
+								<strong class="em rise-02">emphasize</strong>
+								<strong class="em rise-03">emphasize</strong>
+								<strong class="em rise-04">emphasize</strong>
+									
+								<p class="para">em<p>
+								<em class="em fall-02">emphasize</em>
+								<em class="em fall-01">emphasize</em>
+								<em class="em rise-01">emphasize</em>
+								<em class="em rise-02">emphasize</em>
+								<em class="em rise-03">emphasize</em>
+								<em class="em rise-04">emphasize</em>
+							</div>
+							<!-- //module-result -->
+						</div>
+					</section>
+				</section>
+				<!-- //section -->
+				
+				
+				
+				<section class="section">
+					<h1 class="section-name">mark</h1>
+					<p class="para">다른 문맥과의 관련성 때문에 참조 목적으로 표시되거나 강조 표시된 텍스트를 나타냅니다.</p>
+					<section class="subsection">
+						<h1 class="subsection-name">options</h1>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>mark</td>
+							</tr>
+							<tr>
+								<th scope="row">theme</th>
+								<td>theme-a</td>
+							</tr>
+							<tr>
+								<th scope="row">type</th>
+								<td>type-a</td>
+							</tr>
+							<tr>
+								<th scope="row">outline</th>
+								<td>x-small, small, medium, large, x-large</td>
+							</tr>
+							<tr>
+								<th scope="row">level</th>
+								<td>fall-01, rise-01 to rise-03</td>
+							</tr>
+							<tr>
+								<th scope="row">symbols</th>
+								<td>before-*, after-*</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</section>
+					
+					
+					<section class="subsection">
+						<h1 class="subsection-name">example</h1>
+						<ul class="tab theme-bui">
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent11">result</a></li>
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent12">HTML</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-result -->
+							<div class="module-result" id="moduleTabsContent11">
+								<p class="para">type-a</p>
+								<strong class="mark theme-a type-a small fall-02"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small fall-01"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small rise-01"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small rise-02"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small rise-03"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small rise-04"><span class="text">Normally</span></strong>
+								
+								<p class="para">outline</p>
+								<strong class="mark theme-a type-a x-small rise-01"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a small rise-01"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a medium rise-01"><span class="text">Normally</span></strong><br /><br />
+								<strong class="mark theme-a type-a large rise-01"><span class="text">Normally</span></strong>
+							</div>
+							<!-- //module-result -->
+							
+							<!-- module-code -->
+							<div class="module-code" id="moduleTabsContent12">
+<pre class="code-enable brush: xml">
+&lt;strong class="mark theme-a type-a small fall-02"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+&lt;strong class="mark theme-a type-a small fall-01"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+&lt;strong class="mark theme-a type-a small rise-01"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+&lt;strong class="mark theme-a type-a small rise-02"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+&lt;strong class="mark theme-a type-a small rise-03"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+&lt;strong class="mark theme-a type-a small rise-04"&gt;&lt;span class="text"&gt;Normally&lt;/span&gt;&lt;/strong&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+						</div>
+					</section>
+				</section>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

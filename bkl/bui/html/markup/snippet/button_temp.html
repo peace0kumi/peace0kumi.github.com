@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-button" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">button</h1>
+			</div>
+			<!-- //content-head -->
+			
+			
+
+<!-- <canvas id="canvas" width="400" height="400" -->
+<!-- style="background-color:#333"> -->
+<!-- </canvas> -->
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">basic system text button</h3>
+					<p class="para">module prefix "btn"으로 element의 기본 속성이 reset 됩니다.</p>
+					<p class="para">사용목적에따라 화면 이동(anchor), 서식 전송(submit), 동작 제어(button)등 역할(element)에 맞게 마크업 하며, &lt;input type="submit" /&gt;은 표현의 한계로 &lt;button type="submit"&gt;으로 대체합니다.</p>
+					<p class="para">아웃라인(outline) 대비 크기를 결정 후 상태(state)값에 따라 컬러를 적용합니다.</p>
+					<p class="para"><a href="./toggle.html">bui-toggle</a>과 함께 사용할 수 있습니다.</p>
+					
+					
+					<style>
+/* 						.temp						{width: 48px; height: 48px; text-align: center;} */
+/* 						.temp svg {width: 3rem; height: 3rem;} */
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						.before-more:before {
+							content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGNsYXNzPSJzdmctbW9yZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDggNDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KCTxyZWN0IGNsYXNzPSJwYXRoLTAxIiB4PSI4IiB5PSIyMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQiIHN0eWxlPSItd2Via2l0LXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyAtbW96LXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyAtbXMtdHJhbnNpdGlvbjogYWxsIDAuMzVzIGVhc2U7IC1vLXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyB0cmFuc2l0aW9uOiBhbGwgMC4zNXMgZWFzZTsgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOyAtbW96LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IC1vLXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IHRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IiAvPg0KCTxyZWN0IGNsYXNzPSJwYXRoLTAyIiB4PSI4IiB5PSIyMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQiIHN0eWxlPSItd2Via2l0LXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyAtbW96LXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyAtbXMtdHJhbnNpdGlvbjogYWxsIDAuMzVzIGVhc2U7IC1vLXRyYW5zaXRpb246IGFsbCAwLjM1cyBlYXNlOyB0cmFuc2l0aW9uOiBhbGwgMC4zNXMgZWFzZTsgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOyAtbW96LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IC1vLXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IHRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpOyAtbW96LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTsgLW8tdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpOyAtbXMtdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpOyB0cmFuc2Zvcm06IHJvdGF0ZSg5MGRlZyk7IiAvPg0KPC9zdmc+);
+							display: block;
+							width: 48px;
+							height: 48px;
+						}
+						
+						.before-more.active:before {
+							content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGNsYXNzPSJzdmctbW9yZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDggNDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPHJlY3QgY2xhc3M9InBhdGgtMDEiIHg9IjgiIHk9IjIyIiB3aWR0aD0iMzIiIGhlaWdodD0iNCIgc3R5bGU9Ii13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLW1vei10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAtby10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOyAtbW96LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IC1vLXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IHRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IiAvPgoJPHJlY3QgY2xhc3M9InBhdGgtMDIiIHg9IjgiIHk9IjIyIiB3aWR0aD0iMzIiIGhlaWdodD0iNCIgc3R5bGU9Ii13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLW1vei10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAtby10cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpOyAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTsgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOyAtbW96LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IC1vLXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IHRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7IiAvPgo8L3N2Zz4=);
+						}
+						
+						
+.no-ie		{position: relative;}
+						
+#menuBtn {
+	position:absolute;z-index:20;right:0;top:0;
+	-webkit-transition:all 0.25s ease;
+	-moz-transition:all 0.25s ease;
+	-ms-transition:all 0.25s ease;
+	-o-transition:all 0.25s ease;
+	transition:all 0.25s ease;
+}
+#menuBtn a {padding:17px 16px;position:relative;display:block;width:22px;height:16px;}
+#menuBtn a span {position:absolute;top:24px;left:16px;width:22px;display:block;height:2px;background-color:#000000;}
+#menuBtn a:before {
+	content:"";position:absolute;top:17px;left:16px;width:22px;display:block;height:2px;background-color:#000000;
+	-webkit-transition:all 0.55s ease;
+	-moz-transition:all 0.55s ease;
+	-ms-transition:all 0.55s ease;
+	-o-transition:all 0.55s ease;
+	transition:all 0.55s ease;
+
+}
+#menuBtn a:after {
+	content:"";position:absolute;top:31px;left:16px;width:22px;display:block;height:2px;background-color:#000000;
+	-webkit-transition:all 0.35s ease;
+	-moz-transition:all 0.35s ease;
+	-ms-transition:all 0.35s ease;
+	-o-transition:all 0.35s ease;
+	transition:all 0.35s ease;
+}
+
+#menuBtn.active {
+	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-webkit-transition:all 0.55s ease;
+	-moz-transition:all 0.55s ease;
+	-ms-transition:all 0.55s ease;
+	-o-transition:all 0.55s ease;
+	transition:all 0.55s ease;
+}
+
+#menuBtn.active a span {
+	-webkit-transition:all 0.35s ease;
+	-moz-transition:all 0.35s ease;
+	-ms-transition:all 0.35s ease;
+	-o-transition:all 0.35s ease;
+	transition:all 0.35s ease;
+	opacity:0;
+}
+#menuBtn.active a::before {
+	top:24px;
+	transform-origin:50% 50%;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-webkit-transition:all 0.35s ease;
+	-moz-transition:all 0.35s ease;
+	-ms-transition:all 0.35s ease;
+	-o-transition:all 0.35s ease;
+	transition:all 0.35s ease;
+
+}
+#menuBtn.active a::after {
+	top:24px;
+	transform-origin:50% 50%;
+	transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-webkit-transition:all 0.35s ease;
+	-moz-transition:all 0.35s ease;
+	-ms-transition:all 0.35s ease;
+	-o-transition:all 0.35s ease;
+	transition:all 0.35s ease;
+}
+						
+					</style>
+					
+					
+<!-- 					<object> -->
+<!-- 						<embed src="./../../../images/global/symbols.svg" /> -->
+<!-- 					</object> -->
+					
+					
+					
+					<div class="temp before-more"></div>
+					
+					<div class="no-ie"><span id="menuBtn"><a href="#none"><span></span></a></span></div>
+
+					
+					
+					
+					
+					
+					<div class="btn theme-a type-a large rise-01 temp">
+						<span class="text">
+							<svg version="1.1" class="svg-more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+								<rect class="path-01" x="8" y="22" width="32" height="4" />
+								<rect class="path-02" x="22" y="8" width="4" height="32" />
+							</svg>
+							버튼데모
+						</span>
+					</div>
+					
+					<div class="temp">
+
+
+					<svg version="1.1" class="svg-more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+						<rect class="path-01" x="8" y="22" width="32" height="4" />
+						<rect class="path-02" x="22" y="8" width="4" height="32" />
+						
+
+
+
+<div class="tem-02"></div>
+
+
+
+		</div>
+					
+					
+					<div class="subsection">
+						<h4 class="subsection-name">markup</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">anchor</th>
+								<td>&lt;a href="#" class="btn"&gt;</td>
+							</tr>
+							<tr>
+								<th scope="row">submit</th>
+								<td>&lt;button type="submit" class="btn"&gt;</td>
+							</tr>
+							<tr>
+								<th scope="row">button</th>
+								<td>&lt;button type="button" class="btn"&gt;</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">option</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>btn</td>
+							</tr>
+							<tr>
+								<th scope="row">theme</th>
+								<td>theme-a</td>
+							</tr>
+							<tr>
+								<th scope="row">type</th>
+								<td>type-a</td>
+							</tr>
+							<tr>
+								<th scope="row">outline</th>
+								<td>x-small, small, medium, large, x-large</td>
+							</tr>
+							<tr>
+								<th scope="row">level</th>
+								<td>fall-01 to fall-03, rise-01 to rise-04</td>
+							</tr>
+							<tr>
+								<th scope="row">symbols</th>
+								<td>before-*, after-*</td>
+							</tr>
+							<tr>
+								<th scope="row">function</th>
+								<td>bui-toggle</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<style type="text/css">
+						.{display: none;}
+						.tabs-content-item.active {display: block;}
+					</style>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">example</h4>
+						<ul class="tab theme-bui">
+						<li class="tab-item current"><a class="tab-name" href="#temp2">HTML</a></li>
+						<li class="tab-item"><a class="tab-name" href="#temp3">result</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-code -->
+							<div class="module-code active" id="temp2">
+<pre class="code-enable brush: xml">
+&lt;a href="#" class="btn theme-a type-a x-small fall-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-small fall-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-small rise-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-small rise-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-small rise-03"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-small rise-04"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="#" class="btn theme-a type-a small fall-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a small fall-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a small rise-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a small rise-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a small rise-03"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a small rise-04"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="#" class="btn theme-a type-a medium fall-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a medium fall-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a medium rise-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a medium rise-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a medium rise-03"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a medium rise-04"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="#" class="btn theme-a type-a large fall-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a large fall-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a large rise-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a large rise-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a large rise-03"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a large rise-04"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="#" class="btn theme-a type-a x-large fall-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-large fall-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-large rise-01"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-large rise-02"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-large rise-03"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-a x-large rise-04"&gt;&lt;span class="text"&gt;버튼데모&lt;/span&gt;&lt;/a&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+								
+							<!-- module-code -->
+							<div class="module-result" id="temp3">
+<a href="#" class="btn theme-a type-a x-small fall-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-small fall-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-small rise-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-small rise-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-small rise-03"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-small rise-04"><span class="text">버튼데모</span></a>
+<br /><br />
+<a href="#" class="btn theme-a type-a small fall-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a small fall-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a small rise-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a small rise-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a small rise-03"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a small rise-04"><span class="text">버튼데모</span></a>
+<br /><br />
+<a href="#" class="btn theme-a type-a medium fall-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a medium fall-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a medium rise-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a medium rise-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a medium rise-03"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a medium rise-04"><span class="text">버튼데모</span></a>
+<br /><br />
+<a href="#" class="btn theme-a type-a large fall-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a large fall-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a large rise-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a large rise-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a large rise-03"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a large rise-04"><span class="text">버튼데모</span></a>
+<br /><br />
+<a href="#" class="btn theme-a type-a x-large fall-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-large fall-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-large rise-01"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-large rise-02"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-large rise-03"><span class="text">버튼데모</span></a>
+<a href="#" class="btn theme-a type-a x-large rise-04"><span class="text">버튼데모</span></a>
+							</div>
+							<!-- //module-code -->
+						</div>
+<!-- 						<div data-height="300" data-theme-id="27122" data-slug-hash="BpQzQv" data-default-tab="result" data-user="codenamic" data-embed-version="1" data-pen-name="button" class="codepen"></div> -->
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<script type="text/javascript">
+	$('.temp').buiToggle();
+</script>
+</body>
+</html>

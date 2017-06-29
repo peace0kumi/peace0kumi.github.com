@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">convention</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content convention-html" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">html</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">문서</h1>
+					<div class="subsection">
+						<h1 class="subsection-name">Document Type Definition, DTD</h1>
+						<p class="para">반드시 문서 최상위에 위치하며, 시멘틱 마크업을 위한 의미적 요소사용과 다양한 화면과 해상도에 적용되는 html5로 DOCTYPE을 선언한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!doctype html class="no-js"&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h1 class="subsection-name">Character Encoding</h1>
+						<!-- module-code -->
+						<div class="module-code">
+						<p class="para">HTML 문서는 반드시 인코딩 정보를 선언한다.</p>
+						<p class="para">신규 HTML 문서를 작성할 때 기본 인코딩은 utf-8을 원칙으로 하며, 파일을 저장할 때는 반드시 선언한 인코딩과 동일한 인코딩을 선택한다.</p>
+<pre class="code-enable brush: xml">
+&lt;meta charset="utf-8" /&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h1 class="subsection-name">viewport</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h1 class="subsection-name">setting</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;meta name="format-detection" content="telephone=no, date=no, address=no, email=no" /&gt;
+&lt;meta http-equiv="x-rim-auto-match" content="none" /&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h1 class="subsection-name">information</h1>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;meta name="title" content="콘텐츠 제목" /&gt;
+&lt;meta name="description" content="고객과 늘 함께하는 로펌 법무법인태평양 입니다." /&gt;
+&lt;meta name="keywords" content="법무법인, 금융, 기업, 분쟁해결, 조세, 관세 및 국제통상, 공정거래, 지적재산권, 형사, 산업별, 해외, 기업구조조정 및 도산, 공익활동" /&gt;
+&lt;meta name="twitter:card" content="#" /&gt;			&lt;!-- 콘텐츠 종류 (summary) --&gt;
+&lt;meta name="twitter:url" content="#" /&gt;			&lt;!-- 콘텐츠 URL --&gt;
+&lt;meta name="twitter:title" content="#" /&gt;			&lt;!-- 콘텐츠 제목 --&gt;
+&lt;meta name="twitter:description" content="#" /&gt;	&lt;!-- 콘텐츠 설명 --&gt;
+&lt;meta name="twitter:image" content="#" /&gt;			&lt;!-- 대표 이미지 URL --&gt;
+&lt;meta name="twitter:site" content="#" /&gt;			&lt;!-- 사이트 배포자 트위터아이디 (@트위터아이디) --&gt;
+&lt;meta name="twitter:creator" content="#" /&gt;		&lt;!-- 배포자 트위터아이디 (@트위터아이디) --&gt;
+&lt;meta property="fb:app_id" content="" /&gt;			&lt;!-- 앱아이디 --&gt;
+&lt;meta property="og:type" content="#" /&gt;			&lt;!-- 콘텐츠 종류 (website) --&gt;
+&lt;meta property="og:title" content="#" /&gt;			&lt;!-- 콘텐츠 제목 --&gt;
+&lt;meta property="og:description" content="#" /&gt;	&lt;!-- 콘텐츠 설명 --&gt;
+&lt;meta property="og:url" content="#" /&gt;			&lt;!-- 콘텐츠 URL --&gt;
+&lt;meta property="og:image" content="#" /&gt;			&lt;!-- 대표 이미지 URL --&gt;
+&lt;meta property="og:site_name" content="#" /&gt;		&lt;!-- 웹 사이트의 제목 --&gt;
+&lt;meta name="nate:title" content="#" /&gt;			&lt;!-- 콘텐츠 제목 --&gt;
+&lt;meta name="nate:description" content="#" /&gt;		&lt;!-- 콘텐츠 설명 --&gt;
+&lt;meta name="nate:url" content="#" /&gt;				&lt;!-- 콘텐츠 URL --&gt;
+&lt;meta name="nate:site_name" content="#" /&gt;		&lt;!-- 웹 사이트의 제목 --&gt;
+&lt;meta name="nate:image" content="#" /&gt;			&lt;!-- 대표 이미지 URL --&gt;
+</pre>
+
+						</div>
+						<!-- //module-code -->
+					</div>
+					
+					<div class="subsection">
+						<h1 class="subsection-name">title</h1>
+						<p class="para">각 페이지마다 서로 다른 규칙으로 사용 중인 문서 제목 (&lt;title&gt; 태그) 규칙을 일원화함으로써, 서비스 통일성을 높이고 문서 제목에 콘텐츠 제목을 포함시킴으로써 검색 엔진에 대한 최적화를 꾀한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- 기본 규칙 --&gt;
+&lt;title&gt;사이트명 서비스명&lt;/title&gt;
+
+&lt;!-- 하위 컨텐츠 --&gt;
+&lt;title&gt;컨텐츠명 - 사이트명 서비스명&lt;/title&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</div>
+				</section>
+				<!-- //section -->
+				
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">표기법</h1>
+					<section class="subsection">
+						<h1 class="subsection-name">기본 형식</h1>
+						<ol class="bui-data-list theme-a">
+						<li>요소의 완벽한 중첩 되어야 한다.</li>
+						<li>모든 속성 값은 속성이 함께 선언되어야 한다.</li>
+						<li>요소와 속성은 소문자여야 한다.</li>
+						<li>속성 값은 인용 부호("") 안에 표기한다.</li>
+						<li>부위 인식자의 모든 NAME속성을 ID 속성으로 대체한다.</li>
+						<li>모든 요소는 닫아야 한다.</li>
+						<li>text나 URL, script에 포함된 특수 문자는 escape 시킨다.</li>
+						<li>블록 요소와 인라인 요소를 형제로 놓지 않는다.</li>
+						</ol>
+					</section>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">속성(atribute) 선언 순서</h1>
+						<ol class="bui-data-list theme-a">
+						<li>rel</li>
+						<li>type</li>
+						<li>href, src</li>
+						<li>width, height</li>
+						<li>target</li>
+						<li>name</li>
+						<li>Name, alt</li>
+						<li>기타</li>
+						<li>id</li>
+						<li>class</li>
+						<li>style</li>
+						</ol>
+					</section>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">들여 쓰기</h1>
+						<p class="para">코드의 가독성을 높이기 위하여 들여 쓰기를 사용하며 탭 1개의 크기는 공백 4칸으로 설정한다. 또한 마크업의 깊이가 깊어질 때마다 탭 1개만큼 들여 쓰지만 다음의 경우 들여 쓰지 않을 수 있다.</p>
+						<p class="para">자식 요소가 단독으로 쓰일 수 없으며, 또 다른 자식 요소를 포함할 수 있는 경우 thead, tfoot, tbody, tr, li, dt, dd 단(th, td는 제외)</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- thead, tfoot, tbody, tr --&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- //thead, tfoot, tbody, tr --&gt;
+
+&lt;!-- li --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //li --&gt;
+
+&lt;!-- dt, dd --&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;!-- //dt, dd --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">주석 표기</h1>
+						<p class="para">마크업 수정 시, 수정 부분을 표기하는 주석은 다음과 같이 날짜를 기입하며, element와 동일 라인에 표기하지 않는다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- uio-name 2016-01-01 수정 내용 --&gt;
+&lt;element&gt;
+	&lt;element&gt;
+	&lt;/element&gt;
+&lt;/element&gt;
+&lt;!-- //uio-name 2016-01-01 수정 내용 --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+					
+					<section class="subsection">
+						<h1 class="subsection-name">빈 줄</h1>
+<!-- 						<p class="para">의미 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 만드는 것을 허용한다. 단, 빈 줄의 간격은 1줄을 초과하지 않는다.</p> -->
+						<p class="para">빈 줄은 존재하지 않는 것을 원칙으로 한다. 단, 콘텐츠의 구분을 위하여 부득이하게 사용해야 할 경우 1줄을 초과하지 않는다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- uio-name --&gt;
+&lt;element&gt;
+	&lt;element&gt;
+	&lt;/element&gt;
+&lt;/element&gt;
+&lt;!-- //2016-01-01 --&gt;
+
+&lt;!-- uio-name --&gt;
+&lt;element&gt;
+	&lt;element&gt;
+	&lt;/element&gt;
+&lt;/element&gt;
+&lt;!-- //uio-name --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+					
+				</section>
+				<!-- //section -->
+				
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">구조</h1>
+					<section class="subsection">
+						<h1 class="subsection-name">기본 구조</h1>
+						<p class="para">섹션의 시작은 반드시 제목을 표기하여 문서의 흐름이 끊기지 않게 한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;!-- latest-posts --&gt;
+&lt;div class="latest-posts"&gt;
+	&lt;hx&gt;notice&lt;/hx&gt;
+	&lt;ul&gt;
+	&lt;li&gt;Notice is the latest posts.&lt;/li&gt;
+	&lt;li&gt;Notice is the latest posts.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="aside"&gt;&lt;a href=”#”&gt;more&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //latest-posts --&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				<!-- //section -->
+				
+				<!-- section -->
+				<section class="section">
+					<h1 class="section-name">네이밍</h1>
+					<section class="subsection">
+						<h1 class="subsection-name">기본규칙</h1>
+						<p class="para">약어 사용을 지양하며, 네이밍의 시작은 반드시 영문 소문자로 시작한다. 단어별 구분은 id의 경우 카멜 표기법(Camel Notation)으로 class의 경우 hyphen으로 표기한다.</p>
+						<!-- module-code -->
+						<div class="module-code">
+<pre class="code-enable brush: xml">
+&lt;element class="my-page" id="myPage"&gt;&lt;/element&gt;
+</pre>
+						</div>
+						<!-- //module-code -->
+					</section>
+				</section>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

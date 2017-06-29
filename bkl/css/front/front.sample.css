@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import url(./layout.front.css);
+@import url(./module.form.css);
+@import url(./module.button.css);
+@import url(./module.global.css);
+
+/**
+ * layout
+ */
+.page-content .content-head														{margin: 3rem 0 2rem 0; padding: 0 1rem;}
+.page-content .content-head .content-name										{margin: 0; font-size: 2rem; color: #2594c0; line-height: 2.5rem; font-weight: normal; font-family: NotoSansKR-Light, sans-serif;}
+
+.page-content .content-body														{}
+.page-content .content-body .section											{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body .section .section-name								{margin: 2rem 0 1rem 0; line-height: 1.75rem; font-size: 1.25rem; font-weight: normal;}
+.page-content .content-body .section .subsection 								{}
+.page-content .content-body .section .subsection .subsection-name				{margin: 0; line-height: 1.5rem; font-size: 1rem; font-weight: normal; font-family: NotoSansKR-Medium, sans-serif;}
+
+/**
+ * module
+ */
+.page-content .content-body .para												{margin: 1rem 0; line-height: 1.5rem;}
+.page-content .content-body .post-sort											{margin: 2rem 0 1rem 0;}
+.page-content .content-body .post-display										{margin: 1rem 0;}
+.page-content .content-body .post-control										{margin: 2rem 0;}
+.page-content .content-body .submit-form										{margin: 1rem 0;}
+.page-content .content-body .data-display										{margin: 1rem 0;}
+
+.page-content .content-body>.para												{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-sort											{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.post-control										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.submit-form										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.data-display										{margin-right: 1rem; margin-left: 1rem;}
+.page-content .content-body>.button-area										{margin: 2rem 0; padding: 0 1rem;}
+/*
+.btn.more-data																	{width: 100%;}
+.btn.more-data .text															{height: 3rem; font-size: 1rem; color: #404040; font-family: NotoSansKR-Regular, sans-serif;}
+.btn.more-data .text:after														{content: ''; display: block; width: 1.5rem; height: 1.5rem; background-color: #bfbfbf; -webkit-mask-image: url(./../../img/global/symbols.png); mask-image: url(./../../img/global/symbols.png); -webkit-mask-size: 3rem auto; mask-image: 3rem auto; -webkit-mask-position: 0 0; mask-position: 0 0;}
+*/
+.page-content .content-body .page-visual										{margin: 2.5rem 1rem 2rem 1rem;}
+.page-content .content-body .page-visual .data-media							{display: block;}
+.page-content .content-body .page-visual .data-media>img						{width: 100%; vertical-align: top;}
+
+.page-content .content-body .search-word										{margin: -0.25rem 1rem 2rem 1rem;}
+.page-content .content-body .search-word:after									{content: ''; display: block; clear: both;}
+.page-content .content-body .search-word .mark									{float: left; margin: 0.25rem 0.25rem 0 0;}
+.page-content .content-body .info-board.theme-a.type-a							{margin: 0 1rem;}
+
+/**
+ * content
+ */
+
+/* search-result */
+.page-content.search-result .content-head										{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; line-height: 1px; font-size: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.page-content.search-result .content-body .search-result-info					{margin: 3rem 1rem 2rem 1rem; font-size: 1.25rem; white-space: nowrap;}
+.page-content.search-result .content-body .search-result-info .keyword			{font-weight: normal; color: #2594c0;}
+
+/* member-profile */
+.page-content.member-profile .content-head										{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; line-height: 1px; font-size: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+
+
+
+
+
+
+.related-info.theme-a.type-a													{}
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-button" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">tabs</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">tabs theme-a</h3>
+					<p class="para">module prefix "tabs"로 element의 기본 속성이 reset 됩니다.</p>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">option</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">module</th>
+								<td>tabs</td>
+							</tr>
+							<tr>
+								<th scope="row">theme</th>
+								<td>theme-a</td>
+							</tr>
+							<tr>
+								<th scope="row">type</th>
+								<td>type-a</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+
+					<div class="subsection">
+						<h4 class="subsection-name">example</h4>
+						<ul class="tab theme-bui">
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent01">result</a></li>
+						<li class="tab-item"><a class="tab-name" href="#moduleTabsContent02">HTML</a></li>
+						</ul>
+						
+						<div class="contents">
+							<!-- module-result -->
+							<div class="module-result" id="moduleTabsContent01">
+								<p class="para">type-a</p>
+								<!-- tab -->
+								<ul class="tab theme-a type-a">
+								<li class="tab-item current"><a href="#" class="tab-name">tab item 01</a>
+								<li class="tab-item"><a href="#" class="tab-name">tab item 02</a>
+								<li class="tab-item"><a href="#" class="tab-name">tab item 03</a>
+								</ul>
+								<!-- //tab -->
+								<p class="para">type-b</p>
+								<!-- tab -->
+								<ul class="tab theme-a type-b">
+								<li class="tab-item current"><a href="#" class="tab-name">tab item 01</a>
+								<li class="tab-item"><a href="#" class="tab-name">tab item 02</a>
+								<li class="tab-item"><a href="#" class="tab-name">tab item 03</a>
+								</ul>
+								<!-- //tab -->
+							</div>
+							<!-- //module-result -->
+							<!-- module-code -->
+							<div class="module-code" id="moduleTabsContent02">
+<pre class="code-enable brush: xml">
+&lt;!-- tab --&gt;
+&lt;ul class="tab theme-a type-a"&gt;
+&lt;li class="tab-item current"&gt;&lt;a href="#" class="tab-name"&gt;tab item 01&lt;/a&gt;
+&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;tab item 02&lt;/a&gt;
+&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;tab item 03&lt;/a&gt;
+&lt;/ul&gt;
+&lt;!-- //tab --&gt;
+
+&lt;!-- tab --&gt;
+&lt;ul class="tab theme-a type-b"&gt;
+&lt;li class="tab-item current"&gt;&lt;a href="#" class="tab-name"&gt;tab item 01&lt;/a&gt;
+&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;tab item 02&lt;/a&gt;
+&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;tab item 03&lt;/a&gt;
+&lt;/ul&gt;
+&lt;!-- //tab --&gt;
+</pre>
+							</div>
+							<!-- //module-code -->
+						</div>
+<!-- 						<div data-height="300" data-theme-id="27122" data-slug-hash="BpQzQv" data-default-tab="result" data-user="codenamic" data-embed-version="1" data-pen-name="button" class="codepen"></div> -->
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<script type="text/javascript">
+	$('.temp').buiToggle();
+</script>
+</body>
+</html>

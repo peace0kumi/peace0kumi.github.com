@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta property="og:title" content="Basic User Interface" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://211.36.21.96:9084/bui/index.html" />
+<meta property="og:image" content="http://211.36.21.96:9084/bui/images/global/logo_04.png" />
+<meta property="og:description" content="BUI의 목적은 협력 부서 간의 이해도를 높여 프로젝트의 원활한 진행을 돕고 더욱 높은 수준의 결과물을 내는 것입니다" />
+<title>BUI</title>
+<link rel="shortcut icon" href="./../../../images/global/favicon.png" />
+<link rel="stylesheet" type="text/css" href="./../../../css/front.markup.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="./../../../css/layout.mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 961px)" href="./../../../css/layout.desktop.css" />
+</head>
+<body>
+<div class="skip-nav">
+	<a href="#contentName" id="skipContent">본문 바로가기</a>
+</div>
+<!-- frame -->
+<div id="frame">
+	<!-- frame-head -->
+	<div class="frame-head">
+		<!-- page-header -->
+		<header id="header" class="page-header">
+			<h1 class="page-name" id="pageName"><a href="./../../../index.html"><abbr title="Basic User Interface">BUI</abbr></a></h1>
+			<div class="page-control">
+				<span class="page-control-item">
+					<a class="pnb-item menu" href="#lnb"><span class="text">메뉴</span></a>
+				</span>
+			</div>
+		</header>
+		<!-- //page-header -->
+		
+		<!-- local-navigations -->
+		<nav class="lnb" id="lnb">
+			<h1>목차</h1>
+		</nav>
+		<!-- //local-navigations -->
+	</div>
+	<!-- //frame-head -->
+	<hr />
+	<!-- frame-body -->
+	<section class="frame-body">
+		<!-- page-aside -->
+		<div class="page-aside">
+			<h1 class="service-name" id="serviceName">snippet</h1>
+		</div>
+		<!-- //page-aside -->
+		
+		<!-- page-content -->
+		<section class="page-content snippet-form" id="content">
+			<!-- content-head -->
+			<div class="content-head">
+				<h1 id="contentName" class="content-name" tabindex="0">form</h1>
+			</div>
+			<!-- //content-head -->
+			
+			<!-- content-body -->
+			<div class="content-body">
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">basic system</h3>
+					<p class="para">사용자 제출 가능 양식을 나타냅니다.<br /> 일부는 처리를 위해 서버에 제출할 수있는 편집 가능한 값을 나타낼 수 있습니다.</p>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">text field</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">내용</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">default</th>
+								<td>
+									<span class="form theme-a large">
+										<label for="textFieldDefault" class="head">Default</label>
+										<input type="text" placeholder="placeholder" id="textFieldDefault" class="elem" />
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">focus</th>
+								<td>
+									<span class="form theme-a large focus">
+										<label for="textFieldFocus" class="head">Focus</label>
+										<input type="text" placeholder="placeholder" id="textFieldFocus" class="elem" />
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">reset</th>
+								<td>
+									<span class="form theme-a large reset"><input type="text" placeholder="placeholder" class="elem" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">typed</th>
+								<td>
+									<span class="form theme-a large"><input type="text" placeholder="placeholder" class="elem" value="typed" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">error</th>
+								<td>
+									<span class="form theme-a large error"><input type="text" placeholder="placeholder" class="elem" value="error" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">readonly</th>
+								<td>
+									<span class="form theme-a large"><input type="text" placeholder="placeholder" readonly="readonly" class="elem" value="readonly" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">disabled</th>
+								<td>
+									<span class="form theme-a large"><input type="text" placeholder="placeholder" disabled="disabled" class="elem" value="disabled" /></span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">radio</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">내용</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">default</th>
+								<td>
+									<span class="form theme-a x-small"><input type="radio" name="radio-01" class="elem" /></span>
+									<span class="form theme-a x-small"><input type="radio" name="radio-01" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">focus</th>
+								<td>
+									<span class="form theme-a x-small focus"><input type="radio" name="radio-02" class="elem" /></span>
+									<span class="form theme-a x-small focus"><input type="radio" name="radio-02" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">error</th>
+								<td>
+									<span class="form theme-a x-small error"><input type="radio" name="radio-04" class="elem" /></span>
+									<span class="form theme-a x-small error"><input type="radio" name="radio-04" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">disabled</th>
+								<td>
+									<span class="form theme-a x-small"><input type="radio" name="radio-03" disabled="disabled" class="elem" /></span>
+									<span class="form theme-a x-small"><input type="radio" name="radio-03" disabled="disabled" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">checkbox</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">내용</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">default</th>
+								<td>
+									<span class="form theme-a x-small"><input type="checkbox" class="elem" /></span>
+									<span class="form theme-a x-small"><input type="checkbox" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">focus</th>
+								<td>
+									<span class="form theme-a x-small focus"><input type="checkbox" class="elem" /></span>
+									<span class="form theme-a x-small focus"><input type="checkbox" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">error</th>
+								<td>
+									<span class="form theme-a x-small error"><input type="checkbox" class="elem" /></span>
+									<span class="form theme-a x-small error"><input type="checkbox" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">disabled</th>
+								<td>
+									<span class="form theme-a x-small"><input type="checkbox" disabled="disabled" class="elem" /></span>
+									<span class="form theme-a x-small"><input type="checkbox" disabled="disabled" class="elem" checked="checked" /></span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">select</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">내용</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">default</th>
+								<td>
+									<span class="form theme-a large">
+										<select class="elem">
+										<option>Select options Select options Select options Select options</option>
+										<option>Select options</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">focus</th>
+								<td>
+									<span class="form theme-a large focus">
+										<select class="elem">
+										<option>Select options</option>
+										<option>Select options</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">error</th>
+								<td>
+									<span class="form theme-a large error">
+										<select class="elem">
+										<option>Select options</option>
+										<option>Select options</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">disabled</th>
+								<td>
+									<span class="form theme-a large">
+										<select disabled="disabled" class="elem">
+										<option>Select options</option>
+										<option>Select options</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+					<div class="subsection">
+						<h4 class="subsection-name">date</h4>
+						<!-- data-table -->
+						<div class="data-table theme-bui type-a">
+							<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width: 8em;" />
+								<col />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">내용</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th scope="row">default</th>
+								<td>
+									<span class="form theme-a large"><input type="date" title="생년월일 입력" placeholder="생년월일" class="elem" value="2017-03-26" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">focus</th>
+								<td>
+									<span class="form theme-a large focus"><input type="date" title="생년월일 입력" placeholder="생년월일" class="elem" value="2017-03-26" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">error</th>
+								<td>
+									<span class="form theme-a large error"><input type="date" title="생년월일 입력" placeholder="생년월일" class="elem" value="2017-03-26" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">disabled</th>
+								<td>
+									<span class="form theme-a large"><input type="date" title="생년월일 입력" placeholder="생년월일" disabled="disabled" class="elem" value="2017-03-26" /></span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //data-table -->
+					</div>
+					
+				</div>
+				<!-- //section -->
+<style>
+.symbols-list table td svg				{width: 3rem;}
+</style>				
+				<!-- section -->
+				<div class="section">
+					<h3 class="section-name">SVG</h3>
+					<p class="para">폼 서식에 사용하는 아이콘 SVG</p>
+					<!-- data-table -->
+					<div class="data-table theme-bui type-a symbols-list">
+						<table>
+						<caption></caption>
+						<colgroup>
+							<col style="width: 4em;" />
+							<col style="width: 12em;" />
+							<col />
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">icon</th>
+							<th scope="col">name</th>
+							<th scope="col">code</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-default">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-default"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41" /&gt;
+										&lt;path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6" /&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-checked">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+										<path fill="#2594C0" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-checked"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41" /&gt;
+										&lt;path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6" /&gt;
+										&lt;path fill="#2594C0" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13" /&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-focus">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#385871" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio focus</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-focus"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41" /&gt;
+										&lt;path fill="#385871" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6" /&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-focus-checked">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#385871" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+										<path fill="#2594C0" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio focus checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-focus-checked"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41" /&gt;
+										&lt;path fill="#385871" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6" /&gt;
+										&lt;path fill="#2594C0" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13" /&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-error">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#EE2B33" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24
+											s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio error</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-error"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/&gt;
+										&lt;path fill="#EE2B33" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24
+											s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-error-checked">
+										<path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#EE2B33" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+										<path fill="#EE2B33" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio error checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-error-checked"&gt;
+										&lt;path fill="#FFFFFF" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/&gt;
+										&lt;path fill="#EE2B33" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/&gt;
+										&lt;path fill="#EE2B33" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-disabled">
+										<path fill="#F2F2F2" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio disabled</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-disabled"&gt;
+										&lt;path fill="#F2F2F2" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/&gt;
+										&lt;path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24 s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<g id="radio-disabled-checked">
+										<path fill="#F2F2F2" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/>
+										<path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24
+											s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/>
+										<path fill="#BFBFBF" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/>
+									</g>
+								</svg>
+							</td>
+							<td style="text-align: center;">radio disabled checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;g id="radio-disabled-checked"&gt;
+										&lt;path fill="#F2F2F2" d="M24,41c-9.374,0-17-7.626-17-17S14.626,7,24,7s17,7.626,17,17S33.374,41,24,41"/&gt;
+										&lt;path fill="#D9D9D9" d="M24,8c8.822,0,16,7.178,16,16s-7.178,16-16,16S8,32.822,8,24S15.178,8,24,8 M24,6C14.059,6,6,14.059,6,24
+											s8.059,18,18,18s18-8.059,18-18S33.941,6,24,6"/&gt;
+										&lt;path fill="#BFBFBF" d="M24,13c6.075,0,11,4.925,11,11s-4.925,11-11,11s-11-4.925-11-11S17.925,13,24,13"/&gt;
+									&lt;/g&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<path id="checkbox-default" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;path id="checkbox-default" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<rect id="checkbox-checked03" x="7" y="6.5" fill="#2594C0" width="34" height="34"/>
+									<path id="checkbox-checked02_1_" fill="#2594C0" d="M40,39.5H8v-32h32V39.5z M42,5.5H6v36h36V5.5z"/>
+									<polyline id="checkbox-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.32 22.206,30.72 34.03,15.5 "/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;rect id="checkbox-checked03" x="7" y="6.5" fill="#2594C0" width="34" height="34"/&gt;
+									&lt;path id="checkbox-checked02_1_" fill="#2594C0" d="M40,39.5H8v-32h32V39.5z M42,5.5H6v36h36V5.5z"/&gt;
+									&lt;polyline id="checkbox-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.32 22.206,30.72 34.03,15.5 "/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<path id="checkbox-focus" fill="#385871" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox focus</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;path id="checkbox-focus" fill="#385871" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<rect id="checkbox-focus-checked03" x="7" y="7" fill="#2594C0" width="34" height="34"/>
+									<path id="checkbox-focus-checked02" fill="#385871" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+									<polyline id="checkbox-focus-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.82 22.206,31.219 34.03,16 
+										"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox focus checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;rect id="checkbox-focus-checked03" x="7" y="7" fill="#2594C0" width="34" height="34"/&gt;
+									&lt;path id="checkbox-focus-checked02" fill="#385871" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+									&lt;polyline id="checkbox-focus-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.82 22.206,31.219 34.03,16 
+										"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<path id="checkbox-error" fill="#EE2B33" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox error</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;path id="checkbox-error" fill="#EE2B33" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<rect id="checkbox-error-checked03" x="7" y="7" fill="#EE2B33" width="34" height="34"/>
+									<path id="checkbox-error-checked02" fill="#EE2B33" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+									<polyline id="checkbox-error-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.82 22.206,31.22 34.03,16 "/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox error checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;rect id="checkbox-error-checked03" x="7" y="7" fill="#EE2B33" width="34" height="34"/&gt;
+									&lt;path id="checkbox-error-checked02" fill="#EE2B33" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+									&lt;polyline id="checkbox-error-checked01" fill="none" stroke="#FFFFFF" stroke-width="2" points="14,23.82 22.206,31.22 34.03,16 "/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<rect id="checkbox-disabled02" x="7" y="7" fill="#F2F2F2" width="34" height="34"/>
+									<path id="checkbox-disabled01" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox disabled</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;rect id="checkbox-disabled02" x="7" y="7" fill="#F2F2F2" width="34" height="34"/&gt;
+									&lt;path id="checkbox-disabled01" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;">
+									<rect id="checkbox-disabled-checked03" x="7" y="7" fill="#F2F2F2" width="34" height="34"/>
+									<path id="checkbox-disabled-checked02" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/>
+									<polyline id="checkbox-disabled-checked01" fill="none" stroke="#D9D9D9" stroke-width="2" points="14,23.82 22.206,31.22 34.03,16 
+										"/>
+								</svg>
+							</td>
+							<td style="text-align: center;">checkbox disabled checked</td>
+							<td>
+								&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" style="background-color: #ffffff;"&gt;
+									&lt;rect id="checkbox-disabled-checked03" x="7" y="7" fill="#F2F2F2" width="34" height="34"/&gt;
+									&lt;path id="checkbox-disabled-checked02" fill="#D9D9D9" d="M40,40H8V8h32V40z M42,6H6v36h36V6z"/&gt;
+									&lt;polyline id="checkbox-disabled-checked01" fill="none" stroke="#D9D9D9" stroke-width="2" points="14,23.82 22.206,31.22 34.03,16 
+										"/&gt;
+								&lt;/svg&gt;
+							</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- //data-table -->
+					</div>
+				</div>
+				<!-- //section -->
+				
+			</div>
+			<!-- //content-body -->
+		</section>
+		<!-- //page-content -->
+	</section>
+	<!-- frame-body -->
+	<hr />
+	<!-- frame-foot -->
+	<div class="frame-foot">
+		<footer class="page-footer" id="footer">
+			<small class="copyright">&copy;<a href="mailto:codenamic@reflexion.co.kr">Reflexion</a> 2016 Basic User Interface</small>
+		</footer>
+	</div>
+	<!-- //frame-foot -->
+</div>
+<!-- //frame -->
+<script type="text/javascript" src="./../../../js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./../../../js/libs/modernizr.js"></script>
+<script type="text/javascript" src="./../../../js/libs/detectizr.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.js"></script>
+<script type="text/javascript" src="./../../../../js/module/bui.template.js"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="./../../css/layout.desktop.css" />
+<script type="text/javascript" src="./../../js/html5.js"></script>
+<script type="text/javascript" src="./../../js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="./../../../plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../../../js/front.markup.js"></script>
+<script type="text/javascript" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
