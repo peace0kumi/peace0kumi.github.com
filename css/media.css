@@ -5,10 +5,13 @@
 
 /* media query */
 @media screen and (max-width: 1680px){
-	.content-item.resume .resume-wrap											{top: 11vh; height: 82vh;}
-	.content-item.contact .contact-item.info									{padding: 5vh 1.5vw;}
+	.content-item.resume .resume-wrap											{top: 9.5vh; height: 85vh;}
+	.content-item.contact .contact-item.info									{padding: 6vh 1.5vw; font-size: 0.875rem;}
 }
 @media screen and (max-width: 1400px){
+	.content-item.resume h4														{font-size: 1.5rem;}
+	.content-item.resume .resume-item .sub-title								{font-size: 1rem;}
+	.content-item.resume .resume-item .sub-content								{font-size: 0.875rem;}
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 30%; font-size: 1.25rem;}
 }
 @media screen and (max-width: 1024px){

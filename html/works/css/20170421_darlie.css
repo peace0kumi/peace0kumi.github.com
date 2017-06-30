@@ -9,30 +9,28 @@
 html, body														{height: 100%;}
 body															{overflow-x: hidden; margin: 0; padding: 0; font-size: 1rem; line-height: 1.5rem;}
 ul																{list-style: none; margin: 0; padding: 0;}
-img																{width: auto; height: 100%; border: 0 none; vertical-align: top;}
+img																{display: block; margin: 0 auto; border: 0 none; vertical-align: top;}
 #frame															{height: 100%; font-family: 'Spoqa Han Sans', '맑은 고딕', sans-serif;}
 
 /* header */
 #header															{height: 15vh; padding: 0 15%; background-color: #009a3e;}
-#header #siteTitle												{float: left; margin: 0; padding: 0; height: 100%; vertical-align: middle; font-family: 'Fjalla One', sans-serif; font-style: italic;}
-#header #siteTitle:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#header #siteTitle .hyper-link									{display: table; height: 100%; text-decoration: none;}
-#header #siteTitle .hyper-link .text							{display: table-cell; vertical-align: middle; color: #ffffff;}
-
-/* global-navigations */
-#header .global-navigations .gnb:after							{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#header .global-navigations .gnb-name							{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
-#header .global-navigations .gnb								{display: flex; display: -webkit-flex; height: 15vh; margin: 0;}
-#header .global-navigations .gnb-item							{position: relative; float: left; height: 100%; flex: 1; -webkit-flex: 1; text-align: center;}
+#header .global-navigations										{display: flex; display: -webkit-flex;}
+#header .global-navigations:after								{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .global-navigations .gnb-logo							{margin: 0; padding: 0; font-family: 'Fjalla One', sans-serif; font-style: italic;}
+#header .global-navigations .gnb-logo .hyper-link				{display: table; height: 100%; text-decoration: none;}
+#header .global-navigations .gnb-logo .hyper-link .text			{display: table-cell; vertical-align: middle; color: #ffffff;}
+#header .global-navigations .gnb-name							{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
+#header .global-navigations .gnb								{width: 100%; height: 15vh; margin: 0;}
+#header .global-navigations .gnb-item							{position: relative; float: left; width: 25%; height: 100%; text-align: center;}
 #header .global-navigations .gnb-item:before					{content: ''; display: inline-block; width: 1px; height: 100%; margin-right: 0; vertical-align: middle;}
 #header .global-navigations .gnb-item .hyper-link				{display: inline-block; font-size: 1.5rem; color: #ffffff; font-weight: bold; text-decoration: none; transition: ease 0.3s;}
 #header .global-navigations .gnb-item .hyper-link:hover			{font-size: 2rem; transition: ease 0.3s;}
 
 /* local-navigations */
-#header .local-navigations										{display: none; position: absolute; z-index: 2; top: 10vh; left: 50%; width: 10vw; margin: 0 0 0 -6vw; padding: 10px 15px 25px; background-color: #ffffff;}
+#header .local-navigations										{display: none; position: absolute; z-index: 2; top: 10vh; left: 50%; width: 10vw; margin: 0 0 0 -6vw; padding: 10px 15px 25px; box-shadow: 5px 5px 10px #333333; background-color: #ffffff;}
 #header .local-navigations.active								{display: block; transition: ease 0.3s;}
 #header .local-navigations .lnb:after							{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#header .local-navigations .lnb-name							{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rec(0 0 0 0); clip: rect(0,0,0,0);}
+#header .local-navigations .lnb-name							{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
 #header .local-navigations .lnb-wrap+.lnb-wrap					{margin-top: 15px;}
 #header .local-navigations .lnb-wrap .lnb-detail				{margin: 0 0 10px 0; padding: 0; text-align: left; font-size: 1rem; color: #333333;}
 #header .local-navigations .lnb-wrap .lnb						{text-align: left;}
@@ -79,26 +77,27 @@ img																{width: auto; height: 100%; border: 0 none; vertical-align: t
 /* content */
 #content														{}
 #content .data-visual											{width: 100%;}
-#content .data-wrap												{max-width: 1000px; margin: 0 auto; outline: 1px #f00 solid; display: flex; display: -webkit-flex; padding: 3% 2% 0 2%;}
+#content .data-wrap												{display: flex; display: -webkit-flex; margin: 0 auto; padding: 3% 2% 0 2%; max-width: 1000px; outline: 1px #f00 solid;}
 #content .data-wrap:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#content .data-wrap .data-item									{float: left;}
-#content .data-wrap .data-item.theme-a							{flex: auto; -webkit-flex: auto; -ms-flex: auto; height: 70vh;}
-#content .data-wrap .data-item.theme-b							{flex: auto; -webkit-flex: auto; -ms-flex: auto; height: 40vh; outline: 1px #00f solid;}
+#content .data-wrap .data-item.theme-a							{flex-grow: 1; -webkit-flex-grow: 1; height: 70vh; outline: 1px #f00 solid;}
+#content .data-wrap .data-item.theme-b							{flex-grow: 1; -webkit-flex-grow: 1; height: 40vh; outline: 1px #00f solid;}
 #content .data-wrap .data-item .data-head						{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
 #content .data-wrap .data-item .data-body						{display: block;}
-#content .data-wrap .data-item .data-foot						{display: block;}
-#content .data-wrap .data-item .image							{display: block;}
-#content .data-wrap .data-item .title							{display: block;}
-#content .data-wrap .data-item .caption							{display: block; min-height: 3rem; line-height: 1.5rem; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+#content .data-wrap .data-item .data-body .image				{display: block; width: inherit;}
+#content .data-wrap .data-item .data-body .title				{display: block; width: inherit;}
+#content .data-wrap .data-item .data-body .caption				{display: -webkit-box; overflow: hidden; width: inherit; line-height: 1.5rem; text-overflow: ellipsis; word-wrap: break-word; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
 #content .data-wrap .data-item p.text							{margin: 1rem 0 0 0; padding: 0;}
+#content .data-wrap .data-item .hyper-link						{display: block; position: absolute; width: inherit; height: inherit;}
+#content .data-wrap .data-item .hyper-link .text				{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
 
 #content .data-wrap .data-item.recommend-product				{width: 450px; background-color: #eeeeee;}
-#content .data-wrap .data-item.recommend-product .data-body		{text-align: center; padding: 20% 0 0 0;}
-#content .data-wrap .data-item.recommend-product .image			{height: 50vh;}
+#content .data-wrap .data-item.recommend-product .data-body		{text-align: center;}
+#content .data-wrap .data-item.recommend-product .image			{}
 #content .data-wrap .data-item.medical-info						{width: 450px;}
-#content .data-wrap .data-item.medical-info .data-body			{width: inherit; text-align: left; padding: 5% 0 0 0;}
-#content .data-wrap .data-item.medical-info .image				{height: auto; padding: 0;}
-#content .data-wrap .data-item.medical-info .image img			{width: 100%; height: auto;}
+#content .data-wrap .data-item.medical-info .data-body			{width: inherit; text-align: left;}
+#content .data-wrap .data-item.medical-info .image				{padding: 0 0 5% 0;}
+#content .data-wrap .data-item.medical-info .image img			{display: block; width: 100%; height: auto;}
+#content .data-wrap .data-item.medical-info .caption			{width: 450px;}
 
 /* footer */
 #footer 														{height: 30px; text-align: center;}

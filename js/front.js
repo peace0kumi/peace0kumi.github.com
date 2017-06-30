@@ -78,13 +78,13 @@ $(function(){
 		return false;
 	});
 	
+	//portarait and landscape
 	var bodyWidth = $('body').width();
 	var bodyHeight = $('body').height();
 	
-	//portarait and landscape
 	if(bodyWidth <= bodyHeight){
 		
-	}else if(bodyWidth > bodyHeight && bodyWidth < 1280){
+	}else if(bodyWidth > bodyHeight && bodyWidth < 1200){
 		alert('이 페이지는 세로 고정 모드에서만 정상적으로 작동됩니다.');
 		$('#frame').css('visibility','hidden');
 		$('body').css('background-color','#2c4157');
@@ -135,14 +135,5 @@ $(function(){
 	$(document).ready(function(){
 		setTimeout(scrollTo, 0, 0, 1);
 	});
-	
-	//device check > favicon spread
-	if(Detectizr.os.name === 'ios') {
-		$('head').append('<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/favicon_180x180.png" />');
-	} else if(Detectizr.os.name === 'android') {
-		$('head').append('<link rel="apple-touch-icon-precomposed" href="../images/favicon_152x152.png" />');
-		$('head').append('<link rel="icon" sizes="196x196" href="../images/favicon_196x196.png" />');
-	} else {
-		$('head').append('<link rel="shortcut icon" href="../images/favicon.ico" />');
-	};
+
 });
