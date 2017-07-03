@@ -77,10 +77,9 @@ img																{display: block; margin: 0 auto; border: 0 none; vertical-ali
 /* content */
 #content														{}
 #content .data-visual											{width: 100%;}
-#content .data-wrap												{display: flex; display: -webkit-flex; margin: 0 auto; padding: 3% 2% 0 2%; max-width: 1000px; outline: 1px #f00 solid;}
+#content .data-wrap												{display: flex; display: -webkit-flex; max-width: 1000px; margin: 0 auto; padding: 3% 2% 0 2%;}
+#content .data-wrap+.data-wrap									{padding: 3% 2%;}
 #content .data-wrap:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
-#content .data-wrap .data-item.theme-a							{flex-grow: 1; -webkit-flex-grow: 1; height: 70vh; outline: 1px #f00 solid;}
-#content .data-wrap .data-item.theme-b							{flex-grow: 1; -webkit-flex-grow: 1; height: 40vh; outline: 1px #00f solid;}
 #content .data-wrap .data-item .data-head						{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
 #content .data-wrap .data-item .data-body						{display: block;}
 #content .data-wrap .data-item .data-body .image				{display: block; width: inherit;}
@@ -89,15 +88,35 @@ img																{display: block; margin: 0 auto; border: 0 none; vertical-ali
 #content .data-wrap .data-item p.text							{margin: 1rem 0 0 0; padding: 0;}
 #content .data-wrap .data-item .hyper-link						{display: block; position: absolute; width: inherit; height: inherit;}
 #content .data-wrap .data-item .hyper-link .text				{display: block; position: absolute; overflow: hidden; margin: 0; padding: 0; width: 1px; height: 1px; border: 0 none; clip: rect(0,0,0,0);}
+#content .data-wrap .data-item .wbr								{display: inline-block; text-decortaion: inherit;}
 
-#content .data-wrap .data-item.recommend-product				{width: 450px; background-color: #eeeeee;}
-#content .data-wrap .data-item.recommend-product .data-body		{text-align: center;}
-#content .data-wrap .data-item.recommend-product .image			{}
-#content .data-wrap .data-item.medical-info						{width: 450px;}
-#content .data-wrap .data-item.medical-info .data-body			{width: inherit; text-align: left;}
-#content .data-wrap .data-item.medical-info .image				{padding: 0 0 5% 0;}
-#content .data-wrap .data-item.medical-info .image img			{display: block; width: 100%; height: auto;}
-#content .data-wrap .data-item.medical-info .caption			{width: 450px;}
+#content .data-wrap .data-item.theme-a							{width: 25%; flex-grow: 1; -webkit-flex-grow: 1; height: 70vh;}
+#content .data-wrap .data-item.theme-a .data-body				{padding: 150px 0; text-align: center;}
+#content .data-wrap .data-item.theme-a .title					{font-weight: bold;}
+#content .data-wrap .data-item.theme-a .image					{padding: 0 0 5% 0;}
+#content .data-wrap .data-item.theme-a .image img				{vertical-align: top;}
+#content .data-wrap .data-item.theme-a .hyper-link				{width: 250px;}
+#content .data-wrap .data-item.theme-a+.data-item.theme-a		{margin-left: 5px;}
+#content .data-wrap .data-item.theme-b							{flex-grow: 1; -webkit-flex-grow: 1;}
+#content .data-wrap .data-item.theme-b .data-body				{width: inherit; margin: 0 auto; padding: 60px 0; text-align: center;}
+#content .data-wrap .data-item.theme-b .title					{font-size: 1.5rem; font-weight: bold;}
+#content .data-wrap .data-item.theme-b+.data-item.theme-b		{margin-left: 5px;}
+
+#content .data-wrap .data-item.recommend-whitening				{background-color: #eeeeee;}
+#content .data-wrap .data-item.recommend-whitening .title		{color: #2959b8;}
+#content .data-wrap .data-item.recommend-breath					{background-color: #ffffff;}
+#content .data-wrap .data-item.recommend-breath .title			{color: #00b700;}
+#content .data-wrap .data-item.recommend-sensitive				{background-color: #eeeeee;}
+#content .data-wrap .data-item.recommend-sensitive .title		{color: #f268ad;}
+#content .data-wrap .data-item.recommend-kids					{background-color: #ffffff;}
+#content .data-wrap .data-item.recommend-kids .title			{color: #91d305;}
+
+#content .data-wrap .data-item.medical-cause					{padding: 0 2%; background-color: #009a3e; border: 2px #ffffff dashed;}
+#content .data-wrap .data-item.medical-cause .title				{color: #ffffff;}
+#content .data-wrap .data-item.medical-cause .caption			{color: #ffffff;}
+#content .data-wrap .data-item.medical-prevention				{padding: 0 2%; background-color: #eeeeee;}
+#content .data-wrap .data-item.medical-prevention .title		{color: #444444;}
+#content .data-wrap .data-item.medical-prevention .caption		{color: #444444;}
 
 /* footer */
 #footer 														{height: 30px; text-align: center;}
