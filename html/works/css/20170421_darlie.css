@@ -100,6 +100,7 @@ img																{display: block; margin: 0 auto; border: 0 none; vertical-ali
 #content .data-wrap .data-item.theme-b							{flex-grow: 1; -webkit-flex-grow: 1;}
 #content .data-wrap .data-item.theme-b .data-body				{width: inherit; margin: 0 auto; padding: 60px 0; text-align: center;}
 #content .data-wrap .data-item.theme-b .title					{font-size: 1.5rem; font-weight: bold;}
+#content .data-wrap .data-item.theme-b .title .hyper-link		{position: static; text-decoration: none;}
 #content .data-wrap .data-item.theme-b+.data-item.theme-b		{margin-left: 5px;}
 
 #content .data-wrap .data-item.recommend-whitening				{background-color: #eeeeee;}
@@ -112,10 +113,12 @@ img																{display: block; margin: 0 auto; border: 0 none; vertical-ali
 #content .data-wrap .data-item.recommend-kids .title			{color: #91d305;}
 
 #content .data-wrap .data-item.medical-cause					{padding: 0 2%; box-sizing: border-box; border: 5px #009a3e dashed;}
-#content .data-wrap .data-item.medical-cause .title				{color: #ffffff; background-color: #009a3e;}
+#content .data-wrap .data-item.medical-cause .title				{background-color: #009a3e;}
+#content .data-wrap .data-item.medical-cause .hyper-link		{color: #ffffff;}
 #content .data-wrap .data-item.medical-cause .caption			{color: #444444;}
 #content .data-wrap .data-item.medical-prevention				{padding: 0 2%; box-sizing: border-box; border: 5px #009a3e dashed;}
 #content .data-wrap .data-item.medical-prevention .title		{color: #ffffff; background-color: #009a3e;}
+#content .data-wrap .data-item.medical-prevention .hyper-link	{color: #ffffff;}
 #content .data-wrap .data-item.medical-prevention .caption		{color: #444444;}
 
 /* footer */
