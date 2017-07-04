@@ -31,6 +31,9 @@
 	.content-item.publishing .publishing-wrap .data-item li a					{font-size: 1rem;}
 }
 @media screen and (max-width: 581px){
+	.content-item.resume .resume-item .sub-title								{font-size: 0.875rem;}
+	.content-item.resume .resume-item .sub-content								{padding: 5px 0 0 0; font-size: 0.83rem;}
+	.content-item.resume .resume-item.skill .sub-content li						{margin: 5px 0;}
 	.content-item.publishing .publishing-wrap .data-item li						{width: 100%; height: 7.5vh;}
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 37%; font-size: 0.83rem;}
 	.content-item.contact .contact-item.info									{padding: 4vh 1.5vw; font-size: 0.73rem;}
@@ -38,7 +41,6 @@
 @media screen and (max-width: 361px){
 	.content-item.resume .resume-item .sub-content								{padding: 5px 0 0 0; font-size: 0.7rem;}
 	.content-item.resume .resume-item .sub-title								{font-size: 0.73rem;}
-	.content-item.resume .resume-item.skill .sub-content li						{margin: 10px 0;}
 	.content-item.resume .resume-images.hand									{display: none;}
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 35%; font-size: 0.73rem;}
 }
