@@ -111,14 +111,14 @@ img																{display: block; margin: 0 auto; border: 0 none; vertical-ali
 #content .data-wrap .data-item.recommend-kids					{background-color: #ffffff;}
 #content .data-wrap .data-item.recommend-kids .title			{color: #91d305;}
 
-#content .data-wrap .data-item.medical-cause					{padding: 0 2%; background-color: #009a3e; border: 2px #ffffff dashed;}
-#content .data-wrap .data-item.medical-cause .title				{color: #ffffff;}
-#content .data-wrap .data-item.medical-cause .caption			{color: #ffffff;}
-#content .data-wrap .data-item.medical-prevention				{padding: 0 2%; background-color: #eeeeee;}
-#content .data-wrap .data-item.medical-prevention .title		{color: #444444;}
+#content .data-wrap .data-item.medical-cause					{padding: 0 2%; box-sizing: border-box; border: 5px #009a3e dashed;}
+#content .data-wrap .data-item.medical-cause .title				{color: #ffffff; background-color: #009a3e;}
+#content .data-wrap .data-item.medical-cause .caption			{color: #444444;}
+#content .data-wrap .data-item.medical-prevention				{padding: 0 2%; box-sizing: border-box; border: 5px #009a3e dashed;}
+#content .data-wrap .data-item.medical-prevention .title		{color: #ffffff; background-color: #009a3e;}
 #content .data-wrap .data-item.medical-prevention .caption		{color: #444444;}
 
 /* footer */
-#footer 														{height: 30px; text-align: center;}
-#footer .footer-item											{vertical-align: middle; line-height: 30px; font-family: 'Fjalla One', sans-serif; color: #666666;}
+#footer 														{height: 30px; text-align: center; background-color: #009a3e;}
+#footer .footer-item											{vertical-align: middle; line-height: 30px; font-family: 'Fjalla One', sans-serif; color: #ffffff;}
 #footer .footer-item .em										{font-weight: bold; text-transform: uppercase;}
