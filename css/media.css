@@ -4,6 +4,9 @@
 @import url(front.css);
 
 /* media query */
+@media screen and (max-width: 1920px) and (max-height: 960px){
+	.content-item.resume .resume-wrap											{top: 13vh; height: 80vh;}
+}
 @media screen and (max-width: 1680px){
 	.content-item.resume .resume-wrap											{top: 9.5vh; height: 85vh;}
 	.content-item.contact .contact-item.info									{padding: 6vh 1.5vw; font-size: 0.875rem;}
