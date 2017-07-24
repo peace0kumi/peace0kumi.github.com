@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* import */
+@import url(../layout/default.css);
+
+/* reset */
+html, body												{height: 100%;}
+body													{position: relative; font-family: 'Noto Sans KR', sans-serif;}
+
+/* header */
+#header:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header h1												{margin: 0; padding: 0; text-align: center;}
+#header h2												{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+
+/* member-service */
+.member-service											{float: right; padding-top: 20px;}
+.member-service ul li									{float: left; margin: 0 5px;}
+
+/* local-navigations */
+.local-navigations										{float: left; padding-top: 10px;}
+.local-navigations ul li								{float: left; margin: 0 5px;}
+
+/* container */
+#container:after										{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+
+/* aside */
+#aside													{float: right; width: 400px; text-align: left; padding: 0 10px;}
+#aside:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#aside .sub-navigations h2								{font-size: 16px;}
+#aside .sub-navigations li								{margin: 10px 0;}
+#aside .sub-navigations.quantity li						{width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+#aside .sub-navigations.personal li						{width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+/* content */
+#content												{float: none; overflow: hidden; padding: 0 10px 40px;}
+#content:after											{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .content-header h3								{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#content .content-header span							{font-weight: bold;}
+#content .content-primary h4							{color: #3253d0; font-weight: normal;}
+#content .content-primary .section:after				{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#content .content-primary .section .newspaper-office	{font-size: 12px; color: #3253d0;}
+#content .content-primary .section .newspaper-photo		{float: left; overflow: hidden; width: 200px; height: 130px;}
+#content .content-primary .section .newspaper-news		{float: none; overflow: hidden; padding-left: 10px;}
+#content .content-primary .section .newspaper-photo img	{width: 100%; vertical-align: top;}
+
+/* footer */
+#footer													{position: fixed; right: 0; bottom: 0; left: 0; height: 30px; text-align: center; background-color: #000000;}
+#footer small											{color: #ffffff;}
+
+/* media query */
+@media (max-width: 1180px) {
+	#aside												{width: 280px;}
+}
+@media (max-width: 970px) {
+	.member-service ul li								{font-size: 0.83em; width: 4em;}
+	.local-navigations ul li							{font-size: 0.83em;}
+	#content .content-primary .section .newspaper-photo	{float: none; display: block; width: 100%; height: auto;}
+	#content .content-primary .section .newspaper-news	{float: none; width: 100%; margin: 10px 0; padding: 0; font-size: 0.83em;}
+	#content .content-primary .section img				{width: 100%; vertical-align: top;}
+}
+@media (max-width: 640px) {
+	.member-service ul li								{font-size: 0.83em;}
+	.local-navigations ul.lnb							{width: 50px; height: 50px; margin-left: 10px; background-image: url(../../images/front/main/ico_skin_640.png); background-position: 0 100%; background-size: 200px 179px; -webkit-background-size: 200px 179px; background-repeat: no-repeat;}
+	.local-navigations ul li							{display: none;}
+	#aside												{float: none; width: 100%; text-align: left; padding: 0 10px;}
+	#content											{width: calc(100% - 20px); margin: 0.83em auto; padding: 0 0 30px 0;}
+}
+@media (max-width: 320px) {
+	.member-service										{padding: 0;}
+	.member-service ul li								{float: none; font-size: 0.7em;}
+}

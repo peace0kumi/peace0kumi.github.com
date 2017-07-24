@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* import */
+@import url(../layout/default.css);
+
+/* reset */
+html, body						{overflow-x: hidden;}
+body							{position: relative; font-family: 'Nanum Gothic', sans-serif;}
+
+/* header */
+#header		 					{text-align: left;}
+#header:after					{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header h1						{padding-left: 5px;}
+
+/* member-service */
+.member-service					{position: absolute; top: 0; right: 0;}
+.member-service h2				{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.member-service ul				{margin-top: 25px;}
+.member-service ul:after		{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.member-service ul li			{float: left; margin: 0 5px;}
+
+/* local-navigations */
+.local-navigations				{position: absolute; top: 0; left: 50%; width: 500px; margin-left: -250px;}
+.local-navigations h2			{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+.local-navigations ul.lnb		{margin-top: 25px;}
+.local-navigations ul:after		{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+.local-navigations ul li		{float: left; margin: 0 5px;}
+
+/* content */
+#container						{padding: 0 15px;}
+#container:after				{content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#aside							{float: right; width: 200px; padding-left: 1em; box-sizing: border-box;}
+#content						{float: left;}
+
+/* footer */
+#footer							{position: fixed; right: 0; bottom: 0; left: 0; height: 30px; line-height: 30px; color: #ffffff; text-align: center; background-color: #000000;}
+
+/* media query */
+@media (max-width: 970px) {
+	#container #aside			{padding: 0; width: 100%;}
+	#container #content			{width: 100%;}
+	.member-service ul li		{font-size: 0.7em; width: 4em;}
+	.local-navigations			{margin-left: -150px;}
+	.local-navigations ul li	{font-size: 0.7em;}
+	#footer						{position: relative;}
+}
+@media (max-width: 640px) {
+	#header h1					{text-align: center; font-size: 1em;}
+	.member-service ul			{margin: 5px 0 20px 0; width: 40px; height: 35px; background-image: url(../../images/front/main/ico_skin_640.png); background-position: 0 100%; background-size: 120px 120px; -webkit-background-size: 120px 120px; background-repeat: no-repeat;}
+	.member-service ul li,
+	.local-navigations ul li 	{display: none;}
+	#aside						{float: none; width: 100%; text-align: left;}
+	#content					{float: none;}
+}
+@media (max-width: 320px) {
+	.member-service				{padding: 0;}
+	.member-service ul li		{float: none; font-size: 0.7em;}
+}

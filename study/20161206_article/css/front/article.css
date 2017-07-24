@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* import */
+@import url(../layout/default.css);
+
+/* content */
+#content													{padding: 0 10px 20px;}
+#content .content-header h3									{display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; clip: rect(0 0 0 0); clip: rect(0,0,0,0);}
+#content .content-header span								{font-weight: bold;}
+
+/* post */
+.posts-list .posts-item+.posts-item							{margin-top: 20px;}
+.posts-list .posts-item .data-info							{padding: 20px; column-gap: 30px; -webkit-column-gap: 30px; -moz-column-gap: 30px; border: 1px #9a9a9a solid;}
+.posts-list .posts-item .data-info.type-a					{column-count: 2; -webkit-column-count: 2; -moz-column-count: 2;}
+.posts-list .posts-item .data-info.type-a .posts-body 		{padding: 10px 0;}
+.posts-list .posts-item .data-info.type-a .posts-body .image{display: block;}
+.posts-list .posts-item .data-info.type-b					{column-count: 3; -webkit-column-count: 3; -moz-column-count: 3;}
+.posts-list .posts-item .data-info .posts-header h4			{margin: 0; color: #3253d0; font-weight: normal; font-size: 24px; column-span: all; -webkit-column-span: all;}
+.posts-list .posts-item .data-info .posts-footer			{font-size: 12px;}
+.posts-list .posts-item .data-info .posts-footer .writer	{font-weight: bold;}
+.posts-list .posts-item .data-info .posts-footer .comment	{color: #3253d0;}
+
+/* seoullite-article */
+.seoullite-article .posts-list								{padding: 30px 0;}
+.seoullite-article .posts-list .posts-item img				{width: 100%; vertical-align: top;}
+
+/* media query */
+@media (max-width: 1440px) {
+	.posts-list .posts-item .data-info						{padding: 10px; column-gap: 20px; -webkit-column-gap: 20px; -moz-column-gap: 20px; border: 1px #9a9a9a solid;}
+	.posts-list .posts-item .data-info.type-a				{column-count: 1; -webkit-column-count: 1; -moz-column-count: 1;}
+	.posts-list .posts-item .data-info.type-b				{column-count: 1; -webkit-column-count: 1; -moz-column-count: 1;}
+}
+@media (max-width: 970px) {
+	.member-service ul li									{font-size: 0.83em; width: 4em;}
+	.local-navigations ul li								{font-size: 0.83em;}
+	.posts-list .posts-item .data-info .posts-header h4		{font-size: 1.25em;}
+	.posts-list .posts-item .data-info .posts-body			{font-size: 1em;}
+}
+@media (max-width: 640px) {
+	.member-service ul li									{font-size: 0.83em;}
+	.local-navigations ul.lnb								{width: 50px; height: 50px; margin-left: 10px; background-image: url(../../images/front/main/ico_skin_640.png); background-position: 0 100%; background-size: 200px 179px; -webkit-background-size: 200px 179px; background-repeat: no-repeat;}
+	.local-navigations ul li								{display: none;}
+	hr														{margin: 0; padding: 0;}
+}
+@media (max-width: 320px) {
+	.member-service											{padding: 0;}
+	.member-service ul li									{float: none; font-size: 0.7em;}
+}

@@ -1,0 +1,38 @@
+/* width 940px 은 웹페이지 기본값 */
+body {margin: 0;}
+#frame {margin: 0 auto; width: 940px; overflow: hidden;}
+
+#header {}
+#header:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header h1 {margin: 0; float: left; height: 40px; line-height: 40px; font-size: x-large;}
+
+#header .local-navigations {float: right; padding: 20px 0;}
+#header .local-navigations h2 {display: block; position: absolute; overflow: hidden; margin: -1px; padding: 0; width: 1px; height: 1px; border: }
+#header .local-navigations ul {margin: 0; padding: 0;}
+#header .local-navigations ul:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header .local-navigations ul li {float: left; position: relative; list-style: none;}
+/* li+li를 쓰는 이유는 아무데나 놓아도 아무런 지장이 없게끔 하려고 하는 것이다. */
+#header .local-navigations ul li+li {margin-left: 12px; padding-left: 12px;}
+#header .local-navigations ul li+li:after {content: ''; display: block; position: absolute; left: 0; top: 50%; margin-top: -4px; width: 1px; height: 8px; background-color: #000000;}
+#header .local-navigations ul li a {display: block; height: 40px; line-height: 40px;}
+
+#aside {background-color: red;}
+#content {background-color: blue;}
+/*
+width를 유동적으로 사용할 수 있는 방법 3가지
+아래 세 가지로 position을 제외한 분할은 모두 다 표현할 수 있다.
+그러므로 꼭 알아두어야 하는 부분이다.
+1. float 사용 후 overflow hidden 줄 것 , 나머지는 사이즈를 주면 안된다. 확장이 안되는 문제 발생
+#container:after {content: ''; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#aside {float: left; margin-right: 20px; width: 240px; background-color: red;}
+#content {float: none; overflow: hidden; background-color: blue;}
+2. table에는 margin이 먹지 않으므로, padding으로 조절해야 한다.
+#container:after {display: table; table-layout: fixed; width: 100%;}
+#aside {display: table-cell; padding-right: 20px; width: 240px; background-color: red;}
+#content {display: table-cell; background-color: blue;}
+3. 될 수 있으면 모바일에서만 사용할 것을 권장한다. 탭 같은 것 만들 때 이런 걸로 사용한다.
+탭을 사용할 때는 2번이나 3번 사용할 것 권장한다. IE10이상 부터 지원한다.
+#container:after {display: -webkit-box; display: -webkit-flex; display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: flex;}
+#aside {width: 240px; margin-right: 20px; background-color: red;}
+#content {-webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; background-color: blue;}
+*/

@@ -1,0 +1,20 @@
+1. 기사는 목록이므로 굳이 section으로 처리할 필요가 없고, 보통 article로 처리한다.
+2. article은 혹자가 객관적인 정보를 전달하려는 의도를 담은 글이다.
+3. article내에도 header, footer, content로 나뉘는 데
+   header는 기사에 대한 제목, footer는 기사에 대한 정보, content는 기사내용을 말한다.
+
+뉴스에 대개 쓰이는 마크업
+<ul class="posts-list">
+<li class="posts-item">
+<div class="wrap">
+<div class="data-info">
+<div class="posts-header"></div>
+<div class="posts-footer"></div>
+<div class="posts-body"></div>
+</div>
+<div class="thumb">
+<span class="image"><img src="" alt="" /></span>
+</div>
+</div>
+</li>
+</ul>
