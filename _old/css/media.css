@@ -4,7 +4,7 @@
 @import url(front.css);
 
 /* media query */
-@media screen and (max-width: 1920px) and (max-height: 960px){
+@media screen and (max-height: 960px){
 	.content-item.resume .resume-wrap											{top: 13vh; height: 80vh;}
 }
 @media screen and (max-width: 1680px){
@@ -23,7 +23,8 @@
 	.content-item.resume .resume-item .sub-title								{font-size: 1rem;}
 	.content-item.resume .resume-item .sub-content								{font-size: 1rem;}
 	.content-item.resume .resume-images.hand									{width: 45%; right: -5vw; bottom: -50px;}
-	.content-item.publishing .publishing-wrap .data-item li						{width: 50%; height: 15vh;}
+	.content-item.publishing .publishing-wrap .data-item li						{width: 50%; height: 22.5vh;}
+	.content-item.publishing .publishing-wrap .data-item li:last-child          {display: none;}
 }
 @media screen and (max-width: 767px){
 	.content-item.resume .resume-wrap											{top: 10vh; width: 80vw; height: 83vh; margin: 0 0 0 -40vw;}
@@ -36,13 +37,16 @@
 @media screen and (max-width: 581px){
 	.content-item.resume .resume-item .sub-title								{font-size: 0.875rem;}
 	.content-item.resume .resume-item .sub-content								{padding: 5px 0 0 0; font-size: 0.83rem;}
-	.content-item.resume .resume-item.skill .sub-content li						{margin: 5px 0;}
-	.content-item.publishing .publishing-wrap .data-item li						{width: 100%; height: 7.5vh;}
+	.content-item.resume .resume-item.contact .sub-content,
+	.content-item.resume .resume-item.contact .sub-content > *                  {font-size: 0.875rem;}
+	.content-item.publishing .publishing-wrap .data-item li						{width: 100%; height: 10vh;}
+	.content-item.publishing .publishing-wrap .data-item li:last-child          {display: block;}
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 37%; font-size: 0.83rem;}
-	.content-item.contact .contact-item.info									{padding: 4vh 1.5vw; font-size: 0.73rem;}
 }
 @media screen and (max-width: 361px){
 	.content-item.resume .resume-item .sub-content								{padding: 5px 0 0 0; font-size: 0.7rem;}
+	.content-item.resume .resume-item.contact .sub-content,
+	.content-item.resume .resume-item.contact .sub-content > *                  {font-size: 0.7rem;}
 	.content-item.resume .resume-item .sub-title								{font-size: 0.73rem;}
 	.content-item.resume .resume-images.hand									{display: none;}
 	.content-item.publishing .publishing-wrap .data-item li a					{padding: 0 35%; font-size: 0.73rem;}

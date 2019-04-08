@@ -1,5 +1,4 @@
 $(function(){
-	
 	//header
 	var didScroll;
 	var lastScrollTop = 0;
@@ -84,56 +83,14 @@ $(function(){
 	
 	if(bodyWidth <= bodyHeight){
 		
-	}else if(bodyWidth > bodyHeight && bodyWidth < 1200){
+	} else if(bodyWidth > bodyHeight && bodyWidth < 1200){
 		alert('이 페이지는 세로 고정 모드에서만 정상적으로 작동됩니다.');
 		$('#frame').css('visibility','hidden');
 		$('body').css('background-color','#2c4157');
 	}
-	
-	//daum map
-	var container = document.getElementById('map');
-	var options = {
-		center: new daum.maps.LatLng(37.544359, 126.941241),
-		level: 2
-	};
-	
-	var map = new daum.maps.Map(container, options);
-	
-	var circle = new daum.maps.Circle({
-		center : new daum.maps.LatLng(37.544359, 126.941241),
-		radius: 100, 
-		strokeWeight: 5, 
-		strokeColor: '#00ff7f',
-		strokeOpacity: 1,
-		strokeStyle: 'solid',
-		fillColor: '#9bffcd',
-		fillOpacity: 0.5 
-	});
-	circle.setMap(map);
-	
-	var marker = new daum.maps.Marker({ 
-		position: map.getCenter() 
-	});
-	marker.setMap(map);
-	
-	function setZoomable(zoomable) {
-		map.setZoomable(zoomable);
-	}
-	function setDraggable(draggable) {
-		map.setDraggable(draggable);
-	}
-	
-	if(bodyWidth <= 1024){
-		setZoomable(true);
-		setDraggable(true);
-	}else{
-		setZoomable(false);
-		setDraggable(false);
-	}
-	
+
 	//scroll hidden
 	$(document).ready(function(){
 		setTimeout(scrollTo, 0, 0, 1);
 	});
-
 });
